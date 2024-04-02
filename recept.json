@@ -1,0 +1,29 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "picture": "",
+            "name": "",
+            "rating": "",
+            "ingredients": {
+                "key1": "value1",
+                "key2": "value2",
+                "key3": "value3"
+            },
+            "toDo": [
+                {
+                    "step": 1,
+                    "instruction": "text"
+                },
+                {
+                    "step": 2,
+                    "instruction": "text"
+                },
+                {
+                    "step": 3,
+                    "instruction": "text"
+                }
+            ]
+        }
+    ]
+}
