@@ -3,6 +3,7 @@
         {
             "id": 1,
             "picture": "",
+            "time": "",
             "name": "",
             "rating": "",
             "ingredients": {
@@ -12,15 +13,12 @@
             },
             "toDo": [
                 {
-                    "step": 1,
                     "instruction": "text"
                 },
                 {
-                    "step": 2,
                     "instruction": "text"
                 },
                 {
-                    "step": 3,
                     "instruction": "text"
                 }
             ]
