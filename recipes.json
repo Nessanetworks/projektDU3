@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "picture": "food.jpg",
+        "time": 15,
+        "name": "Köttbullar i gräddsås",
+        "rating": 4,
+        "ingredients": {
+            "key1": "value1",
+            "key2": "value2",
+            "key3": "value3"
+        },
+        "toDo": []
+    }
+]
