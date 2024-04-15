@@ -1,15 +1,563 @@
 [
     {
         "id": 1,
-        "picture": "food.jpg",
-        "time": 15,
-        "name": "Köttbullar i gräddsås",
-        "rating": 4,
+        "picture": "media/images/kyckling_och_rostade_rotfrukter.jpg",
+        "time": 60,
+        "name": "Kyckling och rostade rotfrukter",
+        "rating": 0,
         "ingredients": {
-            "key1": "value1",
-            "key2": "value2",
-            "key3": "value3"
+            "morötter": "3",
+            "palsternackor": "2",
+            "potatis": "600 g",
+            "olja": "1 1/2 msk",
+            "salt och peppar": "",
+            "spiskummin": "1 tsk",
+            "kycklingklubbor": "4",
+            "sweet chilisås": "1/2 dl",
+            "persilja": "1/2 kruka",
+            "gräddfil": "1 dl"
         },
-        "toDo": []
+        "toDo": [
+            "Sätt ugnen på 225°C och sätt in en ugnsplåt.",
+            "Skala morötter och palsternackor. Skär dem och potatisen i bitar. Blanda rotfrukterna med hälften av oljan och krydda med salt, peppar och spiskummin.",
+            "Stek kycklingsklubborna runt om i resten av oljan i en stekpanna tills de får fin färg. Krydda med salt och peppar. Blanda dem med sweet chili. Lägg rotfrukterna och kycklingklubborna på den varma plåten. Stek mitt i ugnen ca 40 minuter.",
+            "Hacka persiljan och vänd runt med rotfrukterna när de är klara.",
+            "Servera kycklingen med rotfrukter och gräddfil. Smaksätt gärna gräddfilen med ytterligare sweet chilisås, salt och peppar."
+        ]
+    },
+    {
+        "id": 2,
+        "picture": "media/images/chili_con_carne.jpg",
+        "time": 20,
+        "name": "Chili con carne",
+        "rating": 0,
+        "ingredients": {
+            "nötfärs": "400 g",
+            "gul lök": "1",
+            "paprika": "1",
+            "zucchini": "200 g",
+            "smör": "1 msk",
+            "salt": "1 tsk",
+            "vitlöksklyfta": "1",
+            "krossade tomater": "400 g",
+            "sambal oelek": "1/2 tsk",
+            "stora vita bönor": "400 g",
+            "creme fraiche": "2 dl",
+            "ruccola": "60 g"
+        },
+        "toDo": [
+            "Skala löken. Kärna ur paprikan. Skär lök, paprika och zucchini i bitar.",
+            "Fräs nötfärsen i smör i en stekpanna och rör så att den blir smulig.",
+            "Lägg i grönsakerna och låt dem fräsa med. Tillsätt salt, vitlök, tomater och sambal oelek. Låt allt koka ca 15 min.",
+            "Skölj bönorna i vatten och låt dem rinna av. Lägg dem i grytan och koka ytterligare ett par min",
+            "Servera chili con carne med crème fraiche och ruccolasallad"
+        ]
+    },
+    {
+        "id": 3,
+        "picture": "media/images/korv_stroganoff.jpg",
+        "time": 15,
+        "name": "Korv Stroganoff",
+        "rating": 0,
+        "ingredients": {
+            "falukorv": "300 g",
+            "gul lök": "1",
+            "tomatpuré": "1 1/2 msk",
+            "smör": "1 msk",
+            "matlagningsgrädde": "2 1/2 dl",
+            "salt": "1/2 tsk"
+        },
+        "toDo": [
+            "Skär korven i strimlor. Skala och hacka löken.",
+            "Stek korv, lök och tomatpuré i smör- & rapsolja i en rymlig stekpanna.",
+            "Tillsätt matlagningsgrädden och salta, låt koka på svag värme 2-3 min.",
+            "Servera korv Stroganoff med t.ex. ris eller potatismos och tomatklyftor."
+        ]
+    },
+    {
+        "id": 4,
+        "picture": "media/images/crepes.jpg",
+        "time": 40,
+        "name": "Ädelostcrêpes",
+        "rating": 0,
+        "ingredients": {
+            "smör": "75 g",
+            "vetemjöl": "2 dl",
+            "mjölk": "4 dl",
+            "ägg": "4",
+            "salt": "1 krm",
+            "skogschampinjoner": "250 g",
+            "vitlöksklyfta": "1",
+            "babyspenat": "100 g",
+            "ädelost": "170 g",
+            "bladpersilja": "1 dl",
+            "valnötter": "100 g"
+        },
+        "toDo": [
+            "Värm ugnen till 100°.",
+            "Smält 50 g av smöret i en stekpanna. Vispa ihop mjölet med hälften av mjölken till en jämn smet. Tillsätt resten av mjölken, ägg, salt och det smälta smöret.",
+            "Stek 8 tunna crêpes. Lägg dem på ett fat och håll varma i ugnen.",
+            "Skiva svampen. Skala och finhacka vitlöken. Stek svampen i 25 g smör ca 5 min. Tillsätt vitlöken mot slutet. Smaka av med salt och nymalen svartpeppar.",
+            "Värm ädelostkrämen i en liten kastrull.",
+            "Fördela svamp och spenat på varma crêpes. Vik ihop och ringla över varm ädelostsås. Toppa med persilja och valnötter."
+        ]
+    },
+    {
+        "id": 4,
+        "picture": "media/images/crepes.jpg",
+        "time": 40,
+        "name": "Ädelostcrêpes",
+        "rating": 0,
+        "ingredients": {
+            "smör": "75 g",
+            "vetemjöl": "2 dl",
+            "mjölk": "4 dl",
+            "ägg": "4",
+            "salt": "1 krm",
+            "skogschampinjoner": "250 g",
+            "vitlöksklyfta": "1",
+            "babyspenat": "100 g",
+            "ädelost": "170 g",
+            "bladpersilja": "1 dl",
+            "valnötter": "100 g"
+        },
+        "toDo": [
+            "Värm ugnen till 100°.",
+            "Smält 50 g av smöret i en stekpanna. Vispa ihop mjölet med hälften av mjölken till en jämn smet. Tillsätt resten av mjölken, ägg, salt och det smälta smöret.",
+            "Stek 8 tunna crêpes. Lägg dem på ett fat och håll varma i ugnen.",
+            "Skiva svampen. Skala och finhacka vitlöken. Stek svampen i 25 g smör ca 5 min. Tillsätt vitlöken mot slutet. Smaka av med salt och nymalen svartpeppar.",
+            "Värm ädelostkrämen i en liten kastrull.",
+            "Fördela svamp och spenat på varma crêpes. Vik ihop och ringla över varm ädelostsås. Toppa med persilja och valnötter."
+        ]
+    },
+    {
+        "id": 5,
+        "picture": "media/images/pasta_puttanesca.jpg",
+        "time": 30,
+        "name": "Pasta puttanesca",
+        "rating": 0,
+        "ingredients": {
+            "vitlöksklyftor": "3",
+            "röd chili": "1",
+            "smör": "50 g",
+            "sardellfiléer": "6",
+            "oliver": "2 dl",
+            "kapris": "2 msk",
+            "konseverade körsbärstomater": "1 burk",
+            "strösocker": "1 tsk",
+            "salt": "1 tsk",
+            "spaghetti": "400 g",
+            "persilja": "1 kruka"
+        },
+        "toDo": [
+            "Skala och skiva vitlöken. Skiva chilin.",
+            "Hetta upp smöret i en kastrull. Fräs vitlök och chili på svag värme 3–4 min.",
+            "Tillsätt sardeller, oliver och kapris. Fräs ytterligare 5 min.",
+            "Rör ner tomater, socker och salt. Låt sjuda under lock minst 15 min.",
+            "Koka pastan al dente.",
+            "Häll av pastan och blanda med såsen. Toppa med hackad persilja och servera pasta puttanesca direkt."
+        ]
+    },
+    {
+        "id": 6,
+        "picture": "media/images/cacio_e_pepe.webp",
+        "time": 25,
+        "name": "Cacio e pepe",
+        "rating": 0,
+        "ingredients": {
+            "spaghetti": "320 g",
+            "svartpepparkorn": "1 msk",
+            "pastavatten": "5 dl",
+            "finriven pecorinoost": "150 g"
+        },
+        "toDo": [
+            "Koka pastan al dente enligt anvisningen på förpackningen, spara kokvattnet. Mortla pepparkornen.",
+            "Hetta upp en stekpanna och rosta pepparn under omrörning någon min. Tillsätt 3 dl av pastavattnet i pannan, låt koka upp.",
+            "Lägg pastan i pepparvattnet. Ta bort från värmen och tillsätt osten under kraftig omrörning. Späd ev med mer kokvatten."
+        ]
+    },
+    {
+        "id": 7,
+        "picture": "media/images/pasta_pomodoro.webp",
+        "time": 30,
+        "name": "Pasta pomodoro",
+        "rating": 0,
+        "ingredients": {
+            "spaghetti": "320 g",
+            "gul lök": "1",
+            "vitlöksklyftor": "2",
+            "olivolja": "1/2 dl",
+            "konseverade tomater": "400 g",
+            "basilika": "1/2 dl",
+            "salt och svartpeppar": "",
+            "parmesanost": "25 g"
+        },
+        "toDo": [
+            "Koka pastan al dente enligt anvisningen på förpackningen (spara kokvattnet).",
+            "Stek lök och vitlök i olja tills löken mjuknat utan att få färg. Tillsätt tomaterna, tryck sönder dem något med stekspaden. Låt sjuda ca 20 min.",
+            "Tillsätt basilika, pasta och ca ½ dl kokvatten från pastan i tomatsåsen. Blanda och värm 1–2 min. Smaka av med salt och peppar. Servera pastan med parmesan."
+        ]
+    },
+    {
+        "id": 8,
+        "picture": "media/images/tomatsoppa.webp",
+        "time": 15,
+        "name": "Tomatsoppa med grädde",
+        "rating": 0,
+        "ingredients": {
+            "gul lök": "1",
+            "vitlöksklyfta": "1",
+            "olivolja": "1 msk",
+            "krossade tomater": "500 g",
+            "vatten": "4 dl",
+            "grönsaksbuljongtärning": "1",
+            "honung": "1 tsk",
+            "cayennepeppar": "2 krm",
+            "vispgrädde": "1 dl",
+            "salt": ""
+        },
+        "toDo": [
+            "Fräs lök och vitlök i olja i en kastrull.",
+            "Häll på krossade tomater, vatten, buljongtärning, honung och cayennepeppar.",
+            "Låt sjuda 10 min och mixa slätt. Tillsätt grädden och smaka av med salt."
+        ]
+    },
+    {
+        "id": 9,
+        "picture": "media/images/pizza.webp",
+        "time": 20,
+        "name": "Pizza med rökt skinka och mozzarella",
+        "rating": 0,
+        "ingredients": {
+            "pizzadeg": "1",
+            "tomatsås": "4 msk",
+            "riven mozzarella": "150 g",
+            "strimlad rökt skinka": "150 g",
+            "skivad mozzarella": "125 g",
+            "rödlök": "1",
+            "ruccola": "15 g",
+            "flingsalt och svartpeppar": "",
+            "olivolja": ""
+        },
+        "toDo": [
+            "Rulla ut pizzadegen på plåt med bakplåtspapper. Kavla lätt för tunnare botten.",
+            "Bred på tomatsås. Lägg riven mozzarella, rökt skinka, mozzarellaskivor och rödlök på pizzadegen.",
+            "Grädda i nedre delen av ugnen 10–15 min eller tills kanterna är gyllene. Toppa med rucola, oregano, salt, svartpeppar och några droppar olivolja. Skär eller klipp i bitar."
+        ]
+    },
+    {
+        "id": 10,
+        "picture": "media/images/nudlar.webp",
+        "time": 15,
+        "name": "Snabbnudlar med stekt ägg",
+        "rating": 0,
+        "ingredients": {
+            "ägg": "4",
+            "olja": "",
+            "salt": "",
+            "snabbnudlar": "3 frp",
+            "vatten": "1 1/2 l",
+            "morot": "1",
+            "gul lök": "1",
+            "zucchini": "1/2",
+            "salladslökar": "2",
+            "japansk soja": "2 msk",
+            "rostad lök": "1 dl"
+        },
+        "toDo": [
+            "Stek äggen på låg värme i olja. Krydda med salt.",
+            "Koka upp buljongpulvret (från nudelförpackningarna) i vattnet och häll i grönsakerna. Lägg i nudlarna efter 1 min och tillsätt sojan.",
+            "Servera direkt då nudlarna blivit mjuka. Toppa med stekt ägg och rostad lök."
+        ]
+    },
+    {
+        "id": 30,
+        "picture": "media/images/kycklinglasagne.webp",
+        "time": 45,
+        "name": "Kycklinglasagne",
+        "rating": 0,
+        "ingredients": {
+            "gul lök": "1",
+            "olivolja": "1 msk",
+            "tomatpuré": "3 msk",
+            "vitlöksklyfta": "1",
+            "chiliflakes": "1 tsk",
+            "kycklingfärs": "450 g",
+            "krossade tomater": "400 g",
+            "vatten": "2 dl",
+            "oregano": "1 msk",
+            "salt och peppar": "",
+            "lasagneplattor": "6",
+            "riven ost": "3 dl"
+        },
+        "toDo": [
+            "Fräs löken i olja tills den är mjuk. Tillsätt tomatpuré, vitlök, chiliflakes och stek under omrörning någon minut till.",
+            "Sätt ugnen på 200°. Lägg i färsen och stek under omrörning tills färsen är genomstekt. Häll i krossade tomater, vatten och oregano. Smaka av med salt och peppar.",
+            "Varva lasagneplattorna med såsen i tre lager i en passande form. Börja och avsluta med sås. Tryck ner plattorna något och toppa med riven ost. Tillaga mitt i ugnen, ca 30 min."
+        ]
+    },
+    {
+        "id": 31,
+        "picture": "media/images/flaskpannkaka.webp",
+        "time": 45,
+        "name": "Fläskpannkaka med bacon och morot",
+        "rating": 0,
+        "ingredients": {
+            "vetemjöl": "3 dl",
+            "salt": "1 tsk",
+            "mjölk": "6 dl",
+            "ägg": "6",
+            "morot": "500 g",
+            "skivat bacon": "120 g",
+            "lingonsylt": "2 1/2 dl"
+        },
+        "toDo": [
+            "Sätt ugnen på 200°. Vispa ihop mjöl, salt och hälften av mjölken. Tillsätt ägg, resten av mjölken och 200 g finrivna morötter. Vispa till en jämn smet. Häll smeten i en smord ugnsform.",
+            "Grädda mitt i ugnen ca 20 min. Lägg på baconskivorna och grädda ytterligare 20–25 min.",
+            "Låt gärna stå 5 min innan servering. Servera med lingonsylt och morotsstavar."
+        ]
+    },
+    {
+        "id": 32,
+        "picture": "media/images/linsgryta.webp",
+        "time": 40,
+        "name": "Mustig linsgryta",
+        "rating": 0,
+        "ingredients": {
+            "gul lök": "1",
+            "morot": "1",
+            "olja": "1 msk",
+            "vitlöksklyfta": "1",
+            "chiliflakes": "1 tsk",
+            "tomatpuré": "2 msk",
+            "kokosmjölk": "400 ml",
+            "vatten": "2 1/2 dl",
+            "röda linser": "2 dl",
+            "grönsaksbuljongtärning": "1",
+            "salt och peppar": ""
+        },
+        "toDo": [
+            "Finhacka löken och riv moroten grovt på rivjärn.",
+            "Hetta upp oljan i en stor stekpanna eller kastrull på medelvärme och häll ner lök och morot. Pressa i vitlöken. Fräs alltsammans i några minuter. Tillsätt chiliflakes och tomatpuré och fräs lite till.",
+            "Rör ner kokosmjölk, vatten, linser och smula ner buljongtärningen. Låt koka under lock i cirka 20 minuter, linserna ska bli mjuka. Tillsätt lite mer vatten om konsistensen blir för tjock. Avsluta med att smaka av med salt och peppar.",
+            "Servera grytan med en klick gräddfil och eventuellt lite chiliflakes på toppen. Bröd eller kokt matvete till."
+        ]
+    },
+    {
+        "id": 33,
+        "picture": "media/images/gronsakssoppa.webp",
+        "time": 35,
+        "name": "Rostad grönsakssoppa med vitlökskräm",
+        "rating": 0,
+        "ingredients": {
+            "rödlök": "1",
+            "morötter": "300 g",
+            "palsternacka": "200 g",
+            "paprikor": "2",
+            "vitlöksklyftor": "4",
+            "körsbärstomater": "250 g",
+            "olivolja": "2 msk",
+            "timjan": "2 tsk",
+            "salt": "1/2 tsk",
+            "svartpeppar": "1 krm",
+            "vatten": "8 dl",
+            "grönsaksfond": "3 msk",
+            "basilika": "25 g",
+            "yoghurt": "2 1/2 dl"
+        },
+        "toDo": [
+            "Sätt ugnen på 225 grader.",
+            "Skala och klyfta löken. Skala och skär morötter och palsternackor i stavar. Kärna ur och dela paprikan i grova bitar. Behåll skalet på vitlöken. Lägg allt på en plåt tillsammans med körsbärstomater.",
+            "Ringla över olja, krydda med timjan, salt och peppar. Blanda och rosta i ugnen ca 25 min.",
+            "Lägg de rostade grönsakerna i en gryta och mixa allt till en slät mos, häll i vatten och fond. Koka upp och smaka av med salt och peppar. Späd eventuellt med mer vatten. Hacka basilika och rör i.",
+            "Rör ihop yoghurt med en liten bit pressad vitlök.",
+            "Servera."
+        ]
+    },
+    {
+        "id": 34,
+        "picture": "media/images/asiatisk_karre.webp",
+        "time": 35,
+        "name": "Asiatisk karré med hoisinsås och picklad rödlök",
+        "rating": 0,
+        "ingredients": {
+            "ris": "4 dl",
+            "karré": "600 g",
+            "vitlöksklyfta": "1",
+            "sambal oelek": "1 tsk",
+            "japansk soja": "2 tsk",
+            "olja": "2 msk",
+            "rödlök": "2",
+            "strösocker": "1 dl",
+            "rödvinsvinäger": "1 dl",
+            "hoisinsås": "1 burk",
+            "vitkål": "200 g"
+        },
+        "toDo": [
+            "Koka ris enligt anvisningarna på paketet.",
+            "Skiva och strimla köttet tunt och lägg det i en påse. Skala och pressa i vitlök, häll i sambal oelek, soja och olja. Låt stå tills det är dags att steka.",
+            "Skala och strimla rödlökarna. Rör samman socker och vinäger, blanda med löken.",
+            "Strimla kålen fint, krama den och lägg i en skål.",
+            "Hetta upp en stekpanna och stek köttet i omgångar utan marinad tills det har fått en fin färg. Lägg tillbaka allt i stekpannan och häll på marinaden. Du kan steka det ganska hårt. Det ska nästan bli krispigt.",
+            "Servera med spenat."
+        ]
+    },
+    {
+        "id": 35,
+        "picture": "media/images/kaldolmar.jpg",
+        "time": 60,
+        "name": "Klassiska kåldolmar",
+        "rating": 0,
+        "ingredients": {
+            "blandfärs": "500 g",
+            "spetskål": "1",
+            "ris": "2 dl",
+            "ägg": "1",
+            "vispgrädde": "1 dl",
+            "salt": "1/2 tsk",
+            "vitpeppar": "1 krm",
+            "smör": "2 msk",
+            "ljus sirap": "2 msk"
+        },
+        "toDo": [
+            "Koka riset enligt anvisningar på förpackningen.",
+            "Skär bort roten från spetskålen och ta loss 8-10 blad. Låt kålbladen koka ett par minuter i saltat vatten.",
+            "Sätt ugnen på 225 grader.",
+            "Blanda ihop färsen med grädde, ägg, avsvalnat ris och kryddor till en jämn och lös smet.",
+            "Fördela färsblandningen på kålbladen och vik försiktigt ihop till dolmar.",
+            "Värm en stekpanna med smör och stek kåldolmarna runt om så att kålen får lite färg.",
+            "Lägg sedan över kåldolmarna i en ugnsfast form, ringla över lite sirap och stek färdigt i ugn i ca 30-35 minuter.",
+            "Servera tillsammans med kokt potatis, rårörda lingon och inlagd gurka."
+        ]
+    },
+    {
+        "id": 36,
+        "picture": "media/images/halloumibiffar.jpg",
+        "time": 30,
+        "name": "Halloumibiffar med zucchini och morot",
+        "rating": 0,
+        "ingredients": {
+            "zucchini": "400 g",
+            "salt": "2 tsk",
+            "morot": "100 g",
+            "halloumi": "2 frp",
+            "soltorkade tomater": "1/3 frp",
+            "ägg": "2",
+            "maizena": "1/2 dl",
+            "ströbröd": "1 dl",
+            "olivolja": ""
+        },
+        "toDo": [
+            "Riv zucchini på grova sidan av rivjärnet. Lägg på ett fat och strö över salt, blanda. Låt stå 20 minuter, pressa ur vätska och lägg i en bunke.",
+            "Riv morot och halloumi på grova sidan av rivjärnet och lägg i bunken med zucchini.",
+            "Lägg i strimlade och soltorkade tomater.",
+            "Rör ihop de rivna ingredienserna med ägg, maizena och ströbröd.",
+            "Forma 6 burgare och stek 2 minuter på varje sida."
+        ]
+    },
+    {
+        "id": 37,
+        "picture": "media/images/grilledcheese.jpg",
+        "time": 15,
+        "name": "Italiensk grilled cheese med svart tapenade och mozzarella",
+        "rating": 0,
+        "ingredients": {
+            "skivor surdegsbröd": "8",
+            "dijonsenap": "4 tsk",
+            "tapenade": "8 msk",
+            "mozzarella": "2 frp",
+            "parmesan": "4 dl",
+            "olivolja": ""
+        },
+        "toDo": [
+            "Skär surdegsbrödet i centimetertjocka skivor.",
+            "Bred dijonsenap på ena skivan av brödet och bred tapenade på den andra.",
+            "Bryt mozzarella i mindre bitar och lägg på bröden. Riv över rikligt med parmesanost och dra några varv med svartpepparkvarnen.",
+            "Lägg ihop bröden och tryck till ordentligt. Stek i rikligt med olivolja, lägg gärna bröden i press mot slutet. Stek tills de är gyllenbruna och frasiga.",
+            "Halvera de frasiga bröden och servera direkt."
+        ]
+    },
+    {
+        "id": 38,
+        "picture": "media/images/rostade_grönsaker.jpg",
+        "time": 30,
+        "name": "Rostade medelhavsgrönsaker med fetaost och soltorkade tomater",
+        "rating": 0,
+        "ingredients": {
+            "potatis": "500 g",
+            "olivolja": "1 msk",
+            "rödlök": "1",
+            "paprikor": "3",
+            "zucchini": "1",
+            "soltorkade tomater": "1 burk",
+            "oliver": "1 burk",
+            "rosmarin": "1/2 kruka",
+            "salt": "1/2 tsk",
+            "fetaost": "2 frp",
+            "chiliflakes": "2 tsk",
+            "ruccola": "60 g"
+        },
+        "toDo": [
+            "Sätt ugnen på 225 grader.",
+            "Halvera delikatesspotatisen om de är stora och lägg på plåt, ringla över olivolja, salta och peppra. Ugnsrosta ca 10 minuter.",
+            "Under tiden potatisen är i ugnen, skala och skär rödlök i tunna klyftor. Skölj, ta bort kärnhus ur paprikorna och skär i grova bitar. Skölj och skär zucchini i grova bitar.",
+            "Lägg allt på plåten och blanda runt tillsammans med potatisen. Tillsätt oliver samt soltorkade tomater med oljan de ligger i. Repa över rikligt med rosmarin och baka alla grönsaker i ugnen ca 10 minuter tills de börjar bli mjuka.",
+            "Lägg på fetaost, strössla över chiliflakes och ännu lite mer rosmarin. Ringla över olivolja och ugnsbaka ca 5 minuter tills osten är varm och fått färg. Strössla över rucolasallad precis innan servering."
+        ]
+    },
+    {
+        "id": 39,
+        "picture": "media/images/tonfiskrora.jpg",
+        "time": 15,
+        "name": "Tonfiskröra",
+        "rating": 0,
+        "ingredients": {
+            "tonfisk i olja": "2 burkar",
+            "tomatpuré": "1 msk",
+            "kapris": "1 msk",
+            "sambal oelek": "1 tsk",
+            "torkad oregano": "1/2 tsk",
+            "smetana": "1 dl",
+            "salt och peppar": "",
+            "knäckebröd": "",
+            "rödlök": "1",
+            "paprika": "1",
+            "tomater": "",
+            "babysepenat": "",
+            "kokta ägg": "2"
+        },
+        "toDo": [
+            "Låt tonfisken rinna av väl. Mosa tonfisken och blanda med resterande ingredienser. Smaka av med salt och peppar.",
+            "Skala och skiva rödlöken. Skiva paprikan och dela tomaterna. Fördela tonfiskröran på bröden. Toppa med grönsaker, spenat och äggklyftor."
+        ]
+    },
+    {
+        "id": 40,
+        "picture": "media/images/kottfarssas.jpg",
+        "time": 20,
+        "name": "Spaghetti och köttfärssås",
+        "rating": 0,
+        "ingredients": {
+            "spaghetti": "1/2 frp",
+            "nötfärs": "500 g",
+            "olivolja": "1/2 dl",
+            "gul lök": "1",
+            "vitlöksklyfta": "1",
+            "chili": "1/3",
+            "oregano": "2 tsk",
+            "krossade tomater": "400 g",
+            "vatten": "1 dl",
+            "köttfond": "1 msk",
+            "salt och peppar": "",
+            "parmesan": ""
+        },
+        "toDo": [
+            "Bryn köttfärsen i olivoljan, salta och peppra.",
+            "Lägg i lök, vitlök och chili. Fräs i ytterligare 2 minuter.",
+            "Tillsätt tomatpuré, oregano, finkrossade tomater, vatten och fond.",
+            "Låt koka ihop under ca 10-15 minuter, rör om då och då, smaka av med salt och svartpeppar.",
+            "Koka spaghettin al dente i rikligt med saltat vatten, låt rinna av i ett durkslag. Blanda pastan med såsen.",
+            "Servera med riven parmesan och lite olivolja att ringla över. Garnera med färsk oregano om du vill."
+        ]
     }
 ]
