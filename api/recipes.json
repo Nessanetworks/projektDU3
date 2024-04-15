@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "picture": "media/images/kyckling_och_rostade_rotfrukter.jpg",
+        "picture": "../media/images/kyckling_och_rostade_rotfrukter.jpg",
         "time": 60,
         "name": "Kyckling och rostade rotfrukter",
         "rating": 0,
@@ -27,7 +27,7 @@
     },
     {
         "id": 2,
-        "picture": "media/images/chili_con_carne.jpg",
+        "picture": "../media/images/chili_con_carne.jpg",
         "time": 20,
         "name": "Chili con carne",
         "rating": 0,
@@ -55,7 +55,7 @@
     },
     {
         "id": 3,
-        "picture": "media/images/korv_stroganoff.jpg",
+        "picture": "../media/images/korv_stroganoff.jpg",
         "time": 15,
         "name": "Korv Stroganoff",
         "rating": 0,
@@ -76,7 +76,7 @@
     },
     {
         "id": 4,
-        "picture": "media/images/crepes.jpg",
+        "picture": "../media/images/crepes.jpg",
         "time": 40,
         "name": "Ädelostcrêpes",
         "rating": 0,
@@ -104,7 +104,7 @@
     },
     {
         "id": 5,
-        "picture": "media/images/pasta_puttanesca.jpg",
+        "picture": "../media/images/pasta_puttanesca.jpg",
         "time": 30,
         "name": "Pasta puttanesca",
         "rating": 0,
@@ -132,7 +132,7 @@
     },
     {
         "id": 6,
-        "picture": "media/images/cacio_e_pepe.webp",
+        "picture": "../media/images/cacio_e_pepe.webp",
         "time": 25,
         "name": "Cacio e pepe",
         "rating": 0,
@@ -150,7 +150,7 @@
     },
     {
         "id": 7,
-        "picture": "media/images/pasta_pomodoro.webp",
+        "picture": "../media/images/pasta_pomodoro.webp",
         "time": 30,
         "name": "Pasta pomodoro",
         "rating": 0,
@@ -172,7 +172,7 @@
     },
     {
         "id": 8,
-        "picture": "media/images/tomatsoppa.webp",
+        "picture": "../media/images/tomatsoppa.webp",
         "time": 15,
         "name": "Tomatsoppa med grädde",
         "rating": 0,
@@ -196,7 +196,7 @@
     },
     {
         "id": 9,
-        "picture": "media/images/pizza.webp",
+        "picture": "../media/images/pizza.webp",
         "time": 20,
         "name": "Pizza med rökt skinka och mozzarella",
         "rating": 0,
@@ -219,7 +219,7 @@
     },
     {
         "id": 10,
-        "picture": "media/images/nudlar.webp",
+        "picture": "../media/images/nudlar.webp",
         "time": 15,
         "name": "Snabbnudlar med stekt ägg",
         "rating": 0,
@@ -741,7 +741,7 @@
     },
     {
         "id": 30,
-        "picture": "media/images/kycklinglasagne.webp",
+        "picture": "../media/images/kycklinglasagne.webp",
         "time": 45,
         "name": "Kycklinglasagne",
         "rating": 0,
@@ -767,7 +767,7 @@
     },
     {
         "id": 31,
-        "picture": "media/images/flaskpannkaka.webp",
+        "picture": "../media/images/flaskpannkaka.webp",
         "time": 45,
         "name": "Fläskpannkaka med bacon och morot",
         "rating": 0,
@@ -788,7 +788,7 @@
     },
     {
         "id": 32,
-        "picture": "media/images/linsgryta.webp",
+        "picture": "../media/images/linsgryta.webp",
         "time": 40,
         "name": "Mustig linsgryta",
         "rating": 0,
@@ -814,7 +814,7 @@
     },
     {
         "id": 33,
-        "picture": "media/images/gronsakssoppa.webp",
+        "picture": "../media/images/gronsakssoppa.webp",
         "time": 35,
         "name": "Rostad grönsakssoppa med vitlökskräm",
         "rating": 0,
@@ -845,7 +845,7 @@
     },
     {
         "id": 34,
-        "picture": "media/images/asiatisk_karre.webp",
+        "picture": "../media/images/asiatisk_karre.webp",
         "time": 35,
         "name": "Asiatisk karré med hoisinsås och picklad rödlök",
         "rating": 0,
@@ -873,7 +873,7 @@
     },
     {
         "id": 35,
-        "picture": "media/images/kaldolmar.jpg",
+        "picture": "../media/images/kaldolmar.jpg",
         "time": 60,
         "name": "Klassiska kåldolmar",
         "rating": 0,
@@ -901,7 +901,7 @@
     },
     {
         "id": 36,
-        "picture": "media/images/halloumibiffar.jpg",
+        "picture": "../media/images/halloumibiffar.jpg",
         "time": 30,
         "name": "Halloumibiffar med zucchini och morot",
         "rating": 0,
@@ -926,7 +926,7 @@
     },
     {
         "id": 37,
-        "picture": "media/images/grilledcheese.jpg",
+        "picture": "../media/images/grilledcheese.jpg",
         "time": 15,
         "name": "Italiensk grilled cheese med svart tapenade och mozzarella",
         "rating": 0,
@@ -948,7 +948,7 @@
     },
     {
         "id": 38,
-        "picture": "media/images/rostade_grönsaker.jpg",
+        "picture": "../media/images/rostade_grönsaker.jpg",
         "time": 30,
         "name": "Rostade medelhavsgrönsaker med fetaost och soltorkade tomater",
         "rating": 0,
@@ -976,7 +976,7 @@
     },
     {
         "id": 39,
-        "picture": "media/images/tonfiskrora.jpg",
+        "picture": "../media/images/tonfiskrora.jpg",
         "time": 15,
         "name": "Tonfiskröra",
         "rating": 0,
@@ -1002,7 +1002,7 @@
     },
     {
         "id": 40,
-        "picture": "media/images/kottfarssas.jpg",
+        "picture": "../media/images/kottfarssas.jpg",
         "time": 20,
         "name": "Spaghetti och köttfärssås",
         "rating": 0,
