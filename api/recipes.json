@@ -244,7 +244,7 @@
     },
     {
         "id": 11,
-        "picture": "food.jpg",
+        "picture": "../media/images/pad-thai-kyckling.webp",
         "time": 25,
         "name": "Kyckling Pad thai",
         "rating": 0,
@@ -273,7 +273,7 @@
     },
     {
         "id": 12,
-        "picture": "food.jpg",
+        "picture": "../media/images/kycklingwok-nudel-grönsak.webp",
         "time": 20,
         "name": "Kycklingwok med nudlar och grönsaker",
         "rating": 0,
@@ -299,7 +299,7 @@
     },
     {
         "id": 13,
-        "picture": "food.jpg",
+        "picture": "../media/images/stekt-ris-ägg.webp",
         "time": 25,
         "name": "Stekt ris med grönsaker och ägg",
         "rating": 0,
@@ -325,7 +325,7 @@
     },
     {
         "id": 14,
-        "picture": "food.jpg",
+        "picture": "../media/images/chilibowl.webp",
         "time": 25,
         "name": "Chilibowl med guacamole",
         "rating": 0,
@@ -359,7 +359,7 @@
     },
     {
         "id": 15,
-        "picture": "food.jpg",
+        "picture": "../media/images/kasslergryta-curry.webp",
         "time": 20,
         "name": "Kasslergryta med curry och chili ",
         "rating": 0,
@@ -389,7 +389,7 @@
     },
     {
         "id": 16,
-        "picture": "food.jpg",
+        "picture": "../media/images/kycklingfile-graddsas.webp",
         "time": 35,
         "name": "Kycklingfilé i gräddsås ",
         "rating": 0,
@@ -416,7 +416,7 @@
     },
     {
         "id": 17,
-        "picture": "food.jpg",
+        "picture": "../media/images/tomatsoppa-fetaost.webp",
         "time": 35,
         "name": "Tomatsoppa med bönor och fetaost",
         "rating": 0,
@@ -444,7 +444,7 @@
     },
     {
         "id": 18,
-        "picture": "food.jpg",
+        "picture": "../media/images/ramen.webp",
         "time": 30,
         "name": "Ramen med grönsaker, svamp och ägg",
         "rating": 0,
@@ -476,7 +476,7 @@
     },
     {
         "id": 19,
-        "picture": "food.jpg",
+        "picture": "../media/images/kycklingpasta-soltorkade.webp",
         "time": 20,
         "name": "Krämig kycklingpasta med soltorkade tomater",
         "rating": 0,
@@ -505,7 +505,7 @@
     },
     {
         "id": 20,
-        "picture": "media/images/rod_curry_kyckling.webp",
+        "picture": "../media/images/rod_curry_kyckling.webp",
         "time": 30,
         "name": "Kyckling röd curry",
         "rating": 0,
@@ -528,7 +528,7 @@
     },
     {
         "id": 21,
-        "picture": "media/images/stuvade_makaroner.jpeg",
+        "picture": "../media/images/stuvade_makaroner.jpeg",
         "time": 15,
         "name": "Stuvade makaroner",
         "rating": 0,
@@ -549,7 +549,7 @@
     },
     {
         "id": 22,
-        "picture": "media/images/blomkalsoppa.jpeg",
+        "picture": "../media/images/blomkalsoppa.jpeg",
         "time": 30,
         "name": "Blomkålsoppa",
         "rating": 0,
@@ -570,7 +570,7 @@
     },
     {
         "id": 23,
-        "picture": "media/images/kottfarssoppa.webp",
+        "picture": "../media/images/kottfarssoppa.webp",
         "time": 30,
         "name": "Köttfärssoppa",
         "rating": 0,
@@ -599,7 +599,7 @@
     },
     {
         "id": 24,
-        "picture": "media/images/svamppasta.jpeg",
+        "picture": "../media/images/svamppasta.jpeg",
         "time": 30,
         "name": "Svamppasta",
         "rating": 0,
@@ -620,7 +620,7 @@
     },
     {
         "id": 25,
-        "picture": "media/images/laxpasta.jpeg",
+        "picture": "../media/images/laxpasta.jpeg",
         "time": 15,
         "name": "Laxpasta med lime",
         "rating": 0,
@@ -640,7 +640,7 @@
     },
     {
         "id": 26,
-        "picture": "media/images/vegetarisk-lasagne.jpeg",
+        "picture": "../media/images/vegetarisk-lasagne.jpeg",
         "time": 45,
         "name": "Vegetarisk lasagne",
         "rating": 0,
@@ -664,7 +664,7 @@
     },
     {
         "id": 27,
-        "picture": "media/images/currykyckling.jpg",
+        "picture": "../media/images/currykyckling.jpg",
         "time": 30,
         "name": "Currykyckling",
         "rating": 0,
@@ -692,7 +692,7 @@
     },
     {
         "id": 28,
-        "picture": "media/images/kottbulle-graddsas.jpeg",
+        "picture": "../media/images/kottbulle-graddsas.jpeg",
         "time": 45,
         "name": "Köttbullar i gräddsås",
         "rating": 0,
@@ -716,7 +716,7 @@
     },
     {
         "id": 29,
-        "picture": "media/images/fiskgratang.webp",
+        "picture": "../media/images/fiskgratang.webp",
         "time": 45,
         "name": "Fiskgratäng med fetaost",
         "rating": 0,
