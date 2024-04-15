@@ -559,5 +559,502 @@
             "Koka spaghettin al dente i rikligt med saltat vatten, låt rinna av i ett durkslag. Blanda pastan med såsen.",
             "Servera med riven parmesan och lite olivolja att ringla över. Garnera med färsk oregano om du vill."
         ]
+    },
+    {
+        "id": 11,
+        "picture": "food.jpg",
+        "time": 25,
+        "name": "Kyckling Pad thai",
+        "rating": 0,
+        "ingredients": {
+            "brocoli": "1",
+            "breda risnudlar": "180 g",
+            "olja": "2 msk",
+            "finstrimlad vitkål": "4 dl",
+            "ägg": "2",
+            "fisksås eller salt": "1 tsk",
+            "japansk soja": "1 msk",
+            "salta jordnötter": "1 dl",
+            "färsk koriander eller bladpersilja": "10 g",
+            "finhackade vitlöksklyftor": "3",
+            "flytande hönsbuljong": "1 tsk",
+            "ostronsås": "2 msk",
+            "currypasta": "1 tsk"
+        },
+        "toDo": [
+            "Rör ihop kryddpastan och blanda den med kycklingstrimlorna.",
+            "Skär broccolin i småbitar. Koka nudlarna enligt anvisning på paketet.",
+            "Stek kycklingen i olja. Tillsätt broccoli och stek en minut.",
+            "Blanda ner vitkål och nudlar och rör runt. Vispa ihop äggen och rör ner det i grytan. Smaka av med fisksås och soja.",
+            "Grovhacka jordnötterna. Strö dem och koriander över."
+        ]
+    },
+    {
+        "id": 12,
+        "picture": "food.jpg",
+        "time": 20,
+        "name": "Kycklingwok med nudlar och grönsaker",
+        "rating": 0,
+        "ingredients": {
+            "kycklingbröstfiléer": "600 g",
+            "kinesisk soja": "kinesisk soja",
+            "olja": "2 msk",
+            "salt": "1 tsk",
+            "peppar": "2 krm",
+            "curry": "1 msk",
+            "wokgrönsaker": "400 g",
+            "vitlöksklyfta": "1",
+            "äggnudlar": "250 g",
+            "sweet chili-sås": "2 msk",
+            "sesamfrön": "1 msk"
+        },
+        "toDo": [
+            "Strimla kycklingen och blanda med soja. Stek i olja med salt, peppar och curry.",
+            "Stek wokgrönsakerna och pressa över vitlöken.",
+            "Koka nudlarna och låt rinna av. Blanda alla ingredienser och strö över sesamfrön.",
+            "Servera med sweet chilisås."
+        ]
+    },
+    {
+        "id": 13,
+        "picture": "food.jpg",
+        "time": 25,
+        "name": "Stekt ris med grönsaker och ägg",
+        "rating": 0,
+        "ingredients": {
+            "basmatiris": "1 1/2 dl",
+            "morot": "1",
+            "röd paprik": "1 g",
+            "sockerärter": "100 g",
+            "salladslökar": "2",
+            "rapsolja": "2 msk",
+            "salt": "1 tsk",
+            "peppar": "1 krm",
+            "japansk soja": "1 msk",
+            "sweet chili-sås": "2 msk",
+            "ägg": "3"
+        },
+        "toDo": [
+            "Koka riset enligt anvisning på förpackningen.",
+            "Skala och strimla moroten. Dela, kärna ur och strimla paprikan. Ansa och dela sockerärter och salladslök i strimlor.",
+            "Fräs först morötterna i olja i stekpanna 3 minuter. Lägg i resten av grönsakerna och fräs i 3 minuter till. Krydda med salt och peppar. Rör i soja, sweet chilisås och ris.",
+            "Knäck äggen och rör ner i riset. Blanda om tills allt är krämigt."
+        ]
+    },
+    {
+        "id": 14,
+        "picture": "food.jpg",
+        "time": 25,
+        "name": "Chilibowl med guacamole",
+        "rating": 0,
+        "ingredients": {
+            "köttfärs": "500 g",
+            "hackad gul lök": "1",
+            "olja": "1 msk",
+            "salt": "1 tsk",
+            "krossade tomater": "400 g",
+            "pressad vitlökklyfta": "1",
+            "chilipulver": "1 tsk",
+            "paprikapulver": "1 tsk",
+            "spiskummin": "1/2 msk",
+            "malen koriander": "1/2 msk",
+            "majs": "200 g",
+            "röd paprika": "1",
+            "avokado": "2",
+            "limeklyfta": "1",
+            "pressad vitlöksklyfta": "1",
+            "gräddfil": "3 dl",
+            "skivad rödlök": "1",
+            "tortillachips": "100 g"
+        },
+        "toDo": [
+            "Stek köttfärs och lök i olja i en stor stekpanna. Salta och peppra.",
+            "Tillsätt tomatkross, vitlök och kryddor och sjud i 5 min.",
+            "Häll av vätskan från majsen och skär paprikan i småbitar. Blanda ner det i grytan. Låt allt bli varmt.",
+            "Skala och mosa avokadon. Pressa över lime och blanda med vitlök.",
+            "Servera chilin med guacamole, gräddfil, rödlök och några chips."
+        ]
+    },
+    {
+        "id": 15,
+        "picture": "food.jpg",
+        "time": 20,
+        "name": "Kasslergryta med curry och chili ",
+        "rating": 0,
+        "ingredients": {
+            "kassler": "400 g",
+            "gul lök": "1",
+            "smör": "1 msk",
+            "curry": "1 msk",
+            "vetemjöl": "2 msk",
+            "vitlöksklyftor": "2",
+            "vatten": "2 dl",
+            "vispgrädde": "2 dl",
+            "chilisås": "1 dl",
+            "sambal oelek": "1 tsk",
+            "salt": "1/2 tsk",
+            "mald vitpeppar": "2 krm",
+            "jasminris": "400 gram"
+        },
+        "toDo": [
+            "Strimla kassler och lök fint.",
+            "Stek löken mjuk i smör och lägg ner kassler och curry att fräsa med.",
+            "Pudra över mjöl och blanda. Pressa över vitlöken.",
+            "Häll i vatten, grädde och chilisås. Blanda och koka upp.",
+            "Tillsätt sambal och smaka av med salt och peppar.",
+            "Servera grytan med ris och sallad. Garnera ev med salladslök och röd paprika."
+        ]
+    },
+    {
+        "id": 16,
+        "picture": "food.jpg",
+        "time": 35,
+        "name": "Kycklingfilé i gräddsås ",
+        "rating": 0,
+        "ingredients": {
+            "kycklingbröstfiléer": "4",
+            "kinesisk soja": "1 msk",
+            "smör": "1 msk",
+            "salt": "1 tsk",
+            "vitpeppar": "2 krm",
+            "vatten": "3 dl",
+            "konc kalvfond": "2 msk",
+            "grädde": "2 dl",
+            "vetemjöl": "2 msk",
+            "soltorkade tomater i olja": "100 g",
+            "pressad vitlökklyfta": "1",
+            "hackad färsk basilika": "2 msk"
+        },
+        "toDo": [
+            "Blanda kycklingfiléer och soja. Bryn dem i smör i en stekpanna. Salta och peppra. Häll över vatten och fond och låt filéerna sjuda 10 minuter. Tag upp filéerna.",
+            "Blanda grädde och mjöl och rör ner det i pannan med sky. Koka upp under omrörning och sjud några minuter. Lägg tillbaka kycklingen i såsen.",
+            "Skär tomaterna i småbitar och blanda ner dem också i såsen. Pressa i vitlök och basilika. Sjud filéerna ytterligare 5 min.",
+            "Garnera med färska basilikablad och servera med kokt ris och gröna bönor."
+        ]
+    },
+    {
+        "id": 17,
+        "picture": "food.jpg",
+        "time": 35,
+        "name": "Tomatsoppa med bönor och fetaost",
+        "rating": 0,
+        "ingredients": {
+            "gul lök": "1/2",
+            "vitlöksklyfta": "1",
+            "krossade tomater": "400 g",
+            "vatten": "2 dl",
+            "grönsaksbuljong": "1",
+            "balsamvinäger": "1 msk",
+            "torkad oregano": "1 tsk",
+            "vispgrädde": "1 dl",
+            "salt och peppar": "",
+            "kidneybönor": "380 g",
+            "fetaost": "75 g",
+            "körsbärstomater": "125 g",
+            "salldslökar": "2"
+        },
+        "toDo": [
+            "Skala och hacka lök och vitlök. Fräs i smör i en kastrull tills löken mjuknat. Tillsätt krossade tomater, vatten, buljongtärning, vinäger och oregano. Låt puttra under lock ca 10 min.",
+            "Tillsätt grädde och mixa slätt. Smaka av med salt och peppar.",
+            "Skölj bönorna och låt rinna av. Tärna fetaosten, dela tomaterna och skiva salladslöken. Lägg ner allt i soppan och låt det bli varmt.",
+            "Toppa gärna med örter, vrid över svartpeppar och servera med bröd."
+        ]
+    },
+    {
+        "id": 18,
+        "picture": "food.jpg",
+        "time": 30,
+        "name": "Ramen med grönsaker, svamp och ägg",
+        "rating": 0,
+        "ingredients": {
+            "ägg": "4",
+            "ramen- eller äggnudlar": "200 g",
+            "champinjoner": "200 g",
+            "salladslökar": "6",
+            "soja- eller edamamebönor, frysta": "2 dl",
+            "strimlad morötter": "2",
+            "rostade sesamfrön": "",
+            "vatten": "16 dl",
+            "konc. grönsaks- eller kycklingfond": "5 msk",
+            "rörsocker": "2 msk",
+            "japansk soja": "3 msk",
+            "sesamolja": "1 msk",
+            "risvinäger": "1 msk",
+            "finriven färsk ingefära": "4 cm",
+            "finriven vitlöksklyftor": "2",
+            "chiliflakes": "4 krm"
+        },
+        "toDo": [
+            "Koka äggen ca 5 min till krämig gula. Kyl och skala.",
+            "Koka nudlarna enligt anvisningen på förpackningen och spola kalla.",
+            "Koka upp vatten och fond. Smaka av buljongen med socker, soja, sesamolja, risvinäger, ingefära, vitlök och chiliflakes. Låt sjuda ca 3 min.",
+            "Putsa och klyfta champinjonerna. Låt sjuda i buljongen ca 3 min.",
+            "Lägg upp buljongen i två skålar och lägg i nudlarna. Toppa med delat ägg, tunt skivad salladslök, sojabönor, strimlad morot och sesamfrön."
+        ]
+    },
+    {
+        "id": 19,
+        "picture": "food.jpg",
+        "time": 20,
+        "name": "Krämig kycklingpasta med soltorkade tomater",
+        "rating": 0,
+        "ingredients": {
+            "pasta": "300 g",
+            "kycklingbröstfiléer": "500 g",
+            "soltorkad tomat": "1 burk",
+            "vitlöksklyftor": "2",
+            "vispgrädde": "3 dl",
+            "vatten": "2 dl",
+            "kinesisk soja": "2 tsk",
+            "kalvfond": "3 msk",
+            "majsena majsstärkelse": "2 msk",
+            "färsk babyspenat": "60 msk",
+            "japansk soja": "3 msk",
+            "salt": "1 tsk",
+            "peppar": "2 krm"
+        },
+        "toDo": [
+            "Koka pastan enligt anvisning på förpackningen.",
+            "Strimla kycklingfiléerna och tomaterna. Bryn kycklingen i oljan som tomaterna låg i till fin färg. Pressa över vitlöken.",
+            "Häll på grädde, vatten, soja och kalvfond och sjud ca 5 min.",
+            "Blanda ut stärkelsen i lite kallt vatten och blanda ner. Låt det sjuda 2 min. Vänd ner spenaten och tomaterna och rör om några minuter. Smaka av med salt och peppar.",
+            "Blanda såsen med pastan och servera med riven parmesan och sallad."
+        ]
+    },
+    {
+        "id": 20,
+        "picture": "media/images/rod_curry_kyckling.webp",
+        "time": 30,
+        "name": "Kyckling röd curry",
+        "rating": 0,
+        "ingredients": {
+            "grönsaksbuljong": "1,5 liter",
+            "gul lök": "1",
+            "vitlöksklyftor": "2",
+            "arborioris": "3 dl",
+            "olivolja": "3 msk",
+            "vitt vin": "2 dl",
+            "riven parmesanost": "1 1/2 dl",
+            "salt, peppar": "en nypa"
+        },
+        "toDo": [
+            "Blanda kycklingstrimlorna med soja och vitlök. Stek det i olja, salta. Lägg i paprikan att fräsa med.",
+            "Tillsätt kokosmjölk, chilisås, pressad limesaft, sambal och currypasta. Låt grytan sjuda 5 min.",
+            "Blanda potatismjölet med lite kallt vatten och rör ner det i grytan. Koka upp under omrörning. Blanda ner spenaten.",
+            "Servera grytan med nudlar eller ris. Strö gärna över rostade sesamfrön. Servera med limeklyftor och korianderblad."
+        ]
+    },
+    {
+        "id": 21,
+        "picture": "media/images/stuvade_makaroner.jpeg",
+        "time": 15,
+        "name": "Stuvade makaroner",
+        "rating": 0,
+        "ingredients": {
+            "smör": "2 msk",
+            "vetemjöl": "2 msk",
+            "mjölk": "5 dl",
+            "grönsaksbuljong": "1",
+            "makaroner": "5 dl",
+            "riven ost": "2 dl",
+            "Salt, peppar": "en nypa"
+        },
+        "toDo": [
+            "Smält smör i en kastrull. Vispa ner mjöl och mjölk, lite i taget. Smula ner buljong och sjud under omrörning 5 min. Ta av från värmen.",
+            "Koka makaroner enligt anvisning på förpackningen.",
+            "Häll av vattnet i ett durkslag och häll tillbaka makaronerna i kastrullen. Rör ner stuvning och ost. Smaka av med salt och nymalen peppar."
+        ]
+    },
+    {
+        "id": 22,
+        "picture": "media/images/blomkalsoppa.jpeg",
+        "time": 30,
+        "name": "Blomkålsoppa",
+        "rating": 0,
+        "ingredients": {
+            "blomkål": "700 g",
+            "vatten": "7 dl",
+            "vispgrädde": "2 dl",
+            "grönsaksbuljong": "1",
+            "hackad persilja": "1/2 dl",
+            "Salt, peppar": "en nypa"
+        },
+        "toDo": [
+            "Dela blomkålen i bitar.",
+            "Koka upp vattnet med buljongtärningen. Lägg i blomkålen och koka den mjuk ca 10 min.",
+            "Häll av och spara buljongen.",
+            "Mixa blomkålen till en slät puré. Blanda med buljong och grädde. Koka upp och smaka av med peppar. Strö över persilja vid servering och ringla ev över olivolja."
+        ]
+    },
+    {
+        "id": 23,
+        "picture": "media/images/kottfarssoppa.webp",
+        "time": 30,
+        "name": "Köttfärssoppa",
+        "rating": 0,
+        "ingredients": {
+            "gul lök": "1",
+            "vitlöksklyftor": "3",
+            "röd paprika": "1",
+            "bakpotatis": "1",
+            "smör": "2 msk",
+            "köttfärs": "500 g",
+            "tomatpure": "1 msk",
+            "paprikapulver": "1 msk",
+            "torkad rosmarin": "1 burk",
+            "krossade tomater": "1 liter",
+            "vispgrädde": "2 dl",
+            "hönsbuljong": "3 tärningar",
+            "Salt, peppar": "en nypa"
+        },
+        "toDo": [
+            "Skala och finhacka lök och vitlök. Tärna paprika och potatis.",
+            "Hetta upp smör i en rymlig kastrull. Fräs lök och vitlök 3-4 min.",
+            "Tillsätt färs, tomatpuré och kryddor. Fräs ytterligare 5 min under omrörning.",
+            "Häll på tomater, vatten och grädde. Lägg i paprika och potatis och smula ner buljongtärningarna. Koka upp och låt koka ca 10 min eller tills potatisen är klar. Smaka av med salt och peppar.",
+            "Toppa köttfärssoppan med persilja."
+        ]
+    },
+    {
+        "id": 24,
+        "picture": "media/images/svamppasta.jpeg",
+        "time": 30,
+        "name": "Svamppasta",
+        "rating": 0,
+        "ingredients": {
+            "pasta penne": "300 g",
+            "skogschampinjoner": "500 g",
+            "smör": "2 msk",
+            "syrad grädde": "3 dl",
+            "majsstärkelse": "1/2 msk",
+            "senap": "1 msk",
+            "hackad gräslök": "1/2 dl"
+        },
+        "toDo": [
+            "Koka pastan enligt anvisning på förpackningen.",
+            "Skär svampen i bitar och stek den i smör-&rapsolja i en stekpanna ca 5 min. Salta och peppra. Tillsätt grädde, majsstärkelse och senap. Låt koka ihop några minut.",
+            "Häll av pastavattnet och lägg tillbaka pastan i kastrullen. Häll över sås och gräslök och rör om. Servera med en grönsallad."
+        ]
+    },
+    {
+        "id": 25,
+        "picture": "media/images/laxpasta.jpeg",
+        "time": 15,
+        "name": "Laxpasta med lime",
+        "rating": 0,
+        "ingredients": {
+            "pasta penne": "300 g",
+            "laxfile": "400 g",
+            "creme fraiche": "2 dl",
+            "hönsbuljong": "1/2",
+            "flytande honung": "1 msk",
+            "lime": "1"
+        },
+        "toDo": [
+            "Koka pastan enligt anvisning på förpackningen.",
+            "Skär laxen i tärningar. Blanda crème fraiche, smulad buljongtärning, honung, skal och saft av lime i en kastrull. Låt såsen koka upp.",
+            "Lägg i laxen och låt koka någon minut. Servera med pastan och krydda med peppar."
+        ]
+    },
+    {
+        "id": 26,
+        "picture": "media/images/vegetarisk-lasagne.jpeg",
+        "time": 45,
+        "name": "Vegetarisk lasagne",
+        "rating": 0,
+        "ingredients": {
+            "purjolökar": "300 g",
+            "smör": "400 g",
+            "krossade tomater": "2 dl",
+            "grönsaksbuljong": "1/2",
+            "matlagningsgrädde": "1 msk",
+            "hackad basilika": "1",
+            "lasagne plattor": "300 g",
+            "keso": "400 g",
+            "riven ost": "2 dl"
+        },
+        "toDo": [
+            "Sätt ugnen på 225°.",
+            "Skölj och strimla purjolöken, fräs den i smör i en gryta. Rör ner krossade tomater, tomatpuré, buljongtärning, grädde, salt, peppar och basilika. Låt såsen koka ihop, ca 5 min.",
+            "Varva grönsaksröra, lasagneplattor och cottage cheese i en smord och ugnssäker form. Avsluta med sås och strö över osten.",
+            "Grädda i nedre delen av ugnen ca 30 min. Toppa ev med lite mer basilika."
+        ]
+    },
+    {
+        "id": 27,
+        "picture": "media/images/currykyckling.jpg",
+        "time": 30,
+        "name": "Currykyckling",
+        "rating": 0,
+        "ingredients": {
+            "kycklinglårfile": "300 g",
+            "curry": "400 g",
+            "paprikapulver": "2 dl",
+            "gul lök": "1/2",
+            "vitlöksklyftor": "1 msk",
+            "smör": "1",
+            "tomatpure": "300 g",
+            "mango cutney": "400 g",
+            "vatten": "2 dl",
+            "hönsbuljong": "1",
+            "syrad grädde": "3 dl"
+        },
+        "toDo": [
+            "Koka riset enligt anvisning på färpackningen.",
+            "Dela varje kycklingfilé i tre bitar. Lägg i en bunke och blanda ner curry, paprikapulver och salt.",
+            "Skala och skiva lök och vitlök. Hetta upp smör i en rymlig stekpanna. Fräs lök och vitlök på medelvärme ca 5 min.",
+            "Tillsätt kycklingen och fräs ytterligare 5 min. Blanda ner tomatpuré, mango chutney, vatten och smulad buljongtärning. Sjud ca 8 min.",
+            "Rör ner grädden och koka ihop ca 3 min. Smaka av med salt.",
+            "Servera currykyckling med ris och grönsallad."
+        ]
+    },
+    {
+        "id": 28,
+        "picture": "media/images/kottbulle-graddsas.jpeg",
+        "time": 45,
+        "name": "Köttbullar i gräddsås",
+        "rating": 0,
+        "ingredients": {
+            "vatten": "2 dl",
+            "ströbröd": "1/2 dl",
+            "senap": "1 msk",
+            "blandfärs": "500 g",
+            "smör": "1 msk",
+            "köttfärs": "500 g",
+            "vispgrädde": "2 dl",
+            "majsstärkelse": "1 msk",
+            "köttbuljong": "1 tärning"
+        },
+        "toDo": [
+            "Skala och koka potatisen.",
+            "Blanda vatten och ströbröd och låt svälla ett par minuter. Blanda senap och kryddor med färsen och blanda sedan i ströbrödsblandningen. Forma till köttbullar med vattenfuktade händer.",
+            "Bryn köttbullarna i matfettet i en stekpanna.",
+            "Blanda grädde och majsstärkelse och häll ner grädden, vatten och buljongen i stekpannan. Sänk värmen och låt köttbullarna sjuda ca 5 minuter. Smaka av med salt och peppar."
+        ]
+    },
+    {
+        "id": 29,
+        "picture": "media/images/fiskgratang.webp",
+        "time": 45,
+        "name": "Fiskgratäng med fetaost",
+        "rating": 0,
+        "ingredients": {
+            "fryst bladspenat": "250 g",
+            "grönsaksbuljong": "1",
+            "vit fisk": "500 g",
+            "vitlöksklyftor": "2",
+            "tomater": "60 g",
+            "fetaost": "100 g",
+            "hackad persilja": "10 g",
+            "mandelspån": "3 msk",
+            "solroskärnor": "3 msk",
+            "citron": "1"
+        },
+        "toDo": [
+            "Skala och koka potatisen.",
+            "Blanda vatten och ströbröd och låt svälla ett par minuter. Blanda senap och kryddor med färsen och blanda sedan i ströbrödsblandningen. Forma till köttbullar med vattenfuktade händer.",
+            "Bryn köttbullarna i matfettet i en stekpanna.",
+            "Blanda grädde och majsstärkelse och häll ner grädden, vatten och buljongen i stekpannan. Sänk värmen och låt köttbullarna sjuda ca 5 minuter. Smaka av med salt och peppar."
+        ]
     }
 ]
