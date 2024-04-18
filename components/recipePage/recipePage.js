@@ -35,6 +35,10 @@ function recipePage(parentID) {
         </div>
     </div>
     `
+    document.getElementById("logInOrUserName").addEventListener("click", function () {
+        renderLogInPopUp("wrapper");
+    });
+    
     console.log("Funkar");
 }
 
