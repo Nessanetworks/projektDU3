@@ -9,7 +9,7 @@ function renderLandingPage (parentID) {
             <h3>STUDENTSKAFFERIET</h3>
         </div>
         <div id="landingPageIcon"></div>
-        <div id="landingPageLogIn>LOGGA IN</div>
+        <div id="landingPageLogIn">LOGGA IN</div>
     </div>
     <div id="landingPageBottomContainer">
         <div id="landingPageLeft">
