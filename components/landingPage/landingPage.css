@@ -10,17 +10,26 @@
 #landingPageTopContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 2vw;
     margin-bottom: 40px;
 }
 
+#landingPageIcon {
+    display: flex;
+    align-items: center;
+}
+
 #landingPageIcon img {
-    height: 3vw;
-    width: 3vw;
+    height: 40px;
+    width: 40px;
 }
 
 #landingPageLogIn {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Montserrat';
 }
 
 #landingPageTitle {
@@ -28,9 +37,11 @@
 }
 
 #landingPageTitle h3 {
-    margin-top: 0;
-    margin-right: 1vw;
+    margin: 0;
+    margin-right: 10px;
     font-size: 40px;
+    font-family: 'Poppins';
+
 }
 
 #landingPageBottomContainer {
@@ -48,26 +59,43 @@
     flex-grow: 1;
 }
 
-#landingPageLeft h3 {
+#htre h3 {
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 5px;
+    font-size: 50px;
+    margin-bottom: 0px;
+    font-family: 'Rampart_One';
 
 }
 
 #slogan {
     text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+#slogan p {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 30px;
 }
 
 #slogan h1 {
-    font-size: 50px;
+    font-size: 65px;
+    font-family: 'Rampart_One';
+    margin-top: 0px;
+    margin-bottom: 10px;
 
 }
 
 
-
-#landingPageLeft p {}
-
 #landingPageLeft button {
-    width: 10vw;
+    width: 180px;
+    font-family: 'Montserrat';
+    padding: 15px;
+    background-color: #758650;
+    border-radius: 10px;
+    border: 0;
 }
