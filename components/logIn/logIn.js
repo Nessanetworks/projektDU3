@@ -16,6 +16,6 @@ function renderLogInPopUp (parentID) {
     `;
 
     document.getElementById("closePopUp").addEventListener("click", function() {
-        divDom.querySelector("#popUpContainer").style.display = "none";
+        divDom.remove();
     })
 }
