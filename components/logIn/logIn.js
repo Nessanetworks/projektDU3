@@ -4,6 +4,7 @@ function renderLogInPopUp (parentID) {
     document.getElementById(parentID).append(divDom);
     divDom.innerHTML = `
     <div id="popUpBox">
+        <div id="closePopUp">X</div>
         <div id="popUpIcon"></div>
         <p id="logInParagraph">LOGGA IN</p>
         <input id="userNameLogIn" type="text" placeholder ="Användarnamn">

@@ -28,6 +28,11 @@ function renderLandingPage(parentID) {
     </div>
    `;
 
+   document.getElementById("landingPageLogIn").addEventListener("click", function () {
+        renderAllRecipesContainer("wrapper");
+        renderLogInPopUp("wrapper");
+   });
+
     document.getElementById("landingPageButton").addEventListener("click", function () {
         renderAllRecipesContainer("wrapper");
     });
