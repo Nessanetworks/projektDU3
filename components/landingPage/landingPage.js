@@ -1,9 +1,9 @@
-function renderLandingPage (parentID) {
-   let landingPageContainer = document.createElement("div");
-   landingPageContainer.id = "landingPageContainer";
-   document.getElementById(parentID).append(landingPageContainer);
+function renderLandingPage(parentID) {
+    let landingPageContainer = document.createElement("div");
+    landingPageContainer.id = "landingPageContainer";
+    document.getElementById(parentID).append(landingPageContainer);
 
-   landingPageContainer.innerHTML = `
+    landingPageContainer.innerHTML = `
    <div id="landingPageTopContainer">
         <div id="landingPageTitle">
             <h3>STUDENTSKAFFERIET</h3>
@@ -20,4 +20,8 @@ function renderLandingPage (parentID) {
         <div id="landingPageRight"></div>
     </div>
    `;
+
+    document.getElementById("landingPageButton").addEventListener("click", function () {
+        renderAllRecipesContainer("wrapper");
+    });
 }
