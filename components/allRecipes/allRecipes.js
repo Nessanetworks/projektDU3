@@ -19,4 +19,10 @@ function renderAllRecipesContainer(parentID) {
     </div>
     <div id="allRecipesContainer"></div>
     `;
+
+    document.getElementById("logInOrUserName").addEventListener("click", renderLogInPopUp);
+
+    for(let i = 0; i < 10; i++) {
+        renderRecipesList("allRecipesContainer");
+    }
 }

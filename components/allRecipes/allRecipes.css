@@ -1,6 +1,6 @@
 #recipesPage {
     height: 100vh;
-    margin: 20px;
+    margin: 40px;
 }
 
 #searchRecipes {
@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid black;
+    margin-bottom: 80px;
 }
 
 #navigationLeft {
@@ -49,4 +50,11 @@
     display: flex;
     align-items: center;
     height: 48px;
+}
+
+#allRecipesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 500px;
+    gap: 40px;
 }
