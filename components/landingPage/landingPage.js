@@ -19,7 +19,7 @@ function renderLandingPage(parentID) {
             </div>
             <div id="slogan">
                 <h1>HUNGRIG?</h1>
-                <p>Här hittar du ett stort utbud av enkla,<br> snabba och billiga som passar<br> utmärkt för studenter!</p>
+                <p>Här hittar du ett stort utbud av enkla,<br> snabba och billiga recept som passar<br> utmärkt för studenter!</p>
                 <button id="landingPageButton">GÅ TILL ALLA RECEPT</button>
             </div>
         

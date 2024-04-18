@@ -1,8 +1,11 @@
+let popUpVisible = false;
+
 function renderLogInPopUp(parentID) {
-    let divDom = document.createElement("div")
-    divDom.id = "popUpContainer";
-    document.getElementById(parentID).append(divDom);
-    divDom.innerHTML = `
+    if (!popUpVisible) {
+        let divDom = document.createElement("div")
+        divDom.id = "popUpContainer";
+        document.getElementById(parentID).append(divDom);
+        divDom.innerHTML = `
     <div id="popUpBox">
         <div id="closePopUp">X</div>
         <div id="popUpIcon"></div>
@@ -15,13 +18,17 @@ function renderLogInPopUp(parentID) {
     </div>
     `;
 
-    document.getElementById("closePopUp").addEventListener("click", function () {
-        divDom.remove();
-    });
+        document.getElementById("closePopUp").addEventListener("click", function () {
+            divDom.remove();
+            popUpVisible = false;
+        });
 
-    document.getElementById("createAccountParagraph").addEventListener("click", function () {
-        renderCreateAccountPopUp("wrapper");
-    });
+        document.getElementById("createAccountParagraph").addEventListener("click", function () {
+            renderCreateAccountPopUp("wrapper");
+            popUpVisible = true;
+        });
+        popUpVisible = true;
+    }
 }
 
 function renderCreateAccountPopUp(parentID) {
@@ -42,12 +49,16 @@ function renderCreateAccountPopUp(parentID) {
 
     document.getElementById("closePopUp").addEventListener("click", function () {
         document.getElementById("popUpContainer").remove();
+        popUpVisible = false;
     });
 
     document.getElementById("goToLogInParagraph").addEventListener("click", function () {
         document.getElementById("popUpContainer").remove();
+        popUpVisible = false;
         renderLogInPopUp("wrapper");
     });
+
+
 }
 
 

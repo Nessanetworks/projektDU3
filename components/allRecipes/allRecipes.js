@@ -1,7 +1,7 @@
 function renderAllRecipesContainer(parentID) {
     document.getElementById(parentID).innerHTML = "";
     let recipesPage = document.createElement("div");
-    recipesPage.id = "recipesPage";
+    recipesPage.id = "allRecipesPage";
     document.getElementById(parentID).append(recipesPage);
     recipesPage.innerHTML = `
     <div id="navigationContainer">
