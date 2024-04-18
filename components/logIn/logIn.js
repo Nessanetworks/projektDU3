@@ -25,9 +25,7 @@ function renderLogInPopUp(parentID) {
 }
 
 function renderCreateAccountPopUp(parentID) {
-    let divDom = document.createElement("div")
-    divDom.id = "popUpContainer";
-    document.getElementById(parentID).append(divDom);
+    document.getElementById("popUpContainer").innerHTML = "";
     document.getElementById("popUpContainer").innerHTML = `
     <div id="popUpBox">
         <div id="closePopUp">X</div>
@@ -42,8 +40,12 @@ function renderCreateAccountPopUp(parentID) {
     </div>
     `;
 
+    document.getElementById("closePopUp").addEventListener("click", function () {
+        document.getElementById("popUpContainer").remove();
+    })
+
     document.getElementById("goToLogInParagraph").addEventListener("click", function () {
-        document.getElementById("popUpContainer").innerHTML = "";
+        document.getElementById("popUpContainer").remove();
         renderLogInPopUp("wrapper");
     })
 }
