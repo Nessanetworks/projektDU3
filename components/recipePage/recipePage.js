@@ -28,7 +28,6 @@ function recipePage(parentID) {
             </div>
         <div>
     `
-
     console.log("Funkar");
 }
 
