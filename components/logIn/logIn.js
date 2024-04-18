@@ -14,4 +14,8 @@ function renderLogInPopUp (parentID) {
         <p id="createAccountParagraph">Skapa konto här</p>
     </div>
     `;
+
+    document.getElementById("closePopUp").addEventListener("click", function() {
+        divDom.querySelector("#popUpContainer").style.display = "none";
+    })
 }
