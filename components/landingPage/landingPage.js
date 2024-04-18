@@ -1,14 +1,15 @@
-function renderLandingPage (parentID) {
-   let landingPageContainer = document.createElement("div");
-   landingPageContainer.id = "landingPageContainer";
-   document.getElementById(parentID).append(landingPageContainer);
+function renderLandingPage(parentID) {
+    let landingPageContainer = document.createElement("div");
+    landingPageContainer.id = "landingPageContainer";
+    document.getElementById(parentID).append(landingPageContainer);
 
-   landingPageContainer.innerHTML = `
+    landingPageContainer.innerHTML = `
    <div id="landingPageTopContainer">
         <div id="landingPageTitle">
             <h3>STUDENTSKAFFERIET</h3>
+            <div id="landingPageIcon"><img src="../../media/landingPageImg/landingpage.png" /></div>
         </div>
-        <div id="landingPageIcon"></div>
+        
         <div id="landingPageLogIn">LOGGA IN</div>
     </div>
     <div id="landingPageBottomContainer">
