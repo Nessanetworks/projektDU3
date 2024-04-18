@@ -13,6 +13,5 @@ function navigation(parentID) {
             <div id="logInOrUserName">LOGGA IN</div>
         </div>
     </div>
- 
-`
+    `;
 }
