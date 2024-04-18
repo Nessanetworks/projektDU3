@@ -18,11 +18,12 @@
 #landingPageIcon {
     display: flex;
     align-items: center;
+
 }
 
 #landingPageIcon img {
     height: 40px;
-    width: 40px;
+    width: 45px;
 }
 
 #landingPageLogIn {
