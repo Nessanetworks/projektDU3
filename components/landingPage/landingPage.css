@@ -30,6 +30,7 @@
     align-items: center;
     font-size: 22px;
     font-family: 'Montserrat';
+    cursor: pointer;
 }
 
 #landingPageTitle {
@@ -90,7 +91,6 @@
 
 }
 
-
 #landingPageLeft button {
     width: 180px;
     font-family: 'Montserrat';
@@ -98,4 +98,5 @@
     background-color: #758650;
     border-radius: 10px;
     border: 0;
+    cursor: pointer;
 }
