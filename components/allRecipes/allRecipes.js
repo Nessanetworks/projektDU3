@@ -21,7 +21,6 @@ function renderAllRecipesContainer(parentID) {
     `;
 
     document.getElementById("logInOrUserName").addEventListener("click", function () {
-        document.getElementById("popUpContainer").remove();
         renderLogInPopUp("wrapper");
     });
 
