@@ -17,7 +17,13 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('fonts/Montserrat/static/Montserrat-Black.ttf');
+    src: url('fonts/Montserrat/static/Montserrat-Light.ttf');
+}
+
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('fonts/Montserrat/static/Montserrat-SemiBold.ttf');
 }
 
 * {

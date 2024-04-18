@@ -1,0 +1,42 @@
+#recipePage {
+    display: flex;
+    height: 100vh;
+    margin: 0px;
+}
+
+#recipeImg {
+    /* background-image: url("../../media/images/chilibowl.webp");
+    background-position: center;
+    background-repeat: no-repeat; */
+    height: 100vh;
+    width: 50%;
+
+}
+
+
+#rightContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+
+    font-family: 'Montserrat';
+}
+
+#rightContainer h2 {
+    font-family: 'Montserrat-Black';
+    font-size: 35px;
+
+}
+
+#rightContainer img {
+    object-fit: contain;
+}
+
+
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
