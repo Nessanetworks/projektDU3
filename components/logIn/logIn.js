@@ -5,12 +5,12 @@ function renderLogInPopUp (parentID) {
     divDom.innerHTML = `
     <div id="popUpBox">
         <div id="popUpIcon"></div>
-        <p>LOGGA IN</p>
+        <p id="logInParagraph">LOGGA IN</p>
         <input id="userNameLogIn" type="text" placeholder ="Användarnamn">
         <input id="passwordLogIn" type="password" placeholder ="Lösenord">
         <button id="logInButton">LOGGA IN</button>
-        <p>Har du inget konto?</p>
-        <p>Skapa konto här</p>
+        <p id="noAccountParagraph">Har du inget konto?</p>
+        <p id="createAccountParagraph">Skapa konto här</p>
     </div>
     `;
 }
