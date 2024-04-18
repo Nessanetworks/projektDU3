@@ -14,9 +14,13 @@ function renderLandingPage(parentID) {
     </div>
     <div id="landingPageBottomContainer">
         <div id="landingPageLeft">
-            <h2>ÄR DU HUNGRIG?</h2>
-            <p>Här hittar du ett stort utbud av enkla, snabba och billiga som passar utmärkt för studenter!</p>
-            <button id="landingPageButton">GÅ TILL ALLA RECEPT</button>
+            <h3>ÄR DU</h3>
+            <div id="slogan">
+                <h1>HUNGRIG?</h1>
+                <p>Här hittar du ett stort utbud av enkla,<br> snabba och billiga som passar<br> utmärkt för studenter!</p>
+                <button id="landingPageButton">GÅ TILL ALLA RECEPT</button>
+            </div>
+        
         </div>
         <div id="landingPageRight"></div>
     </div>
