@@ -2,3 +2,11 @@
     height: 100vh;
     margin: 20px;
 }
+
+#searchRecipes {
+    background-image: url(../../media/images/searchicon2.png);
+    background-position: center;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+}
