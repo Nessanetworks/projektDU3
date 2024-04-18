@@ -1,5 +1,47 @@
 #popUpContainer {
-    width: 200px;
-    height: 200px;
-    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#popUpBox {
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    left: calc(50% - 450px/2 - 3.5px);
+    top: 220px;
+    background: rgba(203, 209, 163, 0.9);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 5px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#popUpIcon {
+    background-image: url(../../media/images/usericon.png);
+    background-position: center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+#userNameLogIn {
+    background-color: rgb(248, 249, 248);
+    border: 1px solid black;
+    height: 35px;
+    width: 220px;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+#passwordLogIn {
+    background-color: rgb(248, 249, 248);
+    border: 1px solid black;
+    height: 35px;
+    width: 220px;
+    text-align: center;
+    font-family: Montserrat;
 }
