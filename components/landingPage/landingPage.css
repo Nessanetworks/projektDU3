@@ -1,16 +1,10 @@
-body {
-
+#landingPageContainer {
     background-image: url(../../media/landingPageImg/landingpage.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
-
     height: 98vh;
-}
-
-#wrapper {
-    margin: 2vw;
 }
 
 #landingPageTopContainer {
@@ -26,5 +20,6 @@ body {
 #landingPageTitle h3 {
     margin-top: 0;
     margin-right: 1vw;
-    font-size: 2vw;
+    font-size: 3vw;
+    font-family:
 }
