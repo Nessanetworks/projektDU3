@@ -57,8 +57,6 @@ function renderCreateAccountPopUp(parentID) {
         popUpVisible = false;
         renderLogInPopUp("wrapper");
     });
-
-
 }
 
 
