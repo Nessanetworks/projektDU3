@@ -1,24 +1,30 @@
 "use strict";
 
 function recipePage(parentID) {
+    document.getElementById(parentID).innerHTML = "";
     let recipePage = document.createElement("div");
     recipePage.id = "recipePage";
-
     document.getElementById(parentID).appendChild(recipePage);
 
-    recipePage.innerHTML = `
-        <img src="" alt="">
-        <div id="recipeText">
-            <h2><h2>
-            <stars><stars>
-            <p>Lägg till betyg</p>
+    navigation("recipePage");
+
+    recipePage.innerHTML += `
+    <div id="recipeContainer">
+        <img id="recipeImg" src="./media/images/chilibowl.webp" alt="">
+        <div id="rightContainer">
+            <h2>Chili corn carne</h2>
+            <stars>
+                <p>++++++</p>
+            <stars>
+            <h3>Lägg till betyg</h3>
             <div id="timer">
-                <img src="" alt="">
+                <img id="timer" src="./media/icons/timer.png alt="">
+                <p> min</p>
             </div>
-            <div id="ingredients">
+            <div id="ingredients:">
                 <h3>Ingredienser</h3>
                 <ul>
-                
+                        
                 </ul>
             </div>
             <div>
@@ -26,8 +32,17 @@ function recipePage(parentID) {
                 <ol>
                 </ol>
             </div>
-        <div>
+        </div>
+    </div>
     `
+    document.getElementById("logInOrUserName").addEventListener("click", function () {
+        renderLogInPopUp("wrapper");
+    });
+    
     console.log("Funkar");
+
+    document.getElementById("allRecipes").addEventListener("click", function () {
+        renderAllRecipesContainer("wrapper");
+    });
 }
 

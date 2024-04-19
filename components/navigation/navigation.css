@@ -1,0 +1,45 @@
+#navigationIcon {
+    background-image: url(../../media/landingPageImg/Icon.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+#navigationContainer {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+#navigationLeft {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-grow: 1;
+    flex-basis: 0;
+    font-family: Moulpali;
+    font-size: 22px;
+}
+
+#navigationRight {
+    display: flex;
+    justify-content: end;
+    flex-grow: 1;
+    flex-basis: 0;
+    font-family: Moulpali;
+    font-size: 22px;
+}
+
+#navigationMiddle {
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+#allRecipes,
+#sortRecipes,
+#searchRecipes {
+    cursor: pointer;
+}
