@@ -8,7 +8,7 @@ function renderLandingPage(parentID) {
     <div id="landingPageTopContainer">
         <div id="landingPageTitle">
             <h3>STUDENTSKAFFERIET</h3>
-            <div id="landingPageIcon"><img src="./media/landingPageImg/Icon.PNG"></div>
+            <div id="landingPageIcon"><img src="./media/icons/iconSK.png"></div>
         </div>
         <div id="landingPageLogIn">LOGGA IN</div>
     </div>

@@ -1,9 +1,9 @@
 #navigationIcon {
-    background-image: url(../../media/landingPageImg/Icon.jpg);
+    background-image: url(../../media/icons/iconSK.png);
     background-position: center;
     background-size: cover;
     height: 50px;
-    width: 50px;
+    width: 55px;
     margin-bottom: 20px;
 }
 

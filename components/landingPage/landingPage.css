@@ -1,5 +1,5 @@
 #landingPageContainer {
-    background-image: url(../../media/landingPageImg/landingpage.png);
+    background-image: url(../../media/landingPageImg/landingpageSK.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -18,18 +18,17 @@
 #landingPageIcon {
     display: flex;
     align-items: center;
-
 }
 
 #landingPageIcon img {
     height: 40px;
-    width: 45px;
+    width: 50px;
 }
 
 #landingPageLogIn {
     display: flex;
     align-items: center;
-    font-size: 22px;
+    font-size: 25px;
     font-family: 'Montserrat';
     cursor: pointer;
 }
@@ -58,7 +57,7 @@
 #landingPageLeft {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 2;
 }
 
 #htre h3 {
