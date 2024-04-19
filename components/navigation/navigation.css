@@ -37,3 +37,9 @@
     align-items: center;
     height: 48px;
 }
+
+#allRecipes,
+#sortRecipes,
+#searchRecipes {
+    cursor: pointer;
+}
