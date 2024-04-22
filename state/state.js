@@ -2,6 +2,13 @@ let STATE = {
     recipes: []
 }
 
+let State = {
+    get: function () {
+        const dataClone = JSON.parse(JSON.stringify(STATE[entity]));
+        return dataClone;
+    }
+}
+
 async function fetcher(request, options) {
     return await fetch(request, options);
 }
@@ -11,12 +18,11 @@ async function runApplication() {
         method: "GET",
         headers: { "Content-type": "application/json" }
     };
-    let response = await fetcher(`/api/recipes.php?token=6671cb1c4aeeb7b2bf6d7474b28296b199bdd568`, options);
+    let response = await fetcher(`/api/recipes.php`, options);
     if (response.ok) {
         let resource = await response.json();
         STATE.recipes = resource;
     }
-    console.log(STATE);
 }
 
 async function renderApp() {

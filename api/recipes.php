@@ -11,14 +11,19 @@ if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
     header("Access-Control-Allow-Origin: *");
 }
 
+$fileName = "recipes.json";
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $requestData = getRequestData();
 
-if ($requestMethod == "GET") {
-    $user = getUserFromToken($requestData["token"]);
+$recipes = [];
 
-    $recipes = getDatabaseByType("recipes");
+if (file_exists($fileName)) {
+    $json = file_get_contents($fileName);
+    $recipes = json_decode($json, true);
+}
 
+if ($requestMethod == "GET")
+{
     send(200, $recipes);
 }
 ?>

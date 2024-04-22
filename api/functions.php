@@ -15,10 +15,6 @@ function abort($status = 400, $message = "")
 
 function getRequestData()
 {
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        return $_GET;
-    }
-
     if ($_SERVER["CONTENT_TYPE"] != "application/json") {
         abort(400, "Bad Request (invalid content type)");
     }
