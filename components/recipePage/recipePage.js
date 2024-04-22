@@ -44,5 +44,9 @@ function recipePage(parentID) {
     document.getElementById("allRecipes").addEventListener("click", function () {
         renderAllRecipesContainer("wrapper");
     });
+
+    document.getElementById("navigationIcon").addEventListener("click", function () {
+        renderLandingPage("wrapper");
+    });
 }
 

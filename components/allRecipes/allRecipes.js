@@ -14,6 +14,10 @@ function renderAllRecipesContainer(parentID) {
         renderLogInPopUp("wrapper");
     });
 
+    document.getElementById("navigationIcon").addEventListener("click", function () {
+        renderLandingPage("wrapper");
+    });
+
     for (let i = 0; i < 10; i++) {
         renderRecipesList("allRecipesContainer");
     }
