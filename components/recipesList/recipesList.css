@@ -1,14 +1,16 @@
 .recipesInstance {
     background-color: rgba(248, 249, 248, 0.8);
-    padding: 40px;
-    display: flex;
-    justify-content: center;
 }
 
-#recipesListImageContainer{
+#recipesListImageContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#recipeImageBox {
     width: 300px;
     height: 300px;
-
 }
 
 .recipeImage {
@@ -43,5 +45,3 @@
     background-size: cover;
     margin-right: 5px;
 }
-
-

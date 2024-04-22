@@ -6,7 +6,9 @@ function renderRecipesList(parentID, data) {
     divDom.innerHTML = `
     <div id="recipesListContainer">
         <div id="recipesListImageContainer">
-            <img class="recipeImage" src=${data.picture}>
+            <div id="recipeImageBox">
+                <img class="recipeImage" src=${data.picture}>
+            </div>
         </div>
         <div id="recipesTextContainer">
             <p id="recipeListName">${data.name.toUpperCase()}</p>
