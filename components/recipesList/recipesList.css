@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-#recipesListImageContainer{
+#recipesListImageContainer {
     width: 300px;
     height: 300px;
 
@@ -43,5 +43,4 @@
     background-size: cover;
     margin-right: 5px;
 }
-
 
