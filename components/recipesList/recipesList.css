@@ -1,5 +1,5 @@
 .recipesInstance {
-    background-color: rgb(248, 249, 248);
+    background-color: rgba(248, 249, 248, 0.8);
     padding: 40px;
     display: flex;
     justify-content: center;
