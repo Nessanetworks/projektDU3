@@ -1,6 +1,6 @@
 <?php
 
-require_once("helpers.php");
+require_once("functions.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
     header("Access-Control-Allow-Headers: *");
@@ -19,11 +19,7 @@ if ($requestMethod == "GET")
     $user = getUserFromToken($requestData["token"]);
 
     $recipes = getDatabaseByType("recipes");
-    foreach ($recipes as $index => &$recipe) {
-        if ($recipe["user_id"] != $user["id"]) {
-            array_splice($recipes, $index, 1);
-        }
-    }
+
     send(200, $recipes);
 }
 ?>

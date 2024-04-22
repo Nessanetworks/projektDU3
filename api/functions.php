@@ -31,22 +31,20 @@ function getDatabase()
 {
     // Incase the database does not exist, or is empty, we'll default to this
     $emptyDatabaseTemplate = json_encode([
-        "owners" => [],
-        "dogs" => [],
-        "cats" => []
+        "recipes" => []
     ], JSON_PRETTY_PRINT);
 
-    if (file_exists("database.json") == false) {
-        file_put_contents("database.json", $emptyDatabaseTemplate);
+    if (file_exists("recipes.json") == false) {
+        file_put_contents("recipes.json", $emptyDatabaseTemplate);
     }
 
-    $databaseContents = file_get_contents("database.json");
+    $databaseContents = file_get_contents("recipes.json");
 
     if ($databaseContents == "") {
-        file_put_contents("database.json", $emptyDatabaseTemplate);
+        file_put_contents("recipes.json", $emptyDatabaseTemplate);
     }
     
-    $databaseContents = file_get_contents("database.json");
+    $databaseContents = file_get_contents("recipes.json");
     $databaseData = json_decode($databaseContents, true);
     
     if (is_array($databaseData) == false) {
@@ -60,9 +58,9 @@ function getDatabaseByType($type)
 {
     $database = getDatabase();
 
-    if (isset($database[$type]) == false) {
+    /*if (isset($database[$type]) == false) {
         abort(500, "Internal Server Error (database type '$type' does not exist)");
-    }
+    }*/
 
     return $database[$type];
 }
