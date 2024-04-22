@@ -16,26 +16,15 @@ $requestData = getRequestData();
 
 if ($requestMethod == "GET")
 {
-    if (isset($requestData["id"])) {
-        $id = $requestData["id"];
-        $game = findItemByKey("games", "id", $id);
-        
-        if ($game == false) {
-            abort(404, "Game Not Found");
-        }
-        
-        send(200, $game);
-    }
-
     $user = getUserFromToken($requestData["token"]);
 
-    $games = getDatabaseByType("games");
-    foreach ($games as $index => &$game) {
-        if ($game["user_id"] != $user["id"]) {
-            array_splice($games, $index, 1);
+    $recipes = getDatabaseByType("recipes");
+    foreach ($recipes as $index => &$recipe) {
+        if ($recipe["user_id"] != $user["id"]) {
+            array_splice($recipes, $index, 1);
         }
     }
-    send(200, $games);
+    send(200, $recipes);
 }
 ?>
 
