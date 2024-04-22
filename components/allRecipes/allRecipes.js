@@ -20,7 +20,6 @@ function renderAllRecipesContainer(parentID) {
 
     document.getElementById("searchRecipes").addEventListener("click", function () {
         renderIngredientSearch("wrapper");
-        document.getElementById("inputSearchIngredient").classList.toggle("hide");
     });
 
     document.getElementById("sortRecipes").addEventListener("click", function () {
