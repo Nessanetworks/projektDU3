@@ -18,6 +18,10 @@ function renderAllRecipesContainer(parentID) {
         renderLandingPage("wrapper");
     });
 
+    document.getElementById("searchRecipes").addEventListener("click", function () {
+        renderIngredientSearch("wrapper");
+    });
+
     for (let recipe of State.get()) {
         renderRecipesList("allRecipesContainer", recipe);
     }
