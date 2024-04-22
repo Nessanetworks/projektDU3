@@ -1,6 +1,6 @@
 <?php
 
-require_once("functions.php");
+require_once ("functions.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
     header("Access-Control-Allow-Headers: *");
@@ -14,8 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $requestData = getRequestData();
 
-if ($requestMethod == "GET")
-{
+if ($requestMethod == "GET") {
     $user = getUserFromToken($requestData["token"]);
 
     $recipes = getDatabaseByType("recipes");
@@ -23,4 +22,3 @@ if ($requestMethod == "GET")
     send(200, $recipes);
 }
 ?>
-
