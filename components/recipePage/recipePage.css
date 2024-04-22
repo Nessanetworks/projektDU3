@@ -11,9 +11,17 @@
     margin: 40px 40px 0px 40px;
 }
 
-#recipeImg {
-    height: 100vh;
+#leftContainer {
     width: 50%;
+    height: 115vh;
+}
+
+#recipeImg {
+    position: fixed;
+    /* bottom: 25px;*/
+    height: 100%;
+    width: 50%;
+    z-index: -1;
 
 }
 
@@ -23,6 +31,7 @@
     align-items: center;
     flex-direction: column;
     width: 50%;
+    padding: 0px 55px;
 
     font-family: 'Montserrat';
 }
@@ -30,17 +39,39 @@
 #rightContainer h2 {
     font-family: 'Montserrat-Black';
     font-size: 35px;
+    text-align: center;
 
+}
+
+#rightContainer h3 {
+    text-align: center;
+}
+
+#rightContainer h4 {
+    margin-left: 25px;
+    margin-bottom: -10px;
+}
+
+#stars {
+    display: flex;
+    justify-content: center;
 }
 
 #rightContainer img {
-    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
 }
-
-
 
 #timer {
     display: flex;
     justify-content: center;
     gap: 10px;
+
+}
+
+#timer img {
+    height: 45px;
+    width: 45px;
 }

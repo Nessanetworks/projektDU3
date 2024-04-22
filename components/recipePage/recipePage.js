@@ -1,35 +1,38 @@
 "use strict";
 
-function recipePage(parentID) {
+function recipePage(parentID, data) {
     document.getElementById(parentID).innerHTML = "";
     let recipePage = document.createElement("div");
     recipePage.id = "recipePage";
     document.getElementById(parentID).appendChild(recipePage);
 
     navigation("recipePage");
-
+   
     recipePage.innerHTML += `
     <div id="recipeContainer">
-        <img id="recipeImg" src="./media/images/chilibowl.webp" alt="">
+        <div id="leftContainer">
+            <img id="recipeImg" src="${data.picture}" alt="">
+        </div>
         <div id="rightContainer">
-            <h2>Chili corn carne</h2>
+            <h2>${data.name}</h2>
             <stars>
                 <p>++++++</p>
             <stars>
             <h3>Lägg till betyg</h3>
             <div id="timer">
-                <img id="timer" src="./media/icons/timer.png alt="">
-                <p> min</p>
+                <img id="timer" src="./media/icons/timer.png" alt="">
+                <p>${data.time} min</p>
             </div>
             <div id="ingredients:">
-                <h3>Ingredienser</h3>
+                <h4>Ingredienser</h4>
                 <ul>
-                        
+                ${Object.entries(data.ingredients).map(([ingredient, quantity]) => `<li>${ingredient}: ${quantity}</li>`).join('')}
                 </ul>
             </div>
             <div>
-                <h3>Gör såhär:</h3>
+                <h4>Gör såhär:</h4>
                 <ol>
+                ${data.toDo.map(instruction => `<li>${instruction}</li>`).join('')}
                 </ol>
             </div>
         </div>
@@ -38,7 +41,7 @@ function recipePage(parentID) {
     document.getElementById("logInOrUserName").addEventListener("click", function () {
         renderLogInPopUp("wrapper");
     });
-    
+
     console.log("Funkar");
 
     document.getElementById("allRecipes").addEventListener("click", function () {
