@@ -1,3 +1,47 @@
 .recipesInstance {
     background-color: rgb(248, 249, 248);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
 }
+
+#recipesListImageContainer{
+    width: 300px;
+    height: 300px;
+
+}
+
+.recipeImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#recipesTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#recipeTimeContainer {
+    display: flex;
+}
+
+#recipeListTime {
+    margin: 0;
+}
+
+#timerImage {
+    height: 20px;
+    width: 20px;
+    background-image: url(../../media/icons/timer.png);
+    background-position: center;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+
