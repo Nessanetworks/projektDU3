@@ -27,6 +27,11 @@ function renderAllRecipesContainer(parentID) {
         document.getElementById("inputSearchIngredient").classList.toggle("hide");
     });
 
+    document.getElementById("sortRecipes").addEventListener("click", function () {
+        renderIngredientSort("wrapper");
+        /*document.getElementById("inputSearchIngredient").classList.toggle("hide");*/
+    });
+
 
     for (let recipe of State.get()) {
         renderRecipesList("allRecipesContainer", recipe);
