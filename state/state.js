@@ -1,3 +1,7 @@
+let STATE = {
+    recipes: []
+}
+
 function renderApp() {
     let wrapper = document.createElement("div");
     wrapper.id = "wrapper";
