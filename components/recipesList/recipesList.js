@@ -22,16 +22,9 @@ function renderRecipesList(parentID, data) {
     </div>
     `;
 
-
-    // let allRecipes = document.querySelector("#allRecipesPage").querySelectorAll("#recipesListContainer");
-    // console.log("test", allRecipes)
-
-    // for (let recipe of allRecipes) {
     divDom.addEventListener("click", () => {
         recipePage("wrapper", data);
     })
-    // }
-
 
 }
 
