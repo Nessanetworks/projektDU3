@@ -22,6 +22,12 @@ function renderAllRecipesContainer(parentID) {
         renderIngredientSearch("wrapper");
     });
 
+    document.getElementById("searchRecipes").addEventListener("click", function () {
+        renderIngredientSearch("wrapper");
+        document.getElementById("inputSearchIngredient").classList.toggle("hide");
+    });
+
+
     for (let recipe of State.get()) {
         renderRecipesList("allRecipesContainer", recipe);
     }

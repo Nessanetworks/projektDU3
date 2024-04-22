@@ -1,5 +1,9 @@
 function renderIngredientSearch(parentID) {
-    let inputDom = document.createElement("input");
-    inputDom.id = "inputSearchIngredient";
-    document.getElementById(parentID).append(inputDom);
+    let divDom = document.createElement("div");
+    divDom.id = "divSearchIngredient";
+    document.getElementById(parentID).append(divDom);
+
+    divDom.innerHTML = `
+    <input type="text" id="inputSearchIngredient" class="hide" placeholder="SÖK EFTER INGREDIENS...">
+    `;
 }

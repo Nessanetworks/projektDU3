@@ -1,8 +1,13 @@
-#inputSearchIngredient {
+#divSearchIngredient {
     position: absolute;
     top: 88px;
     left: 350px;
+    overflow: hidden;
+}
+
+#inputSearchIngredient {
     width: 250px;
     height: 40px;
-    overflow: hidden;
+    font-family: Moulpali;
+    border: 1px solid black;
 }

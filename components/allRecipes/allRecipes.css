@@ -22,3 +22,7 @@
 #logInOrUserName {
     cursor: pointer;
 }
+
+.hide {
+    display: none;
+}
