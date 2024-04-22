@@ -847,7 +847,7 @@
         "id": 34,
         "picture": "../media/images/asiatisk_karre.webp",
         "time": 35,
-        "name": "Asiatisk karré med hoisinsås och picklad rödlök",
+        "name": "Asiatisk karré med hoisinsås",
         "rating": 0,
         "ingredients": {
             "ris": "4 dl",
@@ -928,7 +928,7 @@
         "id": 37,
         "picture": "../media/images/grilledcheese.jpg",
         "time": 15,
-        "name": "Italiensk grilled cheese med svart tapenade och mozzarella",
+        "name": "Italiensk grilled cheese",
         "rating": 0,
         "ingredients": {
             "skivor surdegsbröd": "8",
@@ -950,7 +950,7 @@
         "id": 38,
         "picture": "../media/images/rostade_grönsaker.jpg",
         "time": 30,
-        "name": "Rostade medelhavsgrönsaker med fetaost och soltorkade tomater",
+        "name": "Rostade grönsaker med fetaost",
         "rating": 0,
         "ingredients": {
             "potatis": "500 g",
