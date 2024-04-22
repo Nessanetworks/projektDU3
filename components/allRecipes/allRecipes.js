@@ -18,8 +18,8 @@ function renderAllRecipesContainer(parentID) {
         renderLandingPage("wrapper");
     });
 
-    for (let i = 0; i < 10; i++) {
-        renderRecipesList("allRecipesContainer");
+    for (let recipe of State.get()) {
+        renderRecipesList("allRecipesContainer", recipe);
     }
 }
 

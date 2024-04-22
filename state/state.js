@@ -4,7 +4,7 @@ let STATE = {
 
 let State = {
     get: function () {
-        const dataClone = JSON.parse(JSON.stringify(STATE[entity]));
+        const dataClone = JSON.parse(JSON.stringify(STATE.recipes));
         return dataClone;
     }
 }

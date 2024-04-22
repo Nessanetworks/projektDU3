@@ -16,8 +16,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 500px;
     gap: 40px;
-    margin-top: 80px;
-    margin: 80px 40px 0px 40px;
+    margin: 80px 40px 40px 40px;
 }
 
 #logInOrUserName {
