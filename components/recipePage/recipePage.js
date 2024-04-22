@@ -7,7 +7,7 @@ function recipePage(parentID, data) {
     document.getElementById(parentID).appendChild(recipePage);
 
     navigation("recipePage");
-   
+
     recipePage.innerHTML += `
     <div id="recipeContainer">
         <div id="leftContainer">
@@ -42,14 +42,21 @@ function recipePage(parentID, data) {
         renderLogInPopUp("wrapper");
     });
 
-    console.log("Funkar");
+    document.getElementById("navigationIcon").addEventListener("click", function () {
+        renderLandingPage("wrapper");
+    });
+
+    document.getElementById("searchRecipes").addEventListener("click", function () {
+        renderIngredientSearch("wrapper");
+    });
+
+    document.getElementById("sortRecipes").addEventListener("click", function () {
+        renderIngredientSort("wrapper");
+    });
 
     document.getElementById("allRecipes").addEventListener("click", function () {
         renderAllRecipesContainer("wrapper");
     });
 
-    document.getElementById("navigationIcon").addEventListener("click", function () {
-        renderLandingPage("wrapper");
-    });
 }
 

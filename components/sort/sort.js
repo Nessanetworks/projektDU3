@@ -14,7 +14,6 @@ function renderIngredientSearch(parentID) {
         searchPopUpVisible = false;
         document.getElementById("divSearchIngredient").remove();
     }
-
 }
 
 let sortPopUpVisible = false;

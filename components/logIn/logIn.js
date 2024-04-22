@@ -27,6 +27,11 @@ function renderLogInPopUp(parentID) {
             renderCreateAccountPopUp("wrapper");
             popUpVisible = true;
         });
+
+        document.getElementById("wrapper").addEventListener("click", function () {
+            popUpVisible = false;
+        });
+
         popUpVisible = true;
     }
 }
