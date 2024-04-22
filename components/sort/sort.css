@@ -1,0 +1,8 @@
+#inputSearchIngredient {
+    position: absolute;
+    top: 88px;
+    left: 350px;
+    width: 250px;
+    height: 40px;
+    overflow: hidden;
+}
