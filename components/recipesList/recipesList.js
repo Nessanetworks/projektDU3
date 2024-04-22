@@ -11,10 +11,12 @@ function renderRecipesList(parentID, data) {
             </div>
         </div>
         <div id="recipesTextContainer">
-            <p id="recipeListName">${data.name.toUpperCase()}</p>
-            <div id="recipeTimeContainer">
-                <div id="timerImage"></div>
-                <p id="recipeListTime">${data.time} min</p>
+            <div id="recipeTextBox"
+                <p id="recipeListName">${data.name.toUpperCase()}</p>
+                <div id="recipeTimeContainer">
+                    <div id="timerImage"></div>
+                    <p id="recipeListTime">${data.time} min</p>
+                </div>
             </div>
         </div>
     </div>
