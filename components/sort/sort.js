@@ -9,6 +9,13 @@ function renderIngredientSearch(parentID) {
         divDom.innerHTML = `
         <input type="text" id="inputSearchIngredient" placeholder="SÖK EFTER INGREDIENS...">
         `;
+        
+        document.querySelector("#inputSearchIngredient").addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                filterRecipes();
+            }
+        });
+
         searchPopUpVisible = true;
     } else {
         searchPopUpVisible = false;
@@ -50,7 +57,7 @@ function renderIngredientSort(parentID) {
             <input type="checkbox" id="checkShortestTime">
         </div>
         `;
-        
+
         divDom.querySelector("#checkHighestRanking").addEventListener("click", function () {
             filterRecipes();
         });
@@ -68,7 +75,7 @@ function renderIngredientSort(parentID) {
     } else {
         sortPopUpVisible = false;
         if (document.getElementById("divSort")) {
-        document.getElementById("divSort").remove();
+            document.getElementById("divSort").remove();
         }
     }
 }

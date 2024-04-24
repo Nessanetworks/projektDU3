@@ -1,8 +1,6 @@
 function filterRecipes() {
     let shortestTimeBox = document.getElementById("checkShortestTime");
     let longestTimeBox = document.getElementById("checkLongestTime");
-    // let lowestRankingBox = document.getElementById("checkLowestRanking");
-    // let highestRankingBox = document.getElementById("checkHighestRanking");
 
     let selectedRecipes = State.get();
 
