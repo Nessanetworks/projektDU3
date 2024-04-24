@@ -32,21 +32,11 @@ function recipePage(parentID, data) {
         <div id="rightContainer">
             <h2>${data.name}</h2>
             <div class="rating">
-                <span ${onclick = gfg(1)}
-                    class="star">★
-                </span>
-                <span ${onclick = gfg(2)}
-                    class="star">★
-                </span>
-                <span ${onclick = gfg(3)}
-                    class="star">★
-                </span>
-                <span ${onclick = gfg(4)}
-                    class="star">★
-                </span>
-                <span ${onclick = gfg(5)}
-                    class="star">★
-                </span>
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
             </div>
             <h3>Lägg till betyg</h3>
             <div id="timer">
@@ -56,7 +46,7 @@ function recipePage(parentID, data) {
             <div id="ingredients:">
                 <h4>Ingredienser</h4>
                 <ul>
-                ${Object.entries(data.ingredients).map(([ingredient, quantity]) => `<li>${quantity}: ${ingredient}</li>`).join('')}
+                ${Object.entries(data.ingredients).map(([ingredient, quantity]) => `<li>${quantity} ${ingredient}</li>`).join('')}
                 </ul>
             </div>
             <div>
@@ -68,6 +58,13 @@ function recipePage(parentID, data) {
         </div>
     </div>
     `
+    document.querySelectorAll('.star').forEach(star => {
+        star.addEventListener('click', () => {
+            const ratingValue = parseInt(star.getAttribute('data-value'), 10);
+            setRating(ratingValue);
+        });
+    });
+
     document.getElementById("logInOrUserName").addEventListener("click", function () {
         renderLogInPopUp("wrapper");
     });
@@ -90,41 +87,23 @@ function recipePage(parentID, data) {
 
 }
 
-
-
-// script.js
-
-// To access the stars
-// let stars =
-//     document.querySelector(".star");
-
-// console.log(stars   )
-let output =
-    document.getElementById("output");
-
-// Funtion to update rating
-function gfg(n) {
-    let cls = "";
-    // remove();
-    for (let i = 0; i < n; i++) {
-        if (n == 1) cls = "one";
-        else if (n == 2) cls = "two";
-        else if (n == 3) cls = "three";
-        else if (n == 4) cls = "four";
-        else if (n == 5) cls = "five";
-        // document.querySelector(".star").className = "star " + cls;
-    }
-    // output.innerText = "Rating is: " + n + "/5";
+function setRating(rating) {
+    const stars = document.querySelectorAll('.star'); // Get all stars
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.classList.add('filled'); // Fill the star
+        } else {
+            star.classList.remove('filled'); // Unfill the star
+        }
+    });
 }
 
-// To remove the pre-applied styling
-// function remove() {
-//     let i = 0;
-//     while (i < 5) {
-//         document.querySelector(".star").className = "star";
-//         i++;
-//     }
-// }
+
+
+
+
+
+
 
 
 

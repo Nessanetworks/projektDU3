@@ -54,12 +54,11 @@
 
 #recipeImg {
     position: fixed;
-    top: 89.5px;
-    height: 90vh;
+    top: 14vh;
+    height: 86vh;
     width: 50%;
     z-index: -1;
 }
-
 
 #rightContainer {
     display: flex;
@@ -80,6 +79,9 @@
 
 #rightContainer h3 {
     text-align: center;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 #rightContainer h4 {
@@ -99,7 +101,6 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-
 }
 
 #timer img {
@@ -107,14 +108,11 @@
     width: 45px;
 }
 
-
 .rating {
-    margin: 0 1rem;
-    padding: 1rem;
     width: 100%;
-    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
+    margin-bottom: -5px;
 }
 
 
@@ -124,22 +122,14 @@
     cursor: pointer;
 }
 
-.one {
-    color: rgb(255, 0, 0);
+
+.star {
+    color: black;
+    cursor: pointer;
+    font-size: 8vh;
+    text-align: center;
 }
 
-.two {
-    color: rgb(255, 106, 0);
-}
-
-.three {
-    color: rgb(251, 255, 120);
-}
-
-.four {
-    color: rgb(255, 255, 0);
-}
-
-.five {
-    color: rgb(24, 159, 14);
+.star.filled {
+    color: rgb(9, 147, 44);
 }
