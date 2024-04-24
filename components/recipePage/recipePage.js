@@ -39,7 +39,7 @@ function recipePage(parentID, data) {
             <div id="ingredients:">
                 <h4>Ingredienser</h4>
                 <ul>
-                ${Object.entries(data.ingredients).map(([ingredient, quantity]) => `<li>${quantity}: ${ingredient}</li>`).join('')}
+                ${Object.entries(data.ingredients).map(([ingredient, quantity]) => `<li>${quantity} ${ingredient}</li>`).join('')}
                 </ul>
             </div>
             <div>
