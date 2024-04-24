@@ -18,7 +18,8 @@
 
 #recipeImg {
     position: fixed;
-    /* bottom: 25px;*/
+    /* bottom: 0px;
+    top: 0px; */
     height: 100%;
     width: 50%;
     z-index: -1;
@@ -52,10 +53,6 @@
     margin-bottom: -10px;
 }
 
-#stars {
-    display: flex;
-    justify-content: center;
-}
 
 #rightContainer img {
     object-fit: cover;
@@ -74,4 +71,42 @@
 #timer img {
     height: 45px;
     width: 45px;
+}
+
+
+
+
+.rating {
+    max-width: 33rem;
+    background: #fff;
+    margin: 0 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.star {
+    font-size: 10vh;
+    cursor: pointer;
+}
+
+.one {
+    color: rgb(255, 0, 0);
+}
+
+.two {
+    color: rgb(255, 106, 0);
+}
+
+.three {
+    color: rgb(251, 255, 120);
+}
+
+.four {
+    color: rgb(255, 255, 0);
+}
+
+.five {
+    color: rgb(24, 159, 14);
 }
