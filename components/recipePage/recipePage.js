@@ -31,6 +31,13 @@ function recipePage(parentID, data) {
         </div>
         <div id="rightContainer">
             <h2>${data.name}</h2>
+            <div class="rating">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
             <h3>Lägg till betyg</h3>
             <div id="timer">
                 <img id="timer" src="./media/icons/timer.png" alt="">
@@ -51,6 +58,13 @@ function recipePage(parentID, data) {
         </div>
     </div>
     `
+    document.querySelectorAll('.star').forEach(star => {
+        star.addEventListener('click', () => {
+            const ratingValue = parseInt(star.getAttribute('data-value'), 10);
+            setRating(ratingValue);
+        });
+    });
+
     document.getElementById("logInOrUserName").addEventListener("click", function () {
         renderLogInPopUp("wrapper");
     });
@@ -76,6 +90,16 @@ function recipePage(parentID, data) {
 
 
 
+function setRating(rating) {
+    const stars = document.querySelectorAll('.star'); // Get all stars
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.classList.add('filled'); // Fill the star
+        } else {
+            star.classList.remove('filled'); // Unfill the star
+        }
+    });
+}
 
 
 
