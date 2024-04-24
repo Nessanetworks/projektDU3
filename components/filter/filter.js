@@ -1,30 +1,26 @@
 function filterRecipes() {
-
     let shortestTimeBox = document.getElementById("checkShortestTime");
     let longestTimeBox = document.getElementById("checkLongestTime");
-    /*let lowestRankingBox = document.getElementById("checkLowestRanking");
-    let highestRankingBox = document.getElementById("checkHighestRanking");*/
+    // let lowestRankingBox = document.getElementById("checkLowestRanking");
+    // let highestRankingBox = document.getElementById("checkHighestRanking");
 
     let selectedRecipes = State.get();
 
     if (shortestTimeBox.checked) {
         longestTimeBox.checked = false;
         selectedRecipes = filterByShortestTime(selectedRecipes);
-        updateRecipesList(selectedRecipes);
-    } else {
-        updateRecipesList(State.get());
     }
 
     if (longestTimeBox.checked) {
         shortestTimeBox.checked = false;
         selectedRecipes = filterByLongestTime(selectedRecipes);
-        updateRecipesList(selectedRecipes);
-    } else {
-        updateRecipesList(State.get());
     }
+
+    updateRecipesList(selectedRecipes);
 
     return selectedRecipes;
 }
+
 
 function filterByShortestTime(recipes) {
     recipes.sort(function (a, b) {
