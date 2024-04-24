@@ -34,9 +34,6 @@ function recipePage(parentID, data) {
                 <span ${onclick = gfg(5)}
                     class="star">★
                 </span>
-                <h3 id="output">
-                    Rating is: 0/5
-                </h3>
             </div>
             <h3>Lägg till betyg</h3>
             <div id="timer">
@@ -89,33 +86,32 @@ function recipePage(parentID, data) {
 //     document.querySelector(".star");
 
 // console.log(stars   )
-
 let output =
     document.getElementById("output");
 
 // Funtion to update rating
 function gfg(n) {
     let cls = "";
-    remove();
+    // remove();
     for (let i = 0; i < n; i++) {
         if (n == 1) cls = "one";
         else if (n == 2) cls = "two";
         else if (n == 3) cls = "three";
         else if (n == 4) cls = "four";
         else if (n == 5) cls = "five";
-        document.querySelector(".star").className = "star " + cls;
+        // document.querySelector(".star").className = "star " + cls;
     }
-    output.innerText = "Rating is: " + n + "/5";
+    // output.innerText = "Rating is: " + n + "/5";
 }
 
 // To remove the pre-applied styling
-function remove() {
-    let i = 0;
-    while (i < 5) {
-        document.querySelector(".star").className = "star";
-        i++;
-    }
-}
+// function remove() {
+//     let i = 0;
+//     while (i < 5) {
+//         document.querySelector(".star").className = "star";
+//         i++;
+//     }
+// }
 
 
 
