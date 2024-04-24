@@ -28,10 +28,6 @@ function renderLogInPopUp(parentID) {
             popUpVisible = true;
         });
 
-        document.getElementById("wrapper").addEventListener("click", function () {
-            popUpVisible = false;
-        });
-
         popUpVisible = true;
     }
 }

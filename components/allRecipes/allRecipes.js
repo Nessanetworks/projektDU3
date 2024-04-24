@@ -1,5 +1,8 @@
 function renderAllRecipesContainer(parentID) {
     document.getElementById(parentID).innerHTML = "";
+    sortPopUpVisible = false;
+    popUpVisible = false;
+    searchPopUpVisible = false;
     let recipesPage = document.createElement("div");
     recipesPage.id = "allRecipesPage";
     document.getElementById(parentID).append(recipesPage);

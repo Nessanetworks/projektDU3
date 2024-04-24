@@ -53,7 +53,8 @@ function renderIngredientSort(parentID) {
         sortPopUpVisible = true;
     } else {
         sortPopUpVisible = false;
+        if (document.getElementById("divSort")) {
         document.getElementById("divSort").remove();
+        }
     }
-
 }

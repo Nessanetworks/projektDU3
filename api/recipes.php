@@ -22,8 +22,7 @@ if (file_exists($fileName)) {
     $recipes = json_decode($json, true);
 }
 
-if ($requestMethod == "GET")
-{
+if ($requestMethod == "GET") {
     send(200, $recipes);
 }
 ?>

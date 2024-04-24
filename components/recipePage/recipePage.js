@@ -2,6 +2,9 @@
 
 function recipePage(parentID, data) {
     document.getElementById(parentID).innerHTML = "";
+    sortPopUpVisible = false;
+    popUpVisible = false;
+    searchPopUpVisible = false;
     let recipePage = document.createElement("div");
     recipePage.id = "recipePage";
     document.getElementById(parentID).appendChild(recipePage);
