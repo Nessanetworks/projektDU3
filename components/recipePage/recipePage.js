@@ -9,7 +9,7 @@ function recipePage(parentID, data) {
     recipePage.id = "recipePage";
     document.getElementById(parentID).appendChild(recipePage);
 
-    //navigation("recipePage");
+    window.scrollTo(0, 0);
 
     recipePage.innerHTML += `
     <div id="navigationContainerRecipePage">
