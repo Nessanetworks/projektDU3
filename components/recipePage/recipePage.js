@@ -9,9 +9,22 @@ function recipePage(parentID, data) {
     recipePage.id = "recipePage";
     document.getElementById(parentID).appendChild(recipePage);
 
-    navigation("recipePage");
+    //navigation("recipePage");
 
     recipePage.innerHTML += `
+    <div id="navigationContainerRecipePage">
+            <div id="navigationLeft">
+                <div id="allRecipes">ALLA RECEPT</div>
+                <div id="sortRecipes">SORTERA RECEPT</div>
+                <div id="searchRecipes"></div>
+            </div>
+            <div id="navigationMiddle">
+                <div id="navigationIcon"></div>
+             </div>
+            <div id="navigationRight">
+                <div id="logInOrUserName">LOGGA IN</div>
+            </div>
+        </div>
     <div id="recipeContainer">
         <div id="leftContainer">
             <img id="recipeImg" src="${data.picture}" alt="">
