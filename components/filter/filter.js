@@ -25,8 +25,6 @@ function filterRecipes(sort_type, ingredients) {
         // return selectedRecipes;
     }
 
-    const arr1 = ["adam", "julia", "rebecca", "alba"];
-    console.log(...arr1) // console.log("adam", "julia", "rebecca");
     const checked_boxes = [...document.querySelectorAll("input[type=checkbox]")].filter(checkbox => checkbox.checked);
     console.log(checked_boxes)
 
