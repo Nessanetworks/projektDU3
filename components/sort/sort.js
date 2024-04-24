@@ -9,10 +9,11 @@ function renderIngredientSearch(parentID) {
         divDom.innerHTML = `
         <input type="text" id="inputSearchIngredient" placeholder="SÖK EFTER INGREDIENS...">
         `;
-        
+
         document.querySelector("#inputSearchIngredient").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
-                filterRecipes();
+                console.log(event.target.value);
+                filterRecipes(undefined, event.target.value);
             }
         });
 
@@ -65,10 +66,10 @@ function renderIngredientSort(parentID) {
             filterRecipes();
         });
         divDom.querySelector("#checkLongestTime").addEventListener("click", function () {
-            filterRecipes();
+            filterRecipes("sort_longest");
         });
         divDom.querySelector("#checkShortestTime").addEventListener("click", function () {
-            filterRecipes();
+            filterRecipes("sort_shortest");
         });
 
         sortPopUpVisible = true;
