@@ -29,8 +29,14 @@ function renderAllRecipesContainer(parentID) {
         renderIngredientSort("wrapper");
     });
 
-
     for (let recipe of State.get()) {
+        renderRecipesList("allRecipesContainer", recipe);
+    }
+}
+
+function updateRecipesList(recipes) {
+    document.getElementById("allRecipesContainer").innerHTML = "";
+    for (let recipe of recipes) {
         renderRecipesList("allRecipesContainer", recipe);
     }
 }
