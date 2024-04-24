@@ -15,8 +15,6 @@ function recipePage(parentID, data) {
     <div id="navigationContainerRecipePage">
             <div id="navigationLeft">
                 <div id="allRecipes">ALLA RECEPT</div>
-                <div id="sortRecipes">SORTERA RECEPT</div>
-                <div id="searchRecipes"></div>
             </div>
             <div id="navigationMiddle">
                 <div id="navigationIcon"></div>
