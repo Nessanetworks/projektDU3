@@ -55,7 +55,12 @@ function recipePage(parentID, data) {
             </div>
         </div>
     </div>
-    `
+    `;
+
+    document.getElementById("allRecipes").addEventListener("click", () => {
+        renderAllRecipesContainer("wrapper");
+    });
+
     document.querySelectorAll('.star').forEach(star => {
         star.addEventListener('click', () => {
             const ratingValue = parseInt(star.getAttribute('data-value'), 10);
@@ -71,17 +76,13 @@ function recipePage(parentID, data) {
         renderLandingPage("wrapper");
     });
 
-    document.getElementById("searchRecipes").addEventListener("click", function () {
+    /*document.getElementById("searchRecipes").addEventListener("click", function () {
         renderIngredientSearch("wrapper");
-    });
+    });*/
 
-    document.getElementById("sortRecipes").addEventListener("click", function () {
+    /*document.getElementById("sortRecipes").addEventListener("click", function () {
         renderIngredientSort("wrapper");
-    });
-
-    document.getElementById("allRecipes").addEventListener("click", function () {
-        renderAllRecipesContainer("wrapper");
-    });
+    });*/
 
 }
 
