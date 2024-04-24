@@ -50,6 +50,20 @@ function renderIngredientSort(parentID) {
             <input type="checkbox" id="checkShortestTime">
         </div>
         `;
+        
+        divDom.querySelector("#checkHighestRanking").addEventListener("click", function () {
+            filterRecipes();
+        });
+        divDom.querySelector("#checkLowestRanking").addEventListener("click", function () {
+            filterRecipes();
+        });
+        divDom.querySelector("#checkLongestTime").addEventListener("click", function () {
+            filterRecipes();
+        });
+        divDom.querySelector("#checkShortestTime").addEventListener("click", function () {
+            filterRecipes();
+        });
+
         sortPopUpVisible = true;
     } else {
         sortPopUpVisible = false;
