@@ -198,3 +198,18 @@
 #ingredients li {
     margin-bottom: 10px;
 }
+
+.heart {
+    font-size: 5vw;
+    cursor: pointer;
+    color: black;
+    transition: color 0.5s;
+    position: absolute;
+    top: 8.5vw;
+    left: 43vw;
+
+}
+
+.heart.filled {
+    color: red;
+}

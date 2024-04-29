@@ -27,6 +27,7 @@ function recipePage(parentID, data) {
     <div id="recipeContainer">
         <div id="leftContainer">
             <img id="recipeImg" src="${data.picture}" alt="">
+            <span class="heart" value="1">&#x2764;</span>
         </div>
         <div id="rightContainer">
             <h2>${data.name}</h2>
@@ -145,6 +146,22 @@ function recipePage(parentID, data) {
 
         popUpRating.style.display = 'block';
     });
+
+
+    const heart = document.querySelector('.heart');
+
+
+    heart.addEventListener('click', function () {
+
+        heart.classList.toggle('filled');
+
+        if (heart.classList.contains('filled')) {
+            heart.innerHTML = '&#x2764;';
+        } else {
+            heart.innerHTML = '&#x2764;';
+        }
+    });
+
 
 }
 
