@@ -23,6 +23,7 @@ function recipePage(parentID, data) {
                 <div id="logInOrUserName">LOGGA IN</div>
             </div>
         </div>
+
     <div id="recipeContainer">
         <div id="leftContainer">
             <img id="recipeImg" src="${data.picture}" alt="">
@@ -36,7 +37,10 @@ function recipePage(parentID, data) {
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
             </div>
-            <h3>Lägg till betyg</h3>
+            <h3 id="addRating">Lägg till betyg</h3>
+            <div id="popUpRating" class="popUpRating">
+
+            </div>
             <div id="timer">
                 <img id="timer" src="./media/icons/timer.png" alt="">
                 <p>${data.time} min</p>
@@ -63,12 +67,16 @@ function recipePage(parentID, data) {
         renderIngredientSort("wrapper");
     });
 
-    document.querySelectorAll('.star').forEach(star => {
-        star.addEventListener('click', () => {
+    let rightContainer = document.getElementById("rightContainer");
+
+    const stars = rightContainer.querySelectorAll('.star');
+    stars.forEach(star => {
+        /*star.addEventListener('click', () => {
             const ratingValue = parseInt(star.getAttribute('data-value'), 10);
-            setRating(ratingValue);
-        });
+            setRating(ratingValue, rightContainer);
+        });*/
     });
+
 
     document.getElementById("logInOrUserName").addEventListener("click", function () {
         renderLogInPopUp("wrapper");
@@ -86,21 +94,73 @@ function recipePage(parentID, data) {
         renderIngredientSort("wrapper");
     });*/
 
+
+    const addRatingClick = document.getElementById('addRating');
+    const popUpRating = document.getElementById('popUpRating');
+
+    addRatingClick.addEventListener('click', function () {
+        popUpRating.innerHTML = '';
+
+        if (popUpRating.querySelector('.popup-content')) {
+            popUpRating.style.display = 'block';
+            return;
+        }
+
+        popUpRating.innerHTML += `
+            <div class="exitForRatingButton">
+                <button class="exitButton">&times;</button>
+            </div>
+            <div class="popUpContent">
+                <p>Lägg till ditt betyg för:</p> 
+                <p><b>${data.name}</b></p>
+                <div class="rating">
+                    <span class="starsInPopUp" data-value="1">★</span>
+                    <span class="starsInPopUp" data-value="2">★</span>
+                    <span class="starsInPopUp" data-value="3">★</span>
+                    <span class="starsInPopUp" data-value="4">★</span>
+                    <span class="starsInPopUp" data-value="5">★</span>
+                </div>
+                <button id="addRatingButton">Lägg till betyg</button>
+            </div>
+        `;
+
+        const closeButton = popUpRating.querySelector('.exitForRatingButton');
+        const addRatingButton = popUpRating.querySelector('#addRatingButton');
+
+        closeButton.addEventListener('click', function () {
+            popUpRating.style.display = 'none';
+        });
+
+        addRatingButton.addEventListener("click", function () {
+
+        });
+
+        const popupStars = popUpRating.querySelectorAll('.star');
+        popupStars.forEach(popupStar => {
+            popupStar.addEventListener('click', () => {
+                const ratingValue = parseInt(popupStar.getAttribute('data-value'), 10);
+                setRating(ratingValue, popUpRating);
+            });
+        });
+
+        popUpRating.style.display = 'block';
+    });
+
 }
 
 
-
-
-function setRating(rating) {
-    const stars = document.querySelectorAll('.star'); // Get all stars
+function setRating(rating, container) {
+    const stars = container.querySelectorAll('.star');
     stars.forEach((star, index) => {
         if (index < rating) {
-            star.classList.add('filled'); // Fill the star
+            star.classList.add('filled');
         } else {
-            star.classList.remove('filled'); // Unfill the star
+            star.classList.remove('filled');
         }
     });
 }
+
+
 
 
 
