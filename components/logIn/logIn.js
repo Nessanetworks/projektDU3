@@ -54,6 +54,8 @@ async function logIn() {
         let resource = await response.json();
         localStorage.setItem("token", resource.token);
         localStorage.setItem("username", userName);
+        localStorage.setItem("id", resource.id);
+        console.log(localStorage.getItem("id"));
         renderProfilePage("wrapper");
     }
 }
