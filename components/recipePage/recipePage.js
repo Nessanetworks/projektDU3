@@ -45,13 +45,13 @@ function recipePage(parentID, data) {
                 <img id="timer" src="./media/icons/timer.png" alt="">
                 <p>${data.time} min</p>
             </div>
-            <div id="ingredients:">
-                <h4>Ingredienser</h4>
+            <div id="ingredients">
+                <h4>Ingredienser:</h4>
                 <ul>
                 ${Object.entries(data.ingredients).map(([ingredient, quantity]) => `<li>${quantity} ${ingredient}</li>`).join('')}
                 </ul>
             </div>
-            <div>
+            <div id="toDos">
                 <h4>Gör såhär:</h4>
                 <ol>
                 ${data.toDo.map(instruction => `<li>${instruction}</li>`).join('')}
@@ -147,7 +147,6 @@ function recipePage(parentID, data) {
     });
 
 }
-
 
 function setRating(rating, container) {
     const stars = container.querySelectorAll('.starsInPopUp');
