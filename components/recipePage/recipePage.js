@@ -135,7 +135,7 @@ function recipePage(parentID, data) {
 
         });
 
-        const popupStars = popUpRating.querySelectorAll('.star');
+        const popupStars = popUpRating.querySelectorAll('.starsInPopUp');
         popupStars.forEach(popupStar => {
             popupStar.addEventListener('click', () => {
                 const ratingValue = parseInt(popupStar.getAttribute('data-value'), 10);
@@ -151,11 +151,11 @@ function recipePage(parentID, data) {
 
 function setRating(rating, container) {
     const stars = container.querySelectorAll('.starsInPopUp');
-    stars.forEach((star, index) => {
+    stars.forEach((starsInPopUp, index) => {
         if (index < rating) {
-            star.classList.add('filled');
+            starsInPopUp.classList.add('filled');
         } else {
-            star.classList.remove('filled');
+            starsInPopUp.classList.remove('filled');
         }
     });
 }
