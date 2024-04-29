@@ -29,7 +29,33 @@ function renderLogInPopUp(parentID) {
         });
 
         popUpVisible = true;
+
+        document.getElementById("logInButton").addEventListener("click", logIn);
     }
+}
+
+async function logIn () {
+    let userName = document.getElementById("userNameLogIn").value;
+    let userPassword = document.getElementById("passwordLogIn").value;
+
+    let logInData = {
+        username: userName,
+        password: userPassword
+    };
+
+    let options = {
+        method: "POST",
+        body: JSON.stringify(logInData),
+        headers: { "Content-type": "application/json" }
+    };
+
+    let response = await fetcher("/api/login.php", options);
+    if (response.ok) {
+        let resource = await response.json();
+        localStorage.setItem("token", resource.token);
+        localStorage.setItem("username", userName);
+        renderProfilePage("wrapper");
+    } 
 }
 
 function renderCreateAccountPopUp(parentID) {
@@ -58,6 +84,34 @@ function renderCreateAccountPopUp(parentID) {
         popUpVisible = false;
         renderLogInPopUp("wrapper");
     });
+
+    document.getElementById("createAccountButton").addEventListener("click", createUser);
+}
+
+async function createUser () {
+    let userName = document.getElementById("createUserName").value;
+    let userPassword = document.getElementById("createPassword").value;
+    let userConfirmPassword = document.getElementById("confirmPassword").value;
+
+    if (userPassword === userConfirmPassword) {
+        let userData = {
+            username: userName,
+            password: userPassword
+        };
+    
+        let options = {
+            method: "POST",
+            body: JSON.stringify(userData),
+            headers: { "Content-type": "application/json" }
+        };
+    
+        let response = await fetcher("/api/users.php", options);
+        if (response.ok) {
+            popUpVisible = false;
+            document.getElementById("popUpContainer").remove();
+            renderLogInPopUp("wrapper");
+        }
+    }
 }
 
 
