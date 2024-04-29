@@ -10,7 +10,7 @@ function renderLandingPage(parentID) {
             <h3>STUDENTSKAFFERIET</h3>
             <div id="landingPageIcon"><img src="./media/icons/iconSK.png"></div>
         </div>
-        <div id="landingPageLogIn">LOGGA IN</div>
+        <div id="landingPageLogIn"></div>
     </div>
     <div id="landingPageBottomContainer">
         <div id="landingPageLeft">
@@ -26,6 +26,12 @@ function renderLandingPage(parentID) {
         <div id="landingPageRight"></div>
     </div>
    `;
+
+    if (localStorage.getItem("token")) {
+        document.getElementById("landingPageLogIn").textContent = "";
+    } else {
+        document.getElementById("landingPageLogIn").textContent = "LOGGA IN";
+    }
 
     document.getElementById("landingPageLogIn").addEventListener("click", function () {
         renderAllRecipesContainer("wrapper");

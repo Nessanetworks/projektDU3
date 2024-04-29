@@ -34,7 +34,7 @@ function renderLogInPopUp(parentID) {
     }
 }
 
-async function logIn () {
+async function logIn() {
     let userName = document.getElementById("userNameLogIn").value;
     let userPassword = document.getElementById("passwordLogIn").value;
 
@@ -55,7 +55,7 @@ async function logIn () {
         localStorage.setItem("token", resource.token);
         localStorage.setItem("username", userName);
         renderProfilePage("wrapper");
-    } 
+    }
 }
 
 function renderCreateAccountPopUp(parentID) {
@@ -88,7 +88,7 @@ function renderCreateAccountPopUp(parentID) {
     document.getElementById("createAccountButton").addEventListener("click", createUser);
 }
 
-async function createUser () {
+async function createUser() {
     let userName = document.getElementById("createUserName").value;
     let userPassword = document.getElementById("createPassword").value;
     let userConfirmPassword = document.getElementById("confirmPassword").value;
@@ -98,13 +98,13 @@ async function createUser () {
             username: userName,
             password: userPassword
         };
-    
+
         let options = {
             method: "POST",
             body: JSON.stringify(userData),
             headers: { "Content-type": "application/json" }
         };
-    
+
         let response = await fetcher("/api/users.php", options);
         if (response.ok) {
             popUpVisible = false;

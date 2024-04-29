@@ -15,12 +15,128 @@
     right: 40px;
 }
 
+#firstContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
 #bottomProfileContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-#leftProfileContainer h3, #rightProfileContainer h3 {
+#leftProfileContainer h3,
+#rightProfileContainer h3 {
     text-align: center;
     font-family: Montserrat;
+}
+
+#rightProfileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#thirdContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#createRecipesContainer {
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+#recipeNameInput,
+#recipeTimeInput {
+    height: 30px;
+    padding: 10px;
+    font-family: Montserrat;
+}
+
+#recipeNameInput,
+#recipeTimeInput {
+    border: 1px solid black;
+}
+
+#secondContainer {
+    border: 1px solid black;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.measureInput {
+    height: 30px;
+    padding: 10px;
+    width: 80px;
+    border: none;
+    font-family: Montserrat;
+}
+
+.ingredientInput {
+    height: 30px;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 0;
+    border: none;
+    font-family: Montserrat;
+}
+
+.ingredientsInputContainer {
+    display: flex;
+    gap: 10px;
+}
+
+#addMoreIngredients,
+#addMoreInstructions {
+    font-family: Montserrat;
+    font-size: 12px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.instructionInput {
+    border: none;
+    height: 30px;
+    padding: 10px;
+    font-family: Montserrat;
+}
+
+#rightBottomContainer {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#createNewRecipeButton {
+    background-color: #758650;
+    border-radius: 10px;
+    border: none;
+    font-family: Montserrat;
+    padding: 5px;
+    width: 100px;
+}
+
+#uploadPicture {
+    font-family: Montserrat SB;
+}
+
+#ingredientBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#instructionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
