@@ -190,3 +190,11 @@
     font-size: 6.5vh;
     text-align: center;
 }
+
+#toDos li {
+    margin-bottom: 10px;
+}
+
+#ingredients li {
+    margin-bottom: 10px;
+}
