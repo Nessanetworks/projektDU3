@@ -1,0 +1,26 @@
+#topProfileContainer h1 {
+    font-family: Montserrat SB;
+    text-align: center;
+    font-size: 48px;
+}
+
+#profileLogOut {
+    background-color: #758650;
+    border: none;
+    font-family: Montserrat;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+}
+
+#bottomProfileContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#leftProfileContainer h3, #rightProfileContainer h3 {
+    text-align: center;
+    font-family: Montserrat;
+}

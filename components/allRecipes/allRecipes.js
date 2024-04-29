@@ -14,7 +14,11 @@ function renderAllRecipesContainer(parentID) {
     `;
 
     document.getElementById("logInOrUserName").addEventListener("click", function () {
-        renderLogInPopUp("wrapper");
+        if (localStorage.getItem("token")) {
+            renderProfilePage("wrapper");
+        } else {
+            renderLogInPopUp("wrapper");
+        }
     });
 
     document.getElementById("navigationIcon").addEventListener("click", function () {

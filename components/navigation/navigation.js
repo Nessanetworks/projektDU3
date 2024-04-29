@@ -10,8 +10,14 @@ function navigation(parentID) {
             <div id="navigationIcon"></div>
         </div>
         <div id="navigationRight">
-            <div id="logInOrUserName">LOGGA IN</div>
+            <div id="logInOrUserName"></div>
         </div>
     </div>
     `;
+
+    if (localStorage.getItem("token")) {
+        document.getElementById("logInOrUserName").textContent = `${localStorage.getItem("username").toUpperCase()}`;
+    } else {
+        document.getElementById("logInOrUserName").textContent = "LOGGA IN";
+    }
 }
