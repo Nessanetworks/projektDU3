@@ -11,6 +11,7 @@
 #recipeImageBox {
     width: 45vh;
     height: 45vh;
+    position: relative;
 }
 
 
@@ -53,4 +54,23 @@
     background-position: center;
     background-size: cover;
     margin-right: 5px;
+}
+
+.heartsAll {
+    font-size: 3vw;
+    cursor: pointer;
+    color: #758650;
+    transition: color 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 5px;
+}
+
+.heartsAll.filled {
+    color: red;
+}
+
+.recipesInstance {
+    cursor: pointer;
 }
