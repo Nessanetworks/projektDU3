@@ -150,7 +150,7 @@ function recipePage(parentID, data) {
 
 
 function setRating(rating, container) {
-    const stars = container.querySelectorAll('.star');
+    const stars = container.querySelectorAll('.starsInPopUp');
     stars.forEach((star, index) => {
         if (index < rating) {
             star.classList.add('filled');
