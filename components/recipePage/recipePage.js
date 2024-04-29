@@ -59,6 +59,8 @@ function recipePage(parentID, data) {
 
     document.getElementById("allRecipes").addEventListener("click", () => {
         renderAllRecipesContainer("wrapper");
+        renderIngredientSearch("wrapper");
+        renderIngredientSort("wrapper");
     });
 
     document.querySelectorAll('.star').forEach(star => {

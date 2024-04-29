@@ -22,10 +22,16 @@ function renderAllRecipesContainer(parentID) {
     });
 
     document.getElementById("searchRecipes").addEventListener("click", function () {
-        renderIngredientSearch("wrapper");
+        document.getElementById("divSearchIngredient").classList.toggle("hide");
     });
 
     document.getElementById("sortRecipes").addEventListener("click", function () {
+        document.getElementById("divSort").classList.toggle("hide");
+    });
+
+    document.getElementById("allRecipes").addEventListener("click", function () {
+        renderAllRecipesContainer("wrapper");
+        renderIngredientSearch("wrapper");
         renderIngredientSort("wrapper");
     });
 

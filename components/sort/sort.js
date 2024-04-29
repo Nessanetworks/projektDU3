@@ -1,38 +1,28 @@
-let searchPopUpVisible = false;
-
 function renderIngredientSearch(parentID) {
-    if (!searchPopUpVisible) {
-        let divDom = document.createElement("div");
-        divDom.id = "divSearchIngredient";
-        document.getElementById(parentID).append(divDom);
+    let divDom = document.createElement("div");
+    divDom.id = "divSearchIngredient";
+    divDom.classList.add("hide");
+    document.getElementById(parentID).append(divDom);
 
-        divDom.innerHTML = `
+    divDom.innerHTML = `
         <input type="text" id="inputSearchIngredient" placeholder="SÖK EFTER INGREDIENS...">
         `;
 
-        document.querySelector("#inputSearchIngredient").addEventListener("keyup", function (event) {
-            if (event.key === "Enter") {
-                console.log(event.target.value);
-                filterRecipes(undefined, event.target.value);
-            }
-        });
-
-        searchPopUpVisible = true;
-    } else {
-        searchPopUpVisible = false;
-        document.getElementById("divSearchIngredient").remove();
-    }
+    document.querySelector("#inputSearchIngredient").addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            console.log(event.target.value);
+            filterRecipes(undefined, event.target.value);
+        }
+    });
 }
 
-let sortPopUpVisible = false;
-
 function renderIngredientSort(parentID) {
-    if (!sortPopUpVisible) {
-        let divDom = document.createElement("div");
-        divDom.id = "divSort";
-        document.getElementById(parentID).append(divDom);
+    let divDom = document.createElement("div");
+    divDom.id = "divSort";
+    divDom.classList.add("hide");
+    document.getElementById(parentID).append(divDom);
 
-        divDom.innerHTML = `
+    divDom.innerHTML = `
         <div id="highestRanking">
             <ul>
                 <li>HÖGST BETYG</li>
@@ -59,24 +49,16 @@ function renderIngredientSort(parentID) {
         </div>
         `;
 
-        divDom.querySelector("#checkHighestRanking").addEventListener("click", function () {
-            filterRecipes();
-        });
-        divDom.querySelector("#checkLowestRanking").addEventListener("click", function () {
-            filterRecipes();
-        });
-        divDom.querySelector("#checkLongestTime").addEventListener("click", function () {
-            filterRecipes("sort_longest");
-        });
-        divDom.querySelector("#checkShortestTime").addEventListener("click", function () {
-            filterRecipes("sort_shortest");
-        });
-
-        sortPopUpVisible = true;
-    } else {
-        sortPopUpVisible = false;
-        if (document.getElementById("divSort")) {
-            document.getElementById("divSort").remove();
-        }
-    }
+    divDom.querySelector("#checkHighestRanking").addEventListener("click", function () {
+        filterRecipes("sort_best");
+    });
+    divDom.querySelector("#checkLowestRanking").addEventListener("click", function () {
+        filterRecipes("sort_worst");
+    });
+    divDom.querySelector("#checkLongestTime").addEventListener("click", function () {
+        filterRecipes("sort_longest");
+    });
+    divDom.querySelector("#checkShortestTime").addEventListener("click", function () {
+        filterRecipes("sort_shortest");
+    });
 }

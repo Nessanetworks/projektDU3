@@ -16,7 +16,7 @@
 #navigationLeft {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
     flex-grow: 1;
     flex-basis: 0;
     font-family: Moulpali;

@@ -1,7 +1,7 @@
 #divSearchIngredient {
     position: absolute;
-    top: 88px;
-    left: 350px;
+    top: 89px;
+    left: 400px;
     overflow: hidden;
 }
 
@@ -19,7 +19,7 @@
     font-family: Moulpali;
     border: 1px solid black;
     position: absolute;
-    top: 88px;
+    top: 89px;
     left: 150px;
     overflow: hidden;
 }
@@ -34,6 +34,13 @@
     align-items: center;
 }
 
-#checkShortestTime, #checkLongestTime, #checkLowestRanking, #checkHighestRanking {
+#checkShortestTime,
+#checkLongestTime,
+#checkLowestRanking,
+#checkHighestRanking {
     margin-left: 10px;
+}
+
+.hide {
+    opacity: 0;
 }
