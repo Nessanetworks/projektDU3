@@ -4,7 +4,7 @@
     border-bottom: 1px solid black;
     margin: 0 40px 0px 40px;
     position: fixed;
-    width: 90vw;
+    width: 93.5vw;
     background-color: rgb(203, 209, 163);
 }
 
@@ -115,14 +115,6 @@
     margin-bottom: -5px;
 }
 
-
-.star {
-    text-align: center;
-    font-size: 8vh;
-    cursor: pointer;
-}
-
-
 .star {
     color: black;
     cursor: pointer;
@@ -131,5 +123,70 @@
 }
 
 .star.filled {
-    color: rgb(9, 147, 44);
+    color: #758650;
+}
+
+#addRating {
+    cursor: pointer;
+}
+
+#addRating:hover {
+    font-size: 16px;
+}
+
+.popUpRating {
+    display: none;
+    position: fixed;
+    top: 20vw;
+    left: 60vw;
+    padding: 15px;
+    width: 350px;
+    background-color: rgba(248, 249, 248, 0.949);
+    border: 1px solid #000000;
+    z-index: 1000;
+}
+
+.exitForRatingButton button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    font-size: 20px;
+    background-color: rgba(248, 249, 248, 0);
+    cursor: pointer;
+}
+
+#addRatingButton {
+    width: 150px;
+    font-family: 'Montserrat';
+    padding: 10px;
+    background-color: #758650;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    margin: 10px;
+
+}
+
+.popUpContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popUpContent p {
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.popUpContent b {
+    font-weight: bolder;
+}
+
+.starsInPopUp {
+    color: black;
+    cursor: pointer;
+    font-size: 6.5vh;
+    text-align: center;
 }
