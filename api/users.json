@@ -28,5 +28,11 @@
         "username": "stefan",
         "password": "123",
         "favorites": []
+    },
+    {
+        "id": 6,
+        "username": "Venessa",
+        "password": "Grisen",
+        "favorites": []
     }
 ]
