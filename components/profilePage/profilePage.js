@@ -72,10 +72,14 @@ function renderProfilePage(parentID) {
     }
 
     document.getElementById("allRecipes").addEventListener("click", function () {
+        instructionsCounter = 2;
+        ingredientsCounter = 2;
         renderAllRecipesContainer("wrapper");
     })
 
     document.getElementById("navigationIcon").addEventListener("click", function () {
+        instructionsCounter = 2;
+        ingredientsCounter = 2;
         renderLandingPage("wrapper");
     })
 
