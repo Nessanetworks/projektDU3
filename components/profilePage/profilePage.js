@@ -86,6 +86,8 @@ function renderProfilePage(parentID) {
     document.getElementById("profileLogOut").addEventListener("click", function () {
         localStorage.removeItem("token");
         localStorage.removeItem("id");
+        instructionsCounter = 2;
+        ingredientsCounter = 2;
         renderLandingPage("wrapper");
     })
 }
