@@ -62,6 +62,12 @@ function recipePage(parentID, data) {
     </div>
     `;
 
+    if (localStorage.getItem("token")) {
+        document.getElementById("logInOrUserName").textContent = `${localStorage.getItem("username").toUpperCase()}`;
+    } else {
+        document.getElementById("logInOrUserName").textContent = "LOGGA IN";
+    }
+
     document.getElementById("allRecipes").addEventListener("click", () => {
         renderAllRecipesContainer("wrapper");
         renderIngredientSearch("wrapper");
