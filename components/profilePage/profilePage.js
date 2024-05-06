@@ -90,6 +90,23 @@ function renderProfilePage(parentID) {
         ingredientsCounter = 2;
         renderLandingPage("wrapper");
     })
+
+    const user = STATE.users.find(user => user.id == localStorage.getItem("id"));
+    if (user) {
+        const favorites = user.favorites;
+        for (const recipeId of favorites) {
+            const recipe = STATE.recipes.find(recipe => recipe.id === recipeId);
+            if (recipe) {
+                renderFavouriteRecipe(recipe);
+            }
+        }
+    }
+}
+
+function renderFavouriteRecipe (recipe) {
+    let div = document.createElement("div");
+    document.getElementById("favouriteRecipesContainer").append(div);
+    div.textContent = recipe.name;
 }
 
 function renderMoreIngredients(parentID) {
