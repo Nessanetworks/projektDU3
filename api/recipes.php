@@ -45,35 +45,19 @@ if ($requestMethod == "GET") {
     // } 
     send(200, $recipes);
 }
-else if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Lägg till ett nytt recept i databasen
-
-    // Generera ID för det nya receptet
-    $nextId = count($recipes) + 1; // Nästkommande ID
-
-    // Hämta data från POST-förfrågan
+else if ($requestMethod == "POST") {
+    $nextId = count($recipes) + 1; 
     $postData = json_decode(file_get_contents("php://input"), true);
-
-    $imagePath = "../media/images/" . $postData["picture"];
-
-    // Skapa det nya receptobjektet med det tilldelade ID:t
     $newRecipe = [
         "id" => $nextId,
         "name" => $postData["name"],
         "time" => $postData["time"],
         "rating" => $postData["rating"],
         "toDo" => $postData["toDo"],
-        "ingredients" => $postData["ingredients"],
-        "picture" => $imagePath
-    ];
-
-    // Lägg till det nya receptet i databasen
-    $recipes[] = $newRecipe;
-
-    // Spara databasen till filen
+        "ingredients" => $postData["ingredients"]
+    ];   
+    $recipes[] = $newRecipe; 
     file_put_contents($fileName, json_encode($recipes, JSON_PRETTY_PRINT));
-
-    // Returnera respons med det nya receptet inklusive ID:t
     send(201, $newRecipe);
 }
 

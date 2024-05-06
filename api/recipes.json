@@ -1031,47 +1031,33 @@
     },
     {
         "id": 41,
-        "name": "Spagetti med l\u00f6k",
+        "name": "Pasta",
         "time": "10",
         "rating": 0,
         "toDo": [
-            "Koka spagettin",
-            "Hacka l\u00f6ken",
-            "Blanda"
+            "ji",
+            "ji"
         ],
         "ingredients": {
-            "l\u00f6k": "5",
-            "spagetti": "1kg"
+            "jci": "jic",
+            "jc": "ji"
         }
     },
     {
         "id": 42,
-        "name": "Spagetti med ost",
-        "time": "30",
+        "name": "Pasta bolognese",
+        "time": "20",
         "rating": 0,
         "toDo": [
-            "koka spagetti",
-            "bland i ost"
+            "huhdo",
+            "hihi",
+            "huhu"
         ],
         "ingredients": {
-            "spagetti": "500g",
-            "ost": "1kg"
-        },
-        "picture": "..\/..\/media\/images\/Fratelli_Lumiere.jpg"
-    },
-    {
-        "id": 43,
-        "name": "spagetti med ketchup",
-        "time": "50",
-        "rating": 0,
-        "toDo": [
-            "koka spagetti",
-            "h\u00e4ll p\u00e5 ketchup"
-        ],
-        "ingredients": {
-            "spagetti": "200g",
-            "ketchup": "massa"
-        },
-        "picture": "..\/media\/images\/Fratelli_Lumiere.jpg"
+            "jidwq": "ji",
+            "jci": "ji",
+            "dhu": "hu",
+            "uhu": "hu"
+        }
     }
 ]
