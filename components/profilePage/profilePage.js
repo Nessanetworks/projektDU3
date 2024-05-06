@@ -99,6 +99,8 @@ function renderProfilePage(parentID) {
 
         State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions });
     });
+
+
     const user = STATE.users.find(user => user.id == localStorage.getItem("id"));
     if (user) {
         const favorites = user.favorites;
@@ -168,11 +170,11 @@ function renderMoreInstructions(parentID) {
 }
 
 function getAllIngredients() {
-    let ingredients = [];
+    let ingredients = {};
     for (let i = 0; i < ingredientsCounter; i++) {
         let ingredientInput = document.getElementById(`ingredientInput${i + 1}`).value;
         let measureInput = document.getElementById(`measureInput${i + 1}`).value;
-        ingredients.push({ ingredient: ingredientInput, measure: measureInput });
+        ingredients[ingredientInput] = measureInput;
     }
     return ingredients;
 }
@@ -184,4 +186,19 @@ function getAllInstructions() {
         instructions.push(instructionInput);
     }
     return instructions;
+}
+
+function newRecipePopUp(parentID) {
+    let div = document.createElement("div");
+    div.id = "newRecipePopUpContainer";
+    document.getElementById(parentID).append(div);
+    div.innerHTML = `
+    <div id="newRecipePopUpBox">
+        <p>${localStorage.getItem("username").toUpperCase()}, ditt recept är nu tillagt!</p>
+        <div id="closeNewRecipe">X</div>
+    </div>
+    `;
+    document.getElementById("closeNewRecipe").addEventListener("click", function () {
+        div.remove();
+    })
 }

@@ -34,7 +34,7 @@
 }
 
 #rightProfileContainer {
-   margin: 0 auto;
+    margin: 0 auto;
 }
 
 #thirdContainer {
@@ -120,6 +120,7 @@
     font-family: Montserrat;
     padding: 5px;
     width: 100px;
+    cursor: pointer;
 }
 
 #uploadPicture {
@@ -157,7 +158,7 @@
     margin-top: 30px;
 }
 
-#favouriteRecipeImageBox{
+#favouriteRecipeImageBox {
     width: 40vh;
     height: 40vh;
     position: relative;
@@ -194,4 +195,34 @@
     background-position: center;
     background-size: cover;
     margin-right: 5px;
+}
+
+#newRecipePopUpContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#newRecipePopUpBox {
+    border: 1px solid black;
+    background-color: rgba(248, 249, 248, 0.9);
+    height: 180px;
+    width: 300px;
+    top: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    position: fixed;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#closeNewRecipe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
 }
