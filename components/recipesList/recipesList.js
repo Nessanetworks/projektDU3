@@ -38,6 +38,7 @@ function renderRecipesList(parentID, data) {
         event.stopPropagation();
         this.classList.toggle('filled');
         this.innerHTML = '&#x2764;';
+        State.patch({ id: data.id });
     });
 }
 
