@@ -12,16 +12,17 @@ let State = {
     },
     post: async function (data) {
 
-        console.log("hej", data)
         const response = await fetch(`/api/recipes.php`, {
             method: "POST",
+            body: JSON.stringify(data),
             headers: { "Content-type": "application/json" },
-            // body: JSON.stringify(data)
         });
 
         if (response.ok) {
             let resource = await response.json();
             STATE.recipes.push(resource);
+            renderProfilePage("wrapper");
+            newRecipePopUp("profilePageContainer");
         }
     },
     patch: async function (data) {
@@ -51,7 +52,6 @@ let State = {
         //     console.log(STATE.users[i]["favorites"])
         // }
     }
-
 }
 
 async function fetcher(request, options) {

@@ -51,11 +51,27 @@ function renderProfilePage(parentID) {
                 </div>
             </div>
             <div id="rightBottomContainer">
-                <div id="uploadPicture">LADDA UPP BILD</div>
+                <div id="uploadPicture">
+                    LADDA UPP BILD
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                </div>
                 <button id="createNewRecipeButton">SKAPA</button>
             </div>
         </div>
     `;
+
+    document.getElementById("uploadPicture").addEventListener("click", function () {
+        document.getElementById("fileInput").click();
+    });
+
+    document.getElementById("fileInput").addEventListener("change", function () {
+        const fileName = this.files[0].name;
+
+        if (fileName) {
+            document.getElementById("uploadPicture").textContent = fileName;
+            window.selectedFileName = fileName;
+        }
+    });
 
     document.getElementById("addMoreIngredients").addEventListener("click", function () {
         renderMoreIngredients("ingredientBox");
@@ -94,11 +110,15 @@ function renderProfilePage(parentID) {
     document.getElementById("createNewRecipeButton").addEventListener("click", function () {
         const recipeName = document.getElementById("recipeNameInput").value;
         const cookingTime = document.getElementById("recipeTimeInput").value;
-        const ingredients = getAllIngredients(); //get all ingredients --> values
-        const instructions = getAllInstructions(); //get all instructions --> values
+        const ingredients = getAllIngredients();
+        const instructions = getAllInstructions();
 
-        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions });
+
+
+        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions, picture: window.selectedFileName });
     });
+
+
     const user = STATE.users.find(user => user.id == localStorage.getItem("id"));
     if (user) {
         const favorites = user.favorites;
@@ -111,10 +131,32 @@ function renderProfilePage(parentID) {
     }
 }
 
-function renderFavouriteRecipe (recipe) {
+function renderFavouriteRecipe(recipe) {
     let div = document.createElement("div");
+    div.classList.add("favouriteRecipesInstance");
     document.getElementById("favouriteRecipesContainer").append(div);
-    div.textContent = recipe.name;
+    div.innerHTML = `
+    <div id="favouriteRecipesListContainer">
+        <div id="favouriteRecipesListImageContainer">
+            <div id="favouriteRecipeImageBox">
+                <span class="heartsAll" value="1">&#x2764;</span>
+                <img class="recipeImage" src=${recipe.picture}>
+            </div>
+        </div>
+        <div id="favouriteRecipesTextContainer">
+            <div id="favouriteRecipeTextBox">
+                <p id="favouriteRecipeListName" class="recipeNameClickable">${recipe.name.toUpperCase()}</p>
+                <div id="favouriteRecipeTimeContainer">
+                    <div id="favouriteTimerImage"></div>
+                    <p id="favouriteRecipeListTime">${recipe.time} min</p>
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+    div.addEventListener("click", function () {
+        recipePage("wrapper", recipe);
+    })
 }
 
 function renderMoreIngredients(parentID) {
@@ -146,11 +188,11 @@ function renderMoreInstructions(parentID) {
 }
 
 function getAllIngredients() {
-    let ingredients = [];
+    let ingredients = {};
     for (let i = 0; i < ingredientsCounter; i++) {
         let ingredientInput = document.getElementById(`ingredientInput${i + 1}`).value;
         let measureInput = document.getElementById(`measureInput${i + 1}`).value;
-        ingredients.push({ ingredient: ingredientInput, measure: measureInput });
+        ingredients[ingredientInput] = measureInput;
     }
     return ingredients;
 }
@@ -162,4 +204,19 @@ function getAllInstructions() {
         instructions.push(instructionInput);
     }
     return instructions;
+}
+
+function newRecipePopUp(parentID) {
+    let div = document.createElement("div");
+    div.id = "newRecipePopUpContainer";
+    document.getElementById(parentID).append(div);
+    div.innerHTML = `
+    <div id="newRecipePopUpBox">
+        <p>${localStorage.getItem("username").toUpperCase()}, ditt recept är nu tillagt!</p>
+        <div id="closeNewRecipe">X</div>
+    </div>
+    `;
+    document.getElementById("closeNewRecipe").addEventListener("click", function () {
+        div.remove();
+    })
 }
