@@ -103,10 +103,32 @@ function renderProfilePage(parentID) {
     }
 }
 
-function renderFavouriteRecipe (recipe) {
+function renderFavouriteRecipe(recipe) {
     let div = document.createElement("div");
+    div.classList.add("favouriteRecipesInstance");
     document.getElementById("favouriteRecipesContainer").append(div);
-    div.textContent = recipe.name;
+    div.innerHTML = `
+    <div id="favouriteRecipesListContainer">
+        <div id="favouriteRecipesListImageContainer">
+            <div id="favouriteRecipeImageBox">
+                <span class="heartsAll" value="1">&#x2764;</span>
+                <img class="recipeImage" src=${recipe.picture}>
+            </div>
+        </div>
+        <div id="favouriteRecipesTextContainer">
+            <div id="favouriteRecipeTextBox">
+                <p id="favouriteRecipeListName" class="recipeNameClickable">${recipe.name.toUpperCase()}</p>
+                <div id="favouriteRecipeTimeContainer">
+                    <div id="favouriteTimerImage"></div>
+                    <p id="favouriteRecipeListTime">${recipe.time} min</p>
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+    div.addEventListener("click", function () {
+        recipePage("wrapper", recipe);
+    })
 }
 
 function renderMoreIngredients(parentID) {

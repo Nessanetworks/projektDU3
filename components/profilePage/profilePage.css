@@ -34,17 +34,14 @@
 }
 
 #rightProfileContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   margin: 0 auto;
 }
 
 #thirdContainer {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    padding: 5px;
+    padding: 10px;
 }
 
 #createRecipesContainer {
@@ -66,7 +63,7 @@
 
 #secondContainer {
     border: 1px solid black;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -139,4 +136,62 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+#favouriteRecipesContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    grid-auto-rows: 65vh;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.favouriteRecipesInstance {
+    background-color: rgba(248, 249, 248, 0.8);
+}
+
+#favouriteRecipesListImageContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#favouriteRecipeImageBox{
+    width: 40vh;
+    height: 40vh;
+    position: relative;
+}
+
+#favouriteRecipesTextContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#favouriteRecipeTextBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 35vh;
+    align-items: center;
+    font-family: Montserrat;
+}
+
+#favouriteRecipeTimeContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#favouriteRecipeListTime {
+    margin: 0;
+}
+
+#favouriteTimerImage {
+    height: 20px;
+    width: 20px;
+    background-image: url("../../media/icons/timer.png");
+    background-position: center;
+    background-size: cover;
+    margin-right: 5px;
 }
