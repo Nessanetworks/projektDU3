@@ -97,6 +97,7 @@ function renderProfilePage(parentID) {
         const ingredients = getAllIngredients(); //get all ingredients --> values
         const instructions = getAllInstructions(); //get all instructions --> values
 
+
         State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions });
     });
 
