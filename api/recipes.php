@@ -54,6 +54,8 @@ else if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Hämta data från POST-förfrågan
     $postData = json_decode(file_get_contents("php://input"), true);
 
+    $imagePath = "../media/images/" . $postData["picture"];
+
     // Skapa det nya receptobjektet med det tilldelade ID:t
     $newRecipe = [
         "id" => $nextId,
@@ -61,7 +63,8 @@ else if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "time" => $postData["time"],
         "rating" => $postData["rating"],
         "toDo" => $postData["toDo"],
-        "ingredients" => $postData["ingredients"]
+        "ingredients" => $postData["ingredients"],
+        "picture" => $imagePath
     ];
 
     // Lägg till det nya receptet i databasen

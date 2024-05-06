@@ -51,11 +51,27 @@ function renderProfilePage(parentID) {
                 </div>
             </div>
             <div id="rightBottomContainer">
-                <div id="uploadPicture">LADDA UPP BILD</div>
+                <div id="uploadPicture">
+                    LADDA UPP BILD
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                </div>
                 <button id="createNewRecipeButton">SKAPA</button>
             </div>
         </div>
     `;
+
+    document.getElementById("uploadPicture").addEventListener("click", function () {
+        document.getElementById("fileInput").click();
+    });
+
+    document.getElementById("fileInput").addEventListener("change", function () {
+        const fileName = this.files[0].name;
+
+        if (fileName) {
+            document.getElementById("uploadPicture").textContent = fileName;
+            window.selectedFileName = fileName;
+        }
+    });
 
     document.getElementById("addMoreIngredients").addEventListener("click", function () {
         renderMoreIngredients("ingredientBox");
@@ -94,11 +110,12 @@ function renderProfilePage(parentID) {
     document.getElementById("createNewRecipeButton").addEventListener("click", function () {
         const recipeName = document.getElementById("recipeNameInput").value;
         const cookingTime = document.getElementById("recipeTimeInput").value;
-        const ingredients = getAllIngredients(); //get all ingredients --> values
-        const instructions = getAllInstructions(); //get all instructions --> values
+        const ingredients = getAllIngredients();
+        const instructions = getAllInstructions();
 
 
-        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions });
+
+        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions, picture: window.selectedFileName });
     });
 
 

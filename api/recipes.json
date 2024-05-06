@@ -1031,240 +1031,47 @@
     },
     {
         "id": 41,
-        "name": "Honung",
+        "name": "Spagetti med l\u00f6k",
         "time": "10",
         "rating": 0,
         "toDo": [
-            "xbshb",
-            "xmxji"
+            "Koka spagettin",
+            "Hacka l\u00f6ken",
+            "Blanda"
         ],
         "ingredients": {
-            "jsiji": "jijsx",
-            "bxshb": "bxh"
+            "l\u00f6k": "5",
+            "spagetti": "1kg"
         }
     },
     {
         "id": 42,
-        "name": "svamp",
-        "time": "20",
+        "name": "Spagetti med ost",
+        "time": "30",
         "rating": 0,
         "toDo": [
-            "xbshxbh",
-            "xbhsxb"
+            "koka spagetti",
+            "bland i ost"
         ],
         "ingredients": {
-            "suhs": "hush",
-            "huash": "zb"
-        }
+            "spagetti": "500g",
+            "ost": "1kg"
+        },
+        "picture": "..\/..\/media\/images\/Fratelli_Lumiere.jpg"
     },
     {
         "id": 43,
-        "name": "hdwu",
-        "time": "",
+        "name": "spagetti med ketchup",
+        "time": "50",
         "rating": 0,
         "toDo": [
-            "xbhsx",
-            "xbh"
+            "koka spagetti",
+            "h\u00e4ll p\u00e5 ketchup"
         ],
         "ingredients": {
-            "sxo": "xji",
-            "xjsi": "bx"
-        }
-    },
-    {
-        "id": 44,
-        "name": "he",
-        "time": "10",
-        "rating": 0,
-        "toDo": [
-            "hxuhx",
-            "xhusx"
-        ],
-        "ingredients": {
-            "hsuxh": "hushx",
-            "xhsuxh": "huxsh"
-        }
-    },
-    {
-        "id": 45,
-        "name": "hudqu",
-        "time": "10",
-        "rating": 0,
-        "toDo": [
-            "xshu",
-            "xhsus"
-        ],
-        "ingredients": {
-            "xsbh": "zbha",
-            "zbhBH": "XBH"
-        }
-    },
-    {
-        "id": 46,
-        "name": "ahuh",
-        "time": "10",
-        "rating": 0,
-        "toDo": [
-            "xhush",
-            "suh"
-        ],
-        "ingredients": {
-            "hushx": "hxush",
-            "xsuh": "huxs"
-        }
-    },
-    {
-        "id": 47,
-        "name": "hsuqhu",
-        "time": "16",
-        "rating": 0,
-        "toDo": [
-            "xbhs",
-            "xbh"
-        ],
-        "ingredients": {
-            "hxsu": "hzu",
-            "zhu": "z"
-        }
-    },
-    {
-        "id": 48,
-        "name": "hsuw",
-        "time": "15",
-        "rating": 0,
-        "toDo": [
-            "xbhq",
-            "bhb"
-        ],
-        "ingredients": {
-            "hsu": "shu",
-            "xnj": "nbxj"
-        }
-    },
-    {
-        "id": 49,
-        "name": "mat",
-        "time": "10",
-        "rating": 0,
-        "toDo": [
-            "vgd",
-            "vdh"
-        ],
-        "ingredients": {
-            "hsu": "hsu",
-            "xbhs": "bxa"
-        }
-    },
-    {
-        "id": 50,
-        "name": "hwu",
-        "time": "15",
-        "rating": 0,
-        "toDo": [
-            "xbdh",
-            "vxh"
-        ],
-        "ingredients": {
-            "sqhuw": "xhu",
-            "xnj": "xbh"
-        }
-    },
-    {
-        "id": 51,
-        "name": "hsqu",
-        "time": "10",
-        "rating": 0,
-        "toDo": [
-            "xsy",
-            "xvo"
-        ],
-        "ingredients": {
-            "hus": "hxuqs",
-            "xbhs": "bhx"
-        }
-    },
-    {
-        "id": 52,
-        "name": "huwq",
-        "time": "10",
-        "rating": 0,
-        "toDo": [
-            "xa",
-            "xm\u00f6"
-        ],
-        "ingredients": {
-            "shxu": "xnj",
-            "cy": "msl"
-        }
-    },
-    {
-        "id": 53,
-        "name": "hwu",
-        "time": "10",
-        "rating": 0,
-        "toDo": [
-            "xhu",
-            "xnkq"
-        ],
-        "ingredients": {
-            "sji": "jiqx",
-            "uxh": "hxuq"
-        }
-    },
-    {
-        "id": 54,
-        "name": "hu",
-        "time": "10",
-        "rating": 0,
-        "toDo": [
-            "cndi",
-            "cndi"
-        ],
-        "ingredients": {
-            "jxis": "xnia",
-            "njs": "mck"
-        }
-    },
-    {
-        "id": 55,
-        "name": "hej",
-        "time": "10",
-        "rating": 0,
-        "toDo": [
-            "cajid",
-            "kfcow"
-        ],
-        "ingredients": {
-            "jsi": "jxis",
-            "bxy": "hxu"
-        }
-    },
-    {
-        "id": 56,
-        "name": "hdwu",
-        "time": "18",
-        "rating": 0,
-        "toDo": [
-            "naj",
-            "cji"
-        ],
-        "ingredients": {
-            "xhus": "xauh",
-            "dhchu": "chud"
-        }
-    },
-    {
-        "id": 57,
-        "name": "",
-        "time": "",
-        "rating": 0,
-        "toDo": [
-            "",
-            "",
-            ""
-        ],
-        "ingredients": {
-            "": ""
-        }
+            "spagetti": "200g",
+            "ketchup": "massa"
+        },
+        "picture": "..\/media\/images\/Fratelli_Lumiere.jpg"
     }
 ]
