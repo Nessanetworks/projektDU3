@@ -7,7 +7,23 @@ let State = {
     get: function () {
         const dataClone = JSON.parse(JSON.stringify(STATE.recipes));
         return dataClone;
+    },
+    post: async function (data) {
+
+        console.log("hej", data)
+        const response = await fetch(`/api/recipes.php`, {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
+            // body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            let resource = await response.json();
+            STATE.recipes.push(resource);
+            console.log("ok");
+        }
     }
+
 }
 
 async function fetcher(request, options) {

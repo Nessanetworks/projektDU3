@@ -91,6 +91,14 @@ function renderProfilePage(parentID) {
         renderLandingPage("wrapper");
     })
 
+    document.getElementById("createNewRecipeButton").addEventListener("click", function () {
+        const recipeName = document.getElementById("recipeNameInput").value;
+        const cookingTime = document.getElementById("recipeTimeInput").value;
+        const ingredients = getAllIngredients(); //get all ingredients --> values
+        const instructions = getAllInstructions(); //get all instructions --> values
+
+        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions });
+    });
     const user = STATE.users.find(user => user.id == localStorage.getItem("id"));
     if (user) {
         const favorites = user.favorites;
@@ -140,6 +148,8 @@ function renderMoreIngredients(parentID) {
     <input id='measureInput${ingredientsCounter + 1}' class="measureInput" type="text" placeholder='MÅTT ${ingredientsCounter + 1}'>
     `;
     ingredientsCounter++;
+
+    return divDom.id
 }
 
 function renderMoreInstructions(parentID) {
@@ -153,4 +163,25 @@ function renderMoreInstructions(parentID) {
 
     parentElement.appendChild(inputElement);
     instructionsCounter++;
+
+    return inputElement.id
+}
+
+function getAllIngredients() {
+    let ingredients = [];
+    for (let i = 0; i < ingredientsCounter; i++) {
+        let ingredientInput = document.getElementById(`ingredientInput${i + 1}`).value;
+        let measureInput = document.getElementById(`measureInput${i + 1}`).value;
+        ingredients.push({ ingredient: ingredientInput, measure: measureInput });
+    }
+    return ingredients;
+}
+
+function getAllInstructions() {
+    let instructions = [];
+    for (let i = 0; i < instructionsCounter; i++) {
+        let instructionInput = document.getElementById(`instruction${i + 1}`).value;
+        instructions.push(instructionInput);
+    }
+    return instructions;
 }
