@@ -112,9 +112,9 @@ function renderProfilePage(parentID) {
         const cookingTime = document.getElementById("recipeTimeInput").value;
         const ingredients = getAllIngredients();
         const instructions = getAllInstructions();
-        const pictureName = window.selectedFileName;
+        
 
-        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions, picture: pictureName });
+        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions });
     });
 
     const user = STATE.users.find(user => user.id == localStorage.getItem("id"));
