@@ -50,16 +50,16 @@ function getDatabase()
     return $databaseData;
 }
 
-function getDatabaseByType($type)
-{
-    $database = getDatabase();
+// function getDatabaseByType($type)
+// {
+//     $database = getDatabase();
 
-    /*if (isset($database[$type]) == false) {
-        abort(500, "Internal Server Error (database type '$type' does not exist)");
-    }*/
+//     /*if (isset($database[$type]) == false) {
+//         abort(500, "Internal Server Error (database type '$type' does not exist)");
+//     }*/
 
-    return $database[$type];
-}
+//     return $database[$type];
+// }
 
 function requestContainsAllKeys($data, $keys)
 {
@@ -83,17 +83,17 @@ function requestContainsSomeKey($data, $keys)
     return false;
 }
 
-function findItemByKey($type, $key, $value)
+function findItemByKey($key, $value)
 {
     $database = getDatabase();
     
-    if (isset($database[$type]) == false) {
+    if (isset($database) == false) {
         abort(500, "Internal Server Error (database type '$type' does not exist)");
     }
 
-    $databaseByType = $database[$type];
+    // $databaseByType = $database[$type];
 
-    foreach ($databaseByType as $item) {
+    foreach ($database as $item) {
         if (isset($item[$key]) && $item[$key] == $value) {
             return $item;
         }
@@ -102,15 +102,15 @@ function findItemByKey($type, $key, $value)
     return false;
 }
 
-function insertItemByType($type, $keys, $data)
+function insertItem($keys, $data)
 {
     $database = getDatabase();
     
-    if (isset($database[$type]) == false) {
-        abort(500, "Internal Server Error (database type '$type' does not exist)");
-    }
+    // if (isset($database[$type]) == false) {
+    //     abort(500, "Internal Server Error (database type '$type' does not exist)");
+    // }
 
-    $databaseByType = $database[$type];
+    // $databaseByType = $database[$type];
 
     $newItem = [];
 
@@ -123,7 +123,7 @@ function insertItemByType($type, $keys, $data)
 
     $id = 0;
 
-    foreach ($databaseByType as $item) {
+    foreach ($database as $item) {
         if (isset($item["id"]) && $item["id"] > $id) {
             $id = $item["id"];
         }
