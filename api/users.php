@@ -4,6 +4,7 @@ $users = json_decode(file_get_contents('users.json'), true);
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
 
+
 if (isset($request->username) && isset($request->password)) {
 
     $newUser = [

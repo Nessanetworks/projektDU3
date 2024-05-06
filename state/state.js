@@ -1,3 +1,5 @@
+let token = localStorage.getItem("token");
+
 let STATE = {
     recipes: [],
     users: []
@@ -20,8 +22,28 @@ let State = {
         if (response.ok) {
             let resource = await response.json();
             STATE.recipes.push(resource);
-            console.log("ok");
         }
+    },
+    patch: async function (data) {
+        data.token = token;
+        let options = {
+            method: "PATCH",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify(data)
+        };
+        console.log(options)
+        const response = await fetcher(`/api/recipes.php`, options);
+        if (response.ok) {
+            let resource = await response.json();
+            console.log(resource);
+            console.log("test", response.json())
+
+        }
+        // console.log(response)
+        // for (let i = 0; i < STATE.users.length; i++) {
+
+        //     console.log(STATE.users[i]["favorites"])
+        // }
     }
 
 }
