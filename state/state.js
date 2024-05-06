@@ -32,12 +32,18 @@ let State = {
             body: JSON.stringify(data)
         };
         console.log(options)
-        const response = await fetcher(`/api/recipes.php`, options);
-        if (response.ok) {
-            let resource = await response.json();
-            console.log(resource);
-            console.log("test", response.json())
 
+        try {
+            const response = await fetcher(`/api/recipes.php`, options);
+            console.log(response)
+
+            if (response.ok) {
+                let resource = await response.json();
+                console.log(resource);
+
+            }
+        } catch (error) {
+            console.log(error);
         }
         // console.log(response)
         // for (let i = 0; i < STATE.users.length; i++) {

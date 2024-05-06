@@ -97,6 +97,8 @@ else if ($requestMethod == "PATCH") // Patch a recipe (token required)
     $request_body = file_get_contents('php://input');
     $dataPatch = json_decode($request_body, true);
 
+    var_dump($dataPatch);
+
     // Check if required data is present
     if (!isset($dataPatch['id']) || !isset($dataPatch['token'])) {
         http_response_code(400);
@@ -117,11 +119,11 @@ else if ($requestMethod == "PATCH") // Patch a recipe (token required)
 
     // Find the user in the $usersPatch array based on the token
     foreach ($usersPatch as &$user) {
-        if ($user['token'] === $dataPatch['token']) {
+        // if ($user['token'] === $dataPatch['token']) {
             // Append the ID to the favorites array
             $user['favorites'][] = $id;
             break; // Stop looping once the user is found and updated
-        }
+        // }
     }
 
     // Save the updated user data back to the file (if needed)
@@ -137,4 +139,4 @@ else {
     exit();
 }
 
-?>
+    ?>
