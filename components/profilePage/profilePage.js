@@ -72,16 +72,22 @@ function renderProfilePage(parentID) {
     }
 
     document.getElementById("allRecipes").addEventListener("click", function () {
+        instructionsCounter = 2;
+        ingredientsCounter = 2;
         renderAllRecipesContainer("wrapper");
     })
 
     document.getElementById("navigationIcon").addEventListener("click", function () {
+        instructionsCounter = 2;
+        ingredientsCounter = 2;
         renderLandingPage("wrapper");
     })
 
     document.getElementById("profileLogOut").addEventListener("click", function () {
         localStorage.removeItem("token");
         localStorage.removeItem("id");
+        instructionsCounter = 2;
+        ingredientsCounter = 2;
         renderLandingPage("wrapper");
     })
 
@@ -93,6 +99,22 @@ function renderProfilePage(parentID) {
 
         State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions });
     });
+    const user = STATE.users.find(user => user.id == localStorage.getItem("id"));
+    if (user) {
+        const favorites = user.favorites;
+        for (const recipeId of favorites) {
+            const recipe = STATE.recipes.find(recipe => recipe.id === recipeId);
+            if (recipe) {
+                renderFavouriteRecipe(recipe);
+            }
+        }
+    }
+}
+
+function renderFavouriteRecipe (recipe) {
+    let div = document.createElement("div");
+    document.getElementById("favouriteRecipesContainer").append(div);
+    div.textContent = recipe.name;
 }
 
 function renderMoreIngredients(parentID) {

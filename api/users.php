@@ -15,7 +15,7 @@ if (isset($request->username) && isset($request->password)) {
 
     $users[] = $newUser;
 
-    file_put_contents('users.json', json_encode($users));
+    file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
 
     http_response_code(200);
     echo json_encode(['message' => 'Användare skapad']);
