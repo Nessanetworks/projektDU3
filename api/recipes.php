@@ -75,7 +75,10 @@ else if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Returnera respons med det nya receptet inklusive ID:t
     send(201, $newRecipe);
-}
+} 
+
+
+
 
 
 

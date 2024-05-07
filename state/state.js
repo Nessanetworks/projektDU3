@@ -1,3 +1,9 @@
+let token = localStorage.getItem("token");
+
+console.log("STORRREEE", localStorage.getItem("token"));
+//ef13c59c8e8dc1ea137b6b2b4aeea899
+//b50e45a7450e13fc3a95399ce8ed7189
+
 let STATE = {
     recipes: [],
     users: []
@@ -21,6 +27,28 @@ let State = {
             STATE.recipes.push(resource);
             renderProfilePage("wrapper");
             newRecipePopUp("profilePageContainer");
+        }
+    },
+
+    patch: async function (data) {
+        try {
+            const response = await fetch('/api/users.php', {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    id: data.id,
+                    token: localStorage.getItem("token"),
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to update favorites');
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
         }
     }
 }
