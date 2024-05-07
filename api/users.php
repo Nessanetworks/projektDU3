@@ -31,7 +31,7 @@ if (isset($request->username) && isset($request->password)) {
 
 
 
-session_start(); 
+//session_start(); 
 
 
 if ($_SERVER['REQUEST_METHOD'] !== 'PATCH') {
