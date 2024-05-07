@@ -33,6 +33,7 @@ function renderRecipesList(parentID, data) {
         recipePage("wrapper", data);
     })
 
+
     const hearts = divDom.querySelector('.heartsAll');
     hearts.addEventListener('click', function (event) {
         event.stopPropagation();

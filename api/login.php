@@ -13,13 +13,9 @@ if (isset($request->username) && isset($request->password)) {
             // Spara användar-ID:t
             $user_id = $user['id'];
 
-            //$_SESSION['user_id'] = $user['id'];
-            //$_SESSION['token'] = $token;
-
             // Skicka tillbaka en respons med token och användar-ID
             http_response_code(200);
             echo json_encode(['token' => $token, 'id' => $user_id]);
-            //echo json_encode(['token' => $token, 'id' => $user['id']]);
             return;
         }
     }
