@@ -10,6 +10,7 @@ function renderAllRecipesContainer(parentID) {
     navigation("allRecipesPage");
 
     recipesPage.innerHTML += `
+    <div id="message"></div>
     <div id="allRecipesContainer"></div>
     `;
 

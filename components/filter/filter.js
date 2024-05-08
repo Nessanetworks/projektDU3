@@ -6,14 +6,24 @@ function filterRecipes(sort_type, ingredients) {
 
     ingredients = document.querySelector("#inputSearchIngredient").value;
 
-    if (ingredients !== undefined) {
+    if (ingredients !== "") {
         selectedRecipes = selectedRecipes.filter(recipe => {
             for (let key in recipe.ingredients) {
                 if (key.includes(ingredients)) return true;
             }
             return false;
         });
+
+        if (selectedRecipes.length === 0) {
+            let messageDiv = document.getElementById("message");
+            messageDiv.textContent = "Inga recept hittades för den här sökningen!";
+        }
+    } else {
+        document.getElementById("message").textContent = "";
+
     }
+
+    
 
     if (sort_type === "sort_shortest") {
         longestTimeBox = document.getElementById("checkLongestTime");
