@@ -26,7 +26,22 @@ let State = {
             newRecipePopUp("profilePageContainer");
         }
     },
+
     patch: async function (data) {
+
+        const response = await fetch('/api/patchFavorites.php', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                id: data.id,
+                filled: data.filled,
+                userId: localStorage.getItem("id"),
+            })
+        });
+
+
         for (let i = 0; i < STATE.users.length; i++) {
             if (STATE.users[i].id === localStorage.getItem("id")) {
                 let userFavoritesArray = STATE.users[i].favorites;
@@ -59,8 +74,9 @@ let State = {
             }
         }
     }
-
 }
+
+
 
 
 
