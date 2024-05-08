@@ -230,3 +230,33 @@
 #pic {
     cursor: pointer;
 }
+
+#errorRecipePopUpContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#errorRecipePopUpBox {
+    border: 1px solid black;
+    background-color: rgba(248, 249, 248, 0.9);
+    height: 180px;
+    width: 300px;
+    top: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    position: fixed;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#closeErrorRecipe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+}

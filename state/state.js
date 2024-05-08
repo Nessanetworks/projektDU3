@@ -25,6 +25,8 @@ let State = {
             STATE.recipes.push(resource);
             renderProfilePage("wrapper");
             newRecipePopUp("profilePageContainer");
+        } else {
+            errorRecipePopUp("profilePageContainer");
         }
     },
     // patch: async function (data) {

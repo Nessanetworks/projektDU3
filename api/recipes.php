@@ -27,29 +27,44 @@ if ($requestMethod == "GET") {
     send(200, $recipes);
 }
 else if ($requestMethod == "POST") {
-    $nextId = count($recipes) + 1; 
-    $postData = json_decode(file_get_contents("php://input"), true);
 
-    $imageData = $postData["picture"];
-    list($type, $imageData) = explode(';', $imageData);
-    list(, $imageData)      = explode(',', $imageData);
-    $imageData = base64_decode($imageData);
-    $imageName = "recipe_" . $nextId . ".png";
+$postData = json_decode(file_get_contents("php://input"), true);
 
-    $imagePath = "../media/images/" . $imageName;
-    file_put_contents($imagePath, $imageData);
+if (!isset($postData["name"]) || !isset($postData["time"]) || !isset($postData["rating"]) || !isset($postData["toDo"]) || !isset($postData["ingredients"])) {
+    send(400, "Bad Request: Alla obligatoriska fält måste finnas med.");
+}
 
-    $newRecipe = [
-        "id" => $nextId,
-        "name" => $postData["name"],
-        "time" => $postData["time"],
-        "rating" => $postData["rating"],
-        "toDo" => $postData["toDo"],
-        "ingredients" => $postData["ingredients"],
-        "picture" => $imagePath 
-    ];   
-    $recipes[] = $newRecipe; 
-    file_put_contents($fileName, json_encode($recipes, JSON_PRETTY_PRINT));
-    send(201, $newRecipe);
+if (empty($postData["name"]) || empty($postData["time"]) || empty($postData["rating"]) || empty($postData["toDo"]) || empty($postData["ingredients"])) {
+    send(400, "Bad Request: Alla obligatoriska fält måste vara ifyllda.");
+}
+
+if (!isset($postData["picture"])) {
+    send(400, "Bad Request: Du måste bifoga en bild för att skapa ett recept.");
+}
+
+$imageData = $postData["picture"];
+list($type, $imageData) = explode(';', $imageData);
+list(, $imageData)      = explode(',', $imageData);
+$imageData = base64_decode($imageData);
+$imageName = "recipe_" . $nextId . ".png";
+$imagePath = "../media/images/" . $imageName;
+
+file_put_contents($imagePath, $imageData);
+
+$newRecipe = [
+    "id" => $nextId,
+    "name" => $postData["name"],
+    "time" => $postData["time"],
+    "rating" => $postData["rating"],
+    "toDo" => $postData["toDo"],
+    "ingredients" => $postData["ingredients"],
+    "picture" => $imagePath 
+];   
+
+$recipes[] = $newRecipe; 
+
+file_put_contents($fileName, json_encode($recipes, JSON_PRETTY_PRINT));
+
+send(201, $newRecipe);
 }
 ?>

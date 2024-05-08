@@ -101,6 +101,8 @@ function renderProfilePage(parentID) {
         instructionsCounter = 2;
         ingredientsCounter = 2;
         renderAllRecipesContainer("wrapper");
+        renderIngredientSearch("wrapper");
+        renderIngredientSort("wrapper");
     })
 
     document.getElementById("navigationIcon").addEventListener("click", function () {
@@ -121,9 +123,23 @@ function renderProfilePage(parentID) {
         const recipeName = document.getElementById("recipeNameInput").value;
         const cookingTime = document.getElementById("recipeTimeInput").value;
         const ingredients = getAllIngredients();
-        const instructions = getAllInstructions();        
+        const instructions = getAllInstructions();
 
-        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions, picture: uploadedFile.dataURL});
+        const recipeData = {
+            rating: 0,
+            time: cookingTime,
+            name: recipeName,
+            ingredients: ingredients,
+            toDo: instructions
+        };
+    
+        if (uploadedFile && uploadedFile.dataURL) {
+            recipeData.picture = uploadedFile.dataURL;
+        }
+    
+        State.post(recipeData);
+
+       /* State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions, picture: uploadedFile.dataURL});*/
     });
 
     const user = STATE.users.find(user => user.id == localStorage.getItem("id"));
@@ -224,6 +240,21 @@ function newRecipePopUp(parentID) {
     </div>
     `;
     document.getElementById("closeNewRecipe").addEventListener("click", function () {
+        div.remove();
+    })
+}
+
+function errorRecipePopUp(parentID) {
+    let div = document.createElement("div");
+    div.id = "errorRecipePopUpContainer";
+    document.getElementById(parentID).append(div);
+    div.innerHTML = `
+    <div id="errorRecipePopUpBox">
+        <p>Receptet kan inte läggas till! Kontrollera att alla fält är ifyllda och att du har bifogat en bild</p>
+        <div id="closeErrorRecipe">X</div>
+    </div>
+    `;
+    document.getElementById("closeErrorRecipe").addEventListener("click", function () {
         div.remove();
     })
 }
