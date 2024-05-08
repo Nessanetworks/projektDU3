@@ -39,7 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
                 // Remove the id from favorites if it already exists
                 $key = array_search($id, $usersData[$userIndex]['favorites']);
                 if ($key !== false) {
-                    unset($usersData[$userIndex]['favorites'][$key]);
+                    // unset($usersData[$userIndex]['favorites'][$key]);
+                    array_splice($usersData[$userIndex]['favorites'], $key, 1);
                 }
             }
 
