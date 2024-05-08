@@ -27,60 +27,38 @@ let State = {
         }
     },
     patch: async function (data) {
-        try {
-            const response = await fetch('/api/patchFavorites.php', {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    id: data.id,
-                    filled: data.filled,
-                    userId: localStorage.getItem("id"),
-                }),
-            });
-
-            if (response.ok) {
-                // Assuming the PHP script returns some data, you can handle it here if needed
-                const responseData = await response.json();
-
-                // Update STATE based on the response data
-                for (let i = 0; i < STATE.users.length; i++) {
-                    let user = STATE.users[i];
-
-                    // Find the user by ID
-                    if (user.id === data.id) {
-                        // If data.filled is true, add the recipe ID to favorites
-                        if (data.filled === true) {
-                            // Check if the recipe ID doesn't already exist in favorites
-                            if (!user.favorites.includes(data.id)) {
-                                user.favorites.push(data.id);
-                            }
-                        } else {
-                            // If data.filled is false, remove the recipe ID from favorites
-                            const index = user.favorites.indexOf(data.id);
-                            if (index !== -1) {
-                                user.favorites.splice(index, 1);
-                            }
+        for (let i = 0; i < STATE.users.length; i++) {
+            if (STATE.users[i].id === localStorage.getItem("id")) {
+                let userFavoritesArray = STATE.users[i].favorites;
+                // If data.filled is true, add the recipe ID to favorites
+                if (data.filled === true) {
+                    if (!userFavoritesArray.includes(data.id)) {
+                        userFavoritesArray.push(data.id);
+                        const hearts = document.getElementById('heart_' + data.id);
+                        if (hearts) {
+                            hearts.classList.add('heartsAll', 'filled');
+                            hearts.style.color = 'red'; // Ensure the heart turns red
                         }
-
-                        // Update the STATE object
-                        // STATE.users[i] = user;
-
-                        console.log("Updated STATE:", STATE.users);
-                        break;
+                    }
+                } else {
+                    // If data.filled is false, remove the recipe ID from favorites
+                    const index = userFavoritesArray.indexOf(data.id);
+                    if (index !== -1) {
+                        userFavoritesArray.splice(index, 1);
+                        const hearts = document.getElementById('heart_' + data.id);
+                        if (hearts) {
+                            hearts.classList.remove('heartsAll', 'filled');
+                            hearts.style.color = ''; // Reset color
+                        }
                     }
                 }
-            } else {
-                console.error('Response not OK:', response);
+                // Update the STATE object and break out of the loop
+                STATE.users[i].favorites = userFavoritesArray; // Update favorites array
+                console.log("Updated STATE:", STATE.users);
+                break; // Exit loop after updating user
             }
-        } catch (error) {
-            console.error('Error:', error);
         }
     }
-
-
-
 
 }
 

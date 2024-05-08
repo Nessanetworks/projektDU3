@@ -7,7 +7,7 @@ function renderRecipesList(parentID, data) {
     <div id="recipesListContainer">
         <div id="recipesListImageContainer">
             <div id="recipeImageBox">
-                <span class="heartsAll" value="1">&#x2764;</span>
+                <span id='heart_${data.id}' class="heartsAll eventHeart" value="1">&#x2764;</span>
                 <img class="recipeImage" src=${data.picture}>
             </div>
         </div>
@@ -34,7 +34,7 @@ function renderRecipesList(parentID, data) {
     })
 
 
-    const hearts = divDom.querySelector('.heartsAll');
+    const hearts = divDom.querySelector('.eventHeart');
     hearts.addEventListener('click', function (event) {
         event.stopPropagation();
         this.classList.toggle('filled');

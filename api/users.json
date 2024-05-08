@@ -3,11 +3,11 @@
         "id": 1,
         "username": "julia",
         "password": "123",
-        "favorites": {
-            "1": 2,
-            "2": 9,
-            "3": 1
-        }
+        "favorites": [
+            9,
+            3,
+            1
+        ]
     },
     {
         "id": 2,

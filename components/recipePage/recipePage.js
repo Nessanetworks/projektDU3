@@ -27,7 +27,7 @@ function recipePage(parentID, data) {
     <div id="recipeContainer">
         <div id="leftContainer">
             <img id="recipeImg" src="${data.picture}" alt="">
-            <span id=${data.id} class="heart heartsAll" value="1">&#x2764;</span>
+            <span id='heart_${data.id}' class="heart eventHeart" value="1">&#x2764;</span>
         </div>
         <div id="rightContainer">
             <h2>${data.name}</h2>
@@ -158,19 +158,19 @@ function recipePage(parentID, data) {
     });
 
 
-    // const heart = document.querySelector('.heart');
+    const heart = document.querySelector('.eventHeart');
 
 
-    // heart.addEventListener('click', function () {
+    heart.addEventListener('click', function () {
 
-    //     heart.classList.toggle('filled');
+        heart.classList.toggle('filled');
 
-    //     if (heart.classList.contains('filled')) {
-    //         heart.innerHTML = '&#x2764;';
-    //     } else {
-    //         heart.innerHTML = '&#x2764;';
-    //     }
-    // });
+        if (heart.classList.contains('filled')) {
+            heart.innerHTML = '&#x2764;';
+        } else {
+            heart.innerHTML = '&#x2764;';
+        }
+    });
 
 
 }
