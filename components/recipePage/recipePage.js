@@ -61,6 +61,7 @@ function recipePage(parentID, data) {
         </div>
     </div>
     `;
+    heartsStayFilled();
 
     if (localStorage.getItem("token")) {
         document.getElementById("logInOrUserName").textContent = `${localStorage.getItem("username").toUpperCase()}`;

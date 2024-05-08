@@ -14,13 +14,25 @@
         "id": 2,
         "username": "alba",
         "password": "123",
-        "favorites": []
+        "favorites": [
+            5,
+            7,
+            12,
+            18,
+            2,
+            3,
+            1,
+            4,
+            6
+        ]
     },
     {
         "id": 3,
         "username": "lucas",
         "password": "123",
-        "favorites": []
+        "favorites": [
+            5
+        ]
     },
     {
         "id": 4,

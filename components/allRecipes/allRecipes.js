@@ -42,12 +42,14 @@ function renderAllRecipesContainer(parentID) {
     for (let recipe of State.get()) {
         renderRecipesList("allRecipesContainer", recipe);
     }
+    heartsStayFilled();
 }
 
 function updateRecipesList(recipes) {
     document.getElementById("allRecipesContainer").innerHTML = "";
     for (let recipe of recipes) {
         renderRecipesList("allRecipesContainer", recipe);
+
     }
 }
 

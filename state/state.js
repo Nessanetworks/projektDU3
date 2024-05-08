@@ -49,22 +49,12 @@ let State = {
                 if (data.filled === true) {
                     if (!userFavoritesArray.includes(data.id)) {
                         userFavoritesArray.push(data.id);
-                        const hearts = document.getElementById('heart_' + data.id);
-                        if (hearts) {
-                            hearts.classList.add('heartsAll', 'filled');
-                            hearts.style.color = 'red'; // Ensure the heart turns red
-                        }
                     }
                 } else {
                     // If data.filled is false, remove the recipe ID from favorites
                     const index = userFavoritesArray.indexOf(data.id);
                     if (index !== -1) {
                         userFavoritesArray.splice(index, 1);
-                        const hearts = document.getElementById('heart_' + data.id);
-                        if (hearts) {
-                            hearts.classList.remove('heartsAll', 'filled');
-                            hearts.style.color = ''; // Reset color
-                        }
                     }
                 }
                 // Update the STATE object and break out of the loop
@@ -76,7 +66,25 @@ let State = {
     }
 }
 
+function heartsStayFilled() {
+    let loggedInUserId = localStorage.getItem("id");
 
+    let user = STATE.users.find(user => user.id == loggedInUserId);
+    console.log(user);
+    if (user) {
+        user.favorites.forEach(dataId => {
+            console.log(dataId);
+            const heartElement = document.getElementById(`heart_${dataId}`);
+            if (heartElement) {
+                heartElement.style.color = 'red';
+                heartElement.innerHTML = '&#x2764;';
+            }
+        });
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', heartsStayFilled, console.log("YES?", STATE));
 
 
 
