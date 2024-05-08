@@ -40,7 +40,7 @@ function renderAllRecipesContainer(parentID) {
         renderIngredientSort("wrapper");
     });
 
-    for (let recipe of State.get()) {
+    for (let recipe of State.get("recipes")) {
         renderRecipesList("allRecipesContainer", recipe);
     }
 }

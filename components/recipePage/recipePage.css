@@ -195,6 +195,10 @@
     margin-bottom: 10px;
 }
 
+#toDos ol {
+    margin-bottom: 50px;
+}
+
 #ingredients li {
     margin-bottom: 10px;
 }

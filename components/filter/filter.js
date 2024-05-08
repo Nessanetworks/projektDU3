@@ -2,7 +2,7 @@ function filterRecipes(sort_type, ingredients) {
     let shortestTimeBox;
     let longestTimeBox;
 
-    let selectedRecipes = State.get();
+    let selectedRecipes = State.get("recipes");
 
     ingredients = document.querySelector("#inputSearchIngredient").value;
 
@@ -22,8 +22,6 @@ function filterRecipes(sort_type, ingredients) {
         document.getElementById("message").textContent = "";
 
     }
-
-    
 
     if (sort_type === "sort_shortest") {
         longestTimeBox = document.getElementById("checkLongestTime");

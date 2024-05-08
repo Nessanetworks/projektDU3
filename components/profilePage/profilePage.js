@@ -142,11 +142,11 @@ function renderProfilePage(parentID) {
        /* State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions, picture: uploadedFile.dataURL});*/
     });
 
-    const user = STATE.users.find(user => user.id == localStorage.getItem("id"));
+    const user = State.get("users").find(user => user.id == localStorage.getItem("id"));
     if (user) {
         const favorites = user.favorites;
         for (const recipeId of favorites) {
-            const recipe = STATE.recipes.find(recipe => recipe.id === recipeId);
+            const recipe = State.get("recipes").find(recipe => recipe.id === recipeId);
             if (recipe) {
                 renderFavouriteRecipe(recipe);
             }

@@ -6,8 +6,8 @@ let STATE = {
 }
 
 let State = {
-    get: function () {
-        const dataClone = JSON.parse(JSON.stringify(STATE.recipes));
+    get: function (entity) {
+        const dataClone = JSON.parse(JSON.stringify(STATE[entity]));
         return dataClone;
     },
     post: async function (data) {
