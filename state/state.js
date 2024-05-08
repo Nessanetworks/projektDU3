@@ -1,4 +1,5 @@
-let token = localStorage.getItem("token");
+
+console.log("ID FÖR INLOGGADE ANVÄNDAREN:", localStorage.getItem("id"));
 
 let STATE = {
     recipes: [],
@@ -29,34 +30,67 @@ let State = {
             errorRecipePopUp("profilePageContainer");
         }
     },
-    // patch: async function (data) {
-    //     data.token = token;
-    //     let options = {
-    //         method: "PATCH",
-    //         headers: { "Content-type": "application/json" },
-    //         body: JSON.stringify(data)
-    //     };
-    //     console.log(options)
 
-    //     try {
-    //         const response = await fetcher(`/api/recipes.php`, options);
-    //         console.log(response)
+    patch: async function (data) {
 
-    //         if (response.ok) {
-    //             let resource = await response.json();
-    //             console.log(resource);
+        const response = await fetch('/api/patchFavorites.php', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                id: data.id,
+                filled: data.filled,
+                userId: localStorage.getItem("id"),
+            })
+        });
 
-    //         }
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    //     // console.log(response)
-    //     // for (let i = 0; i < STATE.users.length; i++) {
 
-    //     //     console.log(STATE.users[i]["favorites"])
-    //     // }
-    // }
+        for (let i = 0; i < STATE.users.length; i++) {
+            if (STATE.users[i].id === localStorage.getItem("id")) {
+                let userFavoritesArray = STATE.users[i].favorites;
+                // If data.filled is true, add the recipe ID to favorites
+                if (data.filled === true) {
+                    if (!userFavoritesArray.includes(data.id)) {
+                        userFavoritesArray.push(data.id);
+                    }
+                } else {
+                    // If data.filled is false, remove the recipe ID from favorites
+                    const index = userFavoritesArray.indexOf(data.id);
+                    if (index !== -1) {
+                        userFavoritesArray.splice(index, 1);
+                    }
+                }
+                // Update the STATE object and break out of the loop
+                STATE.users[i].favorites = userFavoritesArray; // Update favorites array
+                console.log("Updated STATE:", STATE.users);
+                break; // Exit loop after updating user
+            }
+        }
+    }
 }
+
+function heartsStayFilled() {
+    let loggedInUserId = localStorage.getItem("id");
+
+    let user = STATE.users.find(user => user.id == loggedInUserId);
+    console.log(user);
+    if (user) {
+        user.favorites.forEach(dataId => {
+            console.log(dataId);
+            const heartElement = document.getElementById(`heart_${dataId}`);
+            if (heartElement) {
+                heartElement.style.color = 'red';
+                heartElement.innerHTML = '&#x2764;';
+            }
+        });
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', heartsStayFilled, console.log("YES?", STATE));
+
+
 
 async function fetcher(request, options) {
     return await fetch(request, options);

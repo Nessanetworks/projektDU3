@@ -7,7 +7,7 @@ function renderRecipesList(parentID, data) {
     <div id="recipesListContainer">
         <div id="recipesListImageContainer">
             <div id="recipeImageBox">
-                <span class="heartsAll" value="1">&#x2764;</span>
+                <span id='heart_${data.id}' class="heartsAll eventHeart" value="1">&#x2764;</span>
                 <img class="recipeImage" src=${data.picture}>
             </div>
         </div>
@@ -33,12 +33,21 @@ function renderRecipesList(parentID, data) {
         recipePage("wrapper", data);
     })
 
-    const hearts = divDom.querySelector('.heartsAll');
+
+    const hearts = divDom.querySelector('.eventHeart');
     hearts.addEventListener('click', function (event) {
         event.stopPropagation();
         this.classList.toggle('filled');
-        this.innerHTML = '&#x2764;';
-        State.patch({ id: data.id });
+        const id = data.id;
+
+        if (this.classList.contains('filled')) {
+            this.innerHTML = '&#x2764;';
+            State.patch({ id: id, filled: true });
+            console.log("true")
+        } else {
+            State.patch({ id: id, filled: false });
+            console.log("false")
+        }
     });
 }
 

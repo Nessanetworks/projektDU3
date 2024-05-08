@@ -43,12 +43,14 @@ function renderAllRecipesContainer(parentID) {
     for (let recipe of State.get("recipes")) {
         renderRecipesList("allRecipesContainer", recipe);
     }
+    heartsStayFilled();
 }
 
 function updateRecipesList(recipes) {
     document.getElementById("allRecipesContainer").innerHTML = "";
     for (let recipe of recipes) {
         renderRecipesList("allRecipesContainer", recipe);
+
     }
 }
 

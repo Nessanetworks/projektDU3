@@ -27,7 +27,7 @@ function recipePage(parentID, data) {
     <div id="recipeContainer">
         <div id="leftContainer">
             <img id="recipeImg" src="${data.picture}" alt="">
-            <span class="heart" value="1">&#x2764;</span>
+            <span id='heart_${data.id}' class="heart eventHeart" value="1">&#x2764;</span>
         </div>
         <div id="rightContainer">
             <h2>${data.name}</h2>
@@ -61,6 +61,7 @@ function recipePage(parentID, data) {
         </div>
     </div>
     `;
+    heartsStayFilled();
 
     if (localStorage.getItem("token")) {
         document.getElementById("logInOrUserName").textContent = `${localStorage.getItem("username").toUpperCase()}`;
@@ -158,7 +159,7 @@ function recipePage(parentID, data) {
     });
 
 
-    const heart = document.querySelector('.heart');
+    const heart = document.querySelector('.eventHeart');
 
 
     heart.addEventListener('click', function () {
