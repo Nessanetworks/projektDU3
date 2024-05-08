@@ -10,7 +10,6 @@ function renderIngredientSearch(parentID) {
 
     document.querySelector("#inputSearchIngredient").addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
-            console.log(event.target.value);
             filterRecipes(undefined, event.target.value);
         }
     });
