@@ -38,9 +38,16 @@ function renderRecipesList(parentID, data) {
     hearts.addEventListener('click', function (event) {
         event.stopPropagation();
         this.classList.toggle('filled');
-        this.innerHTML = '&#x2764;';
         const id = data.id;
-        State.patch({ id: id });
+
+        if (this.classList.contains('filled')) {
+            this.innerHTML = '&#x2764;';
+            State.patch({ id: id, filled: true });
+            console.log("true")
+        } else {
+            State.patch({ id: id, filled: false });
+            console.log("false")
+        }
     });
 }
 
