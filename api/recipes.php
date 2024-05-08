@@ -61,6 +61,4 @@ else if ($requestMethod == "POST") {
     file_put_contents($fileName, json_encode($recipes, JSON_PRETTY_PRINT));
     send(201, $newRecipe);
 }
-
-
 ?>
