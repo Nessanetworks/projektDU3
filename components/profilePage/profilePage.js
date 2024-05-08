@@ -1,5 +1,6 @@
 let instructionsCounter = 2;
 let ingredientsCounter = 2;
+let uploadedFile;
 
 function renderProfilePage(parentID) {
     document.getElementById(parentID).innerHTML = "";
@@ -52,7 +53,7 @@ function renderProfilePage(parentID) {
             </div>
             <div id="rightBottomContainer">
                 <div id="uploadPicture">
-                    LADDA UPP BILD
+                    <p id="pic">LADDA UPP BILD</p>
                     <input type="file" id="fileInput" accept="image/*" style="display: none;">
                 </div>
                 <button id="createNewRecipeButton">SKAPA</button>
@@ -65,12 +66,21 @@ function renderProfilePage(parentID) {
     });
 
     document.getElementById("fileInput").addEventListener("change", function () {
-        const fileName = this.files[0].name;
+        let file = this.files[0];
+        let reader = new FileReader();
+        reader.onload = function(event) {
+            uploadedFile = {
+                name: file.name,
+                dataURL: event.target.result
+            };
 
-        if (fileName) {
-            document.getElementById("uploadPicture").textContent = fileName;
-            window.selectedFileName = fileName;
-        }
+            if (uploadedFile) {
+                document.getElementById("pic").textContent = uploadedFile.name;
+            }
+        };
+
+        reader.readAsDataURL(file);
+        
     });
 
     document.getElementById("addMoreIngredients").addEventListener("click", function () {
@@ -111,10 +121,9 @@ function renderProfilePage(parentID) {
         const recipeName = document.getElementById("recipeNameInput").value;
         const cookingTime = document.getElementById("recipeTimeInput").value;
         const ingredients = getAllIngredients();
-        const instructions = getAllInstructions();
-        
+        const instructions = getAllInstructions();        
 
-        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions });
+        State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions, picture: uploadedFile.dataURL});
     });
 
     const user = STATE.users.find(user => user.id == localStorage.getItem("id"));

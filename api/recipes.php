@@ -24,38 +24,29 @@ if (file_exists($fileName)) {
 }
 
 if ($requestMethod == "GET") {
-    //behöver sätta in user_id i varje recept??
-    // if (isset($requestData["id"])) {
-    //     $id = $requestData["id"];
-    //     $recipe = findItemByKey("recipes", "id", $id);
-        
-    //     if ($recipe == false) {
-    //         abort(404, "recipe Not Found");
-    //     }
-        
-    //     send(200, $recipe);
-    // }
-
-    // $user = getUserFromToken($requestData["token"]);
-
-    // $recipes = getDatabaseByType("recipes");
-    // foreach ($recipes as $index => &$recipe) {
-    //     if ($recipe["user_id"] != $user["id"]) {
-    //         array_splice($recipes, $index, 1);
-    //     }
-    // } 
     send(200, $recipes);
 }
 else if ($requestMethod == "POST") {
     $nextId = count($recipes) + 1; 
     $postData = json_decode(file_get_contents("php://input"), true);
+
+    $imageData = $postData["picture"];
+    list($type, $imageData) = explode(';', $imageData);
+    list(, $imageData)      = explode(',', $imageData);
+    $imageData = base64_decode($imageData);
+    $imageName = "recipe_" . $nextId . ".png";
+
+    $imagePath = "../media/images/" . $imageName;
+    file_put_contents($imagePath, $imageData);
+
     $newRecipe = [
         "id" => $nextId,
         "name" => $postData["name"],
         "time" => $postData["time"],
         "rating" => $postData["rating"],
         "toDo" => $postData["toDo"],
-        "ingredients" => $postData["ingredients"]
+        "ingredients" => $postData["ingredients"],
+        "picture" => $imagePath 
     ];   
     $recipes[] = $newRecipe; 
     file_put_contents($fileName, json_encode($recipes, JSON_PRETTY_PRINT));
