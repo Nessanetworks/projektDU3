@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
 $fileName = "recipes.json";
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $requestData = getRequestData();
+$patchData = json_decode(file_get_contents("php://input"), true);
 
 $recipes = [];
 

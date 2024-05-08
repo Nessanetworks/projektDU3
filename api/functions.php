@@ -258,4 +258,6 @@ function removeUserGamesCharactersAndLikes($user)
     }
 }
 
+
+
 ?>
