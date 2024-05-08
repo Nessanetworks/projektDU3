@@ -71,6 +71,10 @@
     color: red;
 }
 
+.heartsAll.unfilled {
+    color: #758650;
+}
+
 .recipesInstance {
     cursor: pointer;
 }

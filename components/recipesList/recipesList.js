@@ -1,5 +1,6 @@
+
 function renderRecipesList(parentID, data) {
-    let divDom = document.createElement("div");
+    divDom = document.createElement("div");
     divDom.classList.add("recipesInstance");
     document.getElementById(parentID).append(divDom);
 
@@ -22,12 +23,7 @@ function renderRecipesList(parentID, data) {
         </div>
     </div>
 `;
-    /*const recipeNameClickable = divDom.querySelector('.recipeNameClickable');
 
-    recipeNameClickable.addEventListener('click', (event) => {
-        event.stopPropagation();
-        recipePage('wrapper', data);
-    });*/
 
     divDom.addEventListener("click", () => {
         recipePage("wrapper", data);
@@ -42,14 +38,19 @@ function renderRecipesList(parentID, data) {
 
         if (this.classList.contains('filled')) {
             this.innerHTML = '&#x2764;';
-            State.patch({ id: id, filled: true });
+            State.patch({ id: id });
             console.log("true")
         } else {
-            State.patch({ id: id, filled: false });
+            renderAllRecipesContainer("wrapper");
+            console.log("Is it rendering but not working? yes sir!");
+            //this.classList.remove("filled");
+            //this.innerHTML = '&#x2764;';
+            State.patch({ id: id });
             console.log("false")
         }
     });
 }
+
 
 
 

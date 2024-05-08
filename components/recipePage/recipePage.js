@@ -63,6 +63,25 @@ function recipePage(parentID, data) {
     `;
     heartsStayFilled();
 
+    const hearts = recipePage.querySelector('.eventHeart');
+    hearts.addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.toggle('filled');
+        const id = data.id;
+
+        if (this.classList.contains('filled')) {
+            this.innerHTML = '&#x2764;';
+            State.patch({ id: id });
+            console.log("true")
+        } else {
+            console.log("Is it rendering but not working? yes sir!");
+            //this.classList.remove("filled");
+            //this.innerHTML = '&#x2764;';
+            State.patch({ id: id });
+            console.log("false")
+        }
+    });
+
     if (localStorage.getItem("token")) {
         document.getElementById("logInOrUserName").textContent = `${localStorage.getItem("username").toUpperCase()}`;
     } else {

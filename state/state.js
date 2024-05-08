@@ -45,27 +45,26 @@ let State = {
             })
         });
 
-
-        for (let i = 0; i < STATE.users.length; i++) {
-            if (STATE.users[i].id === localStorage.getItem("id")) {
-                let userFavoritesArray = STATE.users[i].favorites;
-                // If data.filled is true, add the recipe ID to favorites
-                if (data.filled === true) {
-                    if (!userFavoritesArray.includes(data.id)) {
-                        userFavoritesArray.push(data.id);
+        if (response.ok) {
+            for (let i = 0; i < STATE.users.length; i++) {
+                if (STATE.users[i].id === localStorage.getItem("id")) {
+                    let userFavoritesArray = STATE.users[i].favorites;
+                    if (data.filled === true) {
+                        if (!userFavoritesArray.includes(data.id)) {
+                            userFavoritesArray.push(data.id);
+                        }
+                    } else {
+                        const index = userFavoritesArray.indexOf(data.id);
+                        if (index !== -1) {
+                            userFavoritesArray.splice(index, 1);
+                        }
                     }
-                } else {
-                    // If data.filled is false, remove the recipe ID from favorites
-                    const index = userFavoritesArray.indexOf(data.id);
-                    if (index !== -1) {
-                        userFavoritesArray.splice(index, 1);
-                    }
+                    STATE.users[i].favorites = userFavoritesArray;
+                    console.log("Updated STATE:", STATE.users);
+                    break;
                 }
-                // Update the STATE object and break out of the loop
-                STATE.users[i].favorites = userFavoritesArray; // Update favorites array
-                console.log("Updated STATE:", STATE.users);
-                break; // Exit loop after updating user
             }
+
         }
     }
 }
@@ -74,7 +73,7 @@ function heartsStayFilled() {
     let loggedInUserId = localStorage.getItem("id");
 
     let user = STATE.users.find(user => user.id == loggedInUserId);
-    console.log(user);
+    //console.log(user);
     if (user) {
         user.favorites.forEach(dataId => {
             console.log(dataId);
@@ -87,8 +86,6 @@ function heartsStayFilled() {
     }
 }
 
-
-document.addEventListener('DOMContentLoaded', heartsStayFilled, console.log("YES?", STATE));
 
 
 

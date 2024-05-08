@@ -68,7 +68,7 @@ function renderProfilePage(parentID) {
     document.getElementById("fileInput").addEventListener("change", function () {
         let file = this.files[0];
         let reader = new FileReader();
-        reader.onload = function(event) {
+        reader.onload = function (event) {
             uploadedFile = {
                 name: file.name,
                 dataURL: event.target.result
@@ -80,7 +80,7 @@ function renderProfilePage(parentID) {
         };
 
         reader.readAsDataURL(file);
-        
+
     });
 
     document.getElementById("addMoreIngredients").addEventListener("click", function () {
@@ -132,14 +132,14 @@ function renderProfilePage(parentID) {
             ingredients: ingredients,
             toDo: instructions
         };
-    
+
         if (uploadedFile && uploadedFile.dataURL) {
             recipeData.picture = uploadedFile.dataURL;
         }
-    
+
         State.post(recipeData);
 
-       /* State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions, picture: uploadedFile.dataURL});*/
+        /* State.post({ rating: 0, time: cookingTime, name: recipeName, ingredients: ingredients, toDo: instructions, picture: uploadedFile.dataURL});*/
     });
 
     const user = State.get("users").find(user => user.id == localStorage.getItem("id"));
@@ -162,7 +162,7 @@ function renderFavouriteRecipe(recipe) {
     <div id="favouriteRecipesListContainer">
         <div id="favouriteRecipesListImageContainer">
             <div id="favouriteRecipeImageBox">
-                <span class="heartsAll" value="1">&#x2764;</span>
+            <span id='heart_${recipe.id}' class="heartsAll eventHeart" value="1">&#x2764;</span>
                 <img class="recipeImage" src=${recipe.picture}>
             </div>
         </div>
@@ -177,10 +177,31 @@ function renderFavouriteRecipe(recipe) {
         </div>
     </div>
 `;
+    heartsStayFilled();
     div.addEventListener("click", function () {
         recipePage("wrapper", recipe);
     })
+
+    const hearts = div.querySelector('.eventHeart');
+    hearts.addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.toggle('filled');
+        const id = recipe.id;
+
+        if (this.classList.contains('filled')) {
+            this.innerHTML = '&#x2764;';
+            State.patch({ id: id });
+            console.log("true")
+        } else {
+            console.log("Is it rendering but not working? yes sir!");
+            //this.classList.remove("filled");
+            //this.innerHTML = '&#x2764;';
+            State.patch({ id: id });
+            console.log("false")
+        }
+    });
 }
+
 
 function renderMoreIngredients(parentID) {
     let divDom = document.createElement("div");
