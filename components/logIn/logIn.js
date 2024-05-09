@@ -95,7 +95,7 @@ async function createUser() {
     let userPassword = document.getElementById("createPassword").value;
     let userConfirmPassword = document.getElementById("confirmPassword").value;
 
-    if (userPassword === userConfirmPassword) {
+    if (userPassword === userConfirmPassword && userPassword != "" && userConfirmPassword != "") {
         let userData = {
             username: userName,
             password: userPassword
