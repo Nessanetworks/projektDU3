@@ -13,13 +13,12 @@ let State = {
     },
     post: async function (data) {
 
-        console.log(JSON.stringify(data));
-
         const response = await fetch(`/api/recipes.php`, {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-type": "application/json" },
         });
+        console.log(JSON.stringify(data));
 
         if (response.ok) {
             let resource = await response.json();

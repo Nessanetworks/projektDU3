@@ -13,6 +13,7 @@ function renderLogInPopUp(parentID) {
         <input id="userNameLogIn" type="text" placeholder ="Användarnamn">
         <input id="passwordLogIn" type="password" placeholder ="Lösenord">
         <button id="logInButton">LOGGA IN</button>
+        <p id="messageLogIn"></p>
         <p id="noAccountParagraph">Har du inget konto?</p>
         <p id="createAccountParagraph">Skapa konto här</p>
     </div>
@@ -38,6 +39,10 @@ async function logIn() {
     let userName = document.getElementById("userNameLogIn").value;
     let userPassword = document.getElementById("passwordLogIn").value;
 
+    if (userName == "" || userPassword == "") {
+        document.getElementById("messageLogIn").textContent = "Vänligen fyll i användarnamn och lösenord"
+    }
+
     let logInData = {
         username: userName,
         password: userPassword
@@ -57,6 +62,8 @@ async function logIn() {
         localStorage.setItem("id", resource.id);
         console.log(localStorage.getItem("id"));
         renderProfilePage("wrapper");
+    } else if (response.status === 401) {
+        document.getElementById("messageLogIn").textContent = "Denna användare finns inte"
     }
 }
 
@@ -71,6 +78,7 @@ function renderCreateAccountPopUp(parentID) {
             <input id="createPassword" type="password" placeholder ="Lösenord">
             <input id="confirmPassword" type="password" placeholder ="Bekräfta lösenord">
             <button id="createAccountButton">SKAPA KONTO</button>
+            <p id="messageCreate"></p>
             <p id="alreadyUserParagraph">Har du redan ett konto?</p>
             <p id="goToLogInParagraph">Logga in här</p>
         </div>
@@ -95,7 +103,13 @@ async function createUser() {
     let userPassword = document.getElementById("createPassword").value;
     let userConfirmPassword = document.getElementById("confirmPassword").value;
 
-    if (userPassword === userConfirmPassword) {
+    if (userName === "") {
+        document.getElementById("messageCreate").textContent = "Du har inte angett ett användarnamn";
+    } else if (userPassword == "" || userConfirmPassword == "") {
+        document.getElementById("messageCreate").textContent = "Vänligen fyll i och bekräfta ditt lösenord";
+    } else if (userPassword !== userConfirmPassword) {
+        document.getElementById("messageCreate").textContent = "Lösenorden stämmer inte överens";
+    } else {
         let userData = {
             username: userName,
             password: userPassword
