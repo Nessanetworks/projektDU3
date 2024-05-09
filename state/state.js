@@ -71,8 +71,6 @@ let State = {
             }
         } else {
             console.error("Failed to patch favorites");
-<<<<<<< Updated upstream
-=======
             data.element.classList.toggle('filled', !data.filled);
             data.element.style.color = !data.filled ? 'red' : 'rgb(117, 134, 80)';
             data.element.innerHTML = !data.filled ? '&#x2764;' : '&#x2764;';
@@ -108,7 +106,6 @@ let State = {
                 renderLogInPopUp("wrapper");
                 popUpNotLoggedIn.remove();
             })
->>>>>>> Stashed changes
         }
 
     }
@@ -124,8 +121,6 @@ function heartsStayFilled() {
             console.log(dataId);
             const heartElement = document.getElementById(`heart_${dataId}`);
             if (heartElement) {
-                //heartElement.style.color = 'red';
-                //heartElement.innerHTML = '&#x2764;';
                 heartElement.classList.add('filled');
                 heartElement.style.color = 'red';
                 heartElement.innerHTML = '&#x2764;';
