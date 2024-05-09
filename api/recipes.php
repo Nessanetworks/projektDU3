@@ -34,13 +34,16 @@ if (!isset($postData["name"]) || !isset($postData["time"]) || !isset($postData["
     send(400, "Bad Request: Alla obligatoriska fält måste finnas med.");
 }
 
-if (empty($postData["name"]) || empty($postData["time"]) || empty($postData["rating"]) || empty($postData["toDo"]) || empty($postData["ingredients"])) {
-    send(400, "Bad Request: Alla obligatoriska fält måste vara ifyllda.");
+
+if (empty($postData["name"]) || empty($postData["time"]) ||  empty($postData["toDo"]) || empty($postData["ingredients"])) {
+   send(400, "Bad Request: Alla obligatoriska fält måste vara ifyllda.");
 }
 
 if (!isset($postData["picture"])) {
     send(400, "Bad Request: Du måste bifoga en bild för att skapa ett recept.");
 }
+
+$nextId = count($recipes) + 1; 
 
 $imageData = $postData["picture"];
 list($type, $imageData) = explode(';', $imageData);

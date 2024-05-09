@@ -125,9 +125,11 @@ function renderProfilePage(parentID) {
         const ingredients = getAllIngredients();
         const instructions = getAllInstructions();
 
+        console.log(cookingTime);
+
         const recipeData = {
             rating: 0,
-            time: cookingTime,
+            time: parseInt(cookingTime),
             name: recipeName,
             ingredients: ingredients,
             toDo: instructions

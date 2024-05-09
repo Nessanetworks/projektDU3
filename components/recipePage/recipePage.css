@@ -154,6 +154,7 @@
     font-size: 20px;
     background-color: rgba(248, 249, 248, 0);
     cursor: pointer;
+    font-weight: normal;
 }
 
 #addRatingButton {
@@ -216,4 +217,35 @@
 
 .heart.filled {
     color: red;
+}
+
+#needToLogIn {
+    text-align: center;
+}
+
+#returnLogInBox {
+    display: flex;
+    justify-content: center;
+}
+
+#goToLogInAgain {
+    width: 150px;
+    font-family: Montserrat;
+    padding: 10px;
+    background-color: #758650;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.exitButton2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    font-size: 20px;
+    background-color: rgba(248, 249, 248, 0);
+    cursor: pointer;
+    font-family: Montserrat;
 }

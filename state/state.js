@@ -12,8 +12,6 @@ let State = {
     },
     post: async function (data) {
 
-        console.log(JSON.stringify(data));
-
         const response = await fetch(`/api/recipes.php`, {
             method: "POST",
             body: JSON.stringify(data),

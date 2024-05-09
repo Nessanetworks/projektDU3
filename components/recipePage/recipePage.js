@@ -110,16 +110,17 @@ function recipePage(parentID, data) {
     const popUpRating = document.getElementById('popUpRating');
 
     addRatingClick.addEventListener('click', function () {
-        popUpRating.innerHTML = '';
+        if (localStorage.getItem("id")) {
+            popUpRating.innerHTML = '';
 
-        if (popUpRating.querySelector('.popup-content')) {
-            popUpRating.style.display = 'block';
-            return;
-        }
+            if (popUpRating.querySelector('.popup-content')) {
+                popUpRating.style.display = 'block';
+                return;
+            }
 
-        popUpRating.innerHTML += `
+            popUpRating.innerHTML += `
             <div class="exitForRatingButton">
-                <button class="exitButton">&times;</button>
+                <button class="exitButton">X</button>
             </div>
             <div class="popUpContent">
                 <p>Lägg till ditt betyg för:</p> 
@@ -135,26 +136,46 @@ function recipePage(parentID, data) {
             </div>
         `;
 
-        const closeButton = popUpRating.querySelector('.exitForRatingButton');
-        const addRatingButton = popUpRating.querySelector('#addRatingButton');
+            const closeButton = popUpRating.querySelector('.exitForRatingButton');
+            const addRatingButton = popUpRating.querySelector('#addRatingButton');
 
-        closeButton.addEventListener('click', function () {
-            popUpRating.style.display = 'none';
-        });
-
-        addRatingButton.addEventListener("click", function () {
-
-        });
-
-        const popupStars = popUpRating.querySelectorAll('.starsInPopUp');
-        popupStars.forEach(popupStar => {
-            popupStar.addEventListener('click', () => {
-                const ratingValue = parseInt(popupStar.getAttribute('data-value'), 10);
-                setRating(ratingValue, popUpRating);
+            closeButton.addEventListener('click', function () {
+                popUpRating.style.display = 'none';
             });
-        });
 
-        popUpRating.style.display = 'block';
+            addRatingButton.addEventListener("click", function () {
+
+            });
+
+            const popupStars = popUpRating.querySelectorAll('.starsInPopUp');
+            popupStars.forEach(popupStar => {
+                popupStar.addEventListener('click', () => {
+                    const ratingValue = parseInt(popupStar.getAttribute('data-value'), 10);
+                    setRating(ratingValue, popUpRating);
+                });
+            });
+
+            popUpRating.style.display = 'block';
+        } else {
+            popUpRating.innerHTML = "";
+            popUpRating.style.display = 'block';
+            popUpRating.innerHTML = `
+            <p id="needToLogIn">Du måste vara inloggad för att kunna använda den här funktionen!</p>
+            <div id="returnLogInBox">
+                <button id="goToLogInAgain">LOGGA IN</button>
+            </div>
+            <button class="exitButton2">X</button>
+            `;
+            popUpRating.querySelector(".exitButton2").addEventListener('click', function () {
+                popUpRating.style.display = 'none';
+            });
+
+            document.getElementById("goToLogInAgain").addEventListener("click", function () {
+                renderLogInPopUp("wrapper");
+                popUpRating.style.display = 'none';
+            })
+        }
+
     });
 
 
