@@ -13,14 +13,13 @@ function filterRecipes(sort_type, ingredients) {
             }
             return false;
         });
+    }
 
-        if (selectedRecipes.length === 0) {
-            let messageDiv = document.getElementById("message");
-            messageDiv.textContent = "Inga recept hittades för den här sökningen!";
-        }
+    if (selectedRecipes.length === 0) {
+        let messageDiv = document.getElementById("message");
+        messageDiv.textContent = "Inga recept hittades för den här sökningen!";
     } else {
         document.getElementById("message").textContent = "";
-
     }
 
     if (sort_type === "sort_shortest") {
