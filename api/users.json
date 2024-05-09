@@ -43,10 +43,12 @@
         "username": "Venessa",
         "password": "Grisen",
         "favorites": [
-            1,
             6,
             5,
-            4
+            4,
+            2,
+            3,
+            1
         ]
     },
     {

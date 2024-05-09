@@ -11,6 +11,7 @@ function renderIngredientSearch(parentID) {
     document.querySelector("#inputSearchIngredient").addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
             filterRecipes(undefined, event.target.value);
+            heartsStayFilled();
         }
     });
 }
@@ -50,14 +51,18 @@ function renderIngredientSort(parentID) {
 
     divDom.querySelector("#checkHighestRanking").addEventListener("click", function () {
         filterRecipes("sort_best");
+        heartsStayFilled();
     });
     divDom.querySelector("#checkLowestRanking").addEventListener("click", function () {
         filterRecipes("sort_worst");
+        heartsStayFilled()
     });
     divDom.querySelector("#checkLongestTime").addEventListener("click", function () {
         filterRecipes("sort_longest");
+        heartsStayFilled()
     });
     divDom.querySelector("#checkShortestTime").addEventListener("click", function () {
         filterRecipes("sort_shortest");
+        heartsStayFilled()
     });
 }

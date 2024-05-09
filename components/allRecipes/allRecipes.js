@@ -32,6 +32,7 @@ function renderAllRecipesContainer(parentID) {
 
     document.getElementById("sortRecipes").addEventListener("click", function () {
         document.getElementById("divSort").classList.toggle("hide");
+        heartsStayFilled();
     });
 
     document.getElementById("allRecipes").addEventListener("click", function () {
