@@ -67,7 +67,7 @@
 
 #noAccountParagraph {
     font-family: Montserrat;
-    margin: 15px 0 0 0;
+    margin: 5px 0 0 0;
     font-size: 12px;
 }
 
@@ -149,6 +149,15 @@
 }
 
 #messageCreate {
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: Montserrat;
+    font-size: 14px;
+    color: rgb(233, 73, 73);
+}
+
+#messageLogIn {
     margin-top: 8px;
     margin-bottom: 0;
     padding: 0;

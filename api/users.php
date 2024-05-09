@@ -24,5 +24,4 @@ if (isset($request->username) && isset($request->password)) {
     http_response_code(400);
     echo json_encode(['message' => 'Användarnamn och lösenord krävs']);
 }
-
 ?>
