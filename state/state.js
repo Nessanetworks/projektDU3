@@ -71,6 +71,9 @@ let State = {
             }
         } else {
             console.error("Failed to patch favorites");
+            data.element.classList.toggle('filled', !data.filled);
+            data.element.style.color = !data.filled ? 'red' : 'rgb(117, 134, 80)';
+            data.element.innerHTML = !data.filled ? '&#x2764;' : '&#x2764;';
         }
 
     }
