@@ -71,6 +71,7 @@ function renderCreateAccountPopUp(parentID) {
             <input id="createPassword" type="password" placeholder ="Lösenord">
             <input id="confirmPassword" type="password" placeholder ="Bekräfta lösenord">
             <button id="createAccountButton">SKAPA KONTO</button>
+            <p id="messageCreate"></p>
             <p id="alreadyUserParagraph">Har du redan ett konto?</p>
             <p id="goToLogInParagraph">Logga in här</p>
         </div>
@@ -95,25 +96,31 @@ async function createUser() {
     let userPassword = document.getElementById("createPassword").value;
     let userConfirmPassword = document.getElementById("confirmPassword").value;
 
-    if (userPassword === userConfirmPassword && userPassword != "" && userConfirmPassword != "") {
-        let userData = {
-            username: userName,
-            password: userPassword
-        };
+    if (userName === "") {
+        document.getElementById("messageCreate").textContent = "Du har inte angett ett användarnamn";
+    } else if (userPassword == "" || userConfirmPassword == "") {
+        document.getElementById("messageCreate").textContent = "Vänligen fyll i och bekräfta ditt lösenord";
+    } else if (userPassword !== userConfirmPassword) {
+        document.getElementById("messageCreate").textContent = "Lösenorden stämmer inte överens";
+    } else {
+            let userData = {
+                username: userName,
+                password: userPassword
+            };
 
-        let options = {
-            method: "POST",
-            body: JSON.stringify(userData),
-            headers: { "Content-type": "application/json" }
-        };
+            let options = {
+                method: "POST",
+                body: JSON.stringify(userData),
+                headers: { "Content-type": "application/json" }
+            };
 
-        let response = await fetcher("/api/users.php", options);
-        if (response.ok) {
-            popUpVisible = false;
-            document.getElementById("popUpContainer").remove();
-            renderLogInPopUp("wrapper");
+            let response = await fetcher("/api/users.php", options);
+            if (response.ok) {
+                popUpVisible = false;
+                document.getElementById("popUpContainer").remove();
+                renderLogInPopUp("wrapper");
+            }
         }
-    }
 }
 
 
