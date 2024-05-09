@@ -18,6 +18,7 @@ let State = {
             body: JSON.stringify(data),
             headers: { "Content-type": "application/json" },
         });
+        console.log(JSON.stringify(data));
 
         if (response.ok) {
             let resource = await response.json();
