@@ -1,5 +1,6 @@
+
 function renderRecipesList(parentID, data) {
-    let divDom = document.createElement("div");
+    divDom = document.createElement("div");
     divDom.classList.add("recipesInstance");
     document.getElementById(parentID).append(divDom);
 
@@ -7,7 +8,7 @@ function renderRecipesList(parentID, data) {
     <div id="recipesListContainer">
         <div id="recipesListImageContainer">
             <div id="recipeImageBox">
-                <span class="heartsAll" value="1">&#x2764;</span>
+                <span id='heart_${data.id}' class="heartsAll eventHeart" value="1">&#x2764;</span>
                 <img class="recipeImage" src=${data.picture}>
             </div>
         </div>
@@ -22,25 +23,42 @@ function renderRecipesList(parentID, data) {
         </div>
     </div>
 `;
-    /*const recipeNameClickable = divDom.querySelector('.recipeNameClickable');
 
-    recipeNameClickable.addEventListener('click', (event) => {
-        event.stopPropagation();
-        recipePage('wrapper', data);
-    });*/
 
     divDom.addEventListener("click", () => {
         recipePage("wrapper", data);
     })
 
-    const hearts = divDom.querySelector('.heartsAll');
+
+    const hearts = divDom.querySelector('.eventHeart');
+    hearts.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const isFilled = this.classList.contains('filled');
+        State.patch({
+            id: data.id,
+            filled: !isFilled,
+            element: this
+        });
+    });
+
+    /*const hearts = divDom.querySelector('.eventHeart');
     hearts.addEventListener('click', function (event) {
         event.stopPropagation();
         this.classList.toggle('filled');
-        this.innerHTML = '&#x2764;';
-        State.patch({ id: data.id });
-    });
+        const id = data.id;
+
+        if (this.classList.add('filled')) {
+            this.innerHTML = '&#x2764;';
+            State.patch({ id: id });
+            console.log("true")
+        } else {
+            this.classList.remove("filled");
+            State.patch({ id: id });
+            console.log("false")
+        }
+    });*/
 }
+
 
 
 

@@ -32,6 +32,7 @@ function renderAllRecipesContainer(parentID) {
 
     document.getElementById("sortRecipes").addEventListener("click", function () {
         document.getElementById("divSort").classList.toggle("hide");
+        heartsStayFilled();
     });
 
     document.getElementById("allRecipes").addEventListener("click", function () {
@@ -43,12 +44,14 @@ function renderAllRecipesContainer(parentID) {
     for (let recipe of State.get("recipes")) {
         renderRecipesList("allRecipesContainer", recipe);
     }
+    heartsStayFilled();
 }
 
 function updateRecipesList(recipes) {
     document.getElementById("allRecipesContainer").innerHTML = "";
     for (let recipe of recipes) {
         renderRecipesList("allRecipesContainer", recipe);
+
     }
 }
 

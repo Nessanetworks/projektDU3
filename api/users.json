@@ -4,8 +4,10 @@
         "username": "julia",
         "password": "123",
         "favorites": [
+            9,
+            3,
             1,
-            9
+            2
         ]
     },
     {
@@ -13,17 +15,16 @@
         "username": "alba",
         "password": "123",
         "favorites": [
-            5,
-            7,
-            9,
-            11
+            1
         ]
     },
     {
         "id": 3,
         "username": "lucas",
         "password": "123",
-        "favorites": []
+        "favorites": [
+            5
+        ]
     },
     {
         "id": 4,
@@ -41,11 +42,24 @@
         "id": 6,
         "username": "Venessa",
         "password": "Grisen",
-        "favorites": []
+        "favorites": [
+            6,
+            5,
+            4,
+            2,
+            3,
+            1
+        ]
     },
     {
         "id": 7,
         "username": "elin",
+        "password": "123",
+        "favorites": []
+    },
+    {
+        "id": 8,
+        "username": "Rebz",
         "password": "123",
         "favorites": []
     }

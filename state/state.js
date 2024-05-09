@@ -1,4 +1,5 @@
-let token = localStorage.getItem("token");
+
+console.log("ID FÖR INLOGGADE ANVÄNDAREN:", localStorage.getItem("id"));
 
 let STATE = {
     recipes: [],
@@ -27,34 +28,81 @@ let State = {
             errorRecipePopUp("profilePageContainer");
         }
     },
-    // patch: async function (data) {
-    //     data.token = token;
-    //     let options = {
-    //         method: "PATCH",
-    //         headers: { "Content-type": "application/json" },
-    //         body: JSON.stringify(data)
-    //     };
-    //     console.log(options)
 
-    //     try {
-    //         const response = await fetcher(`/api/recipes.php`, options);
-    //         console.log(response)
+    patch: async function (data) {
 
-    //         if (response.ok) {
-    //             let resource = await response.json();
-    //             console.log(resource);
+        data.element.classList.toggle('filled', data.filled);
+        data.element.style.color = data.filled ? 'red' : 'rgb(117, 134, 80)';
+        data.element.innerHTML = data.filled ? '&#x2764;' : '&#x2764;';
 
-    //         }
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    //     // console.log(response)
-    //     // for (let i = 0; i < STATE.users.length; i++) {
 
-    //     //     console.log(STATE.users[i]["favorites"])
-    //     // }
-    // }
+        const response = await fetch('/api/patchFavorites.php', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                id: data.id,
+                userId: localStorage.getItem("id"),
+            })
+        });
+
+
+        if (response.ok) {
+            const userId = parseInt(localStorage.getItem("id"), 10);
+            let user = STATE.users.find(user => user.id === userId);
+            if (user) {
+                if (data.filled) {
+                    if (!user.favorites.includes(data.id)) {
+                        user.favorites.push(data.id);
+                    }
+                } else {
+                    const index = user.favorites.indexOf(data.id);
+                    if (index !== -1) {
+                        user.favorites.splice(index, 1);
+                    }
+                }
+                console.log("Updated STATE successfully:", STATE.users);
+                if (data.wrapper) {
+                    renderProfilePage(data.wrapper);
+                }
+            }
+        } else {
+            console.error("Failed to patch favorites");
+            data.element.classList.toggle('filled', !data.filled);
+            data.element.style.color = !data.filled ? 'red' : 'rgb(117, 134, 80)';
+            data.element.innerHTML = !data.filled ? '&#x2764;' : '&#x2764;';
+        }
+
+    }
 }
+
+function heartsStayFilled() {
+    let loggedInUserId = localStorage.getItem("id");
+
+    let user = STATE.users.find(user => user.id == loggedInUserId);
+    //console.log(user);
+    if (user) {
+        user.favorites.forEach(dataId => {
+            console.log(dataId);
+            const heartElement = document.getElementById(`heart_${dataId}`);
+            if (heartElement) {
+                //heartElement.style.color = 'red';
+                //heartElement.innerHTML = '&#x2764;';
+                heartElement.classList.add('filled');
+                heartElement.style.color = 'red';
+                heartElement.innerHTML = '&#x2764;';
+            }
+        });
+    }
+}
+
+
+
+
+
+
+
 
 async function fetcher(request, options) {
     return await fetch(request, options);
@@ -85,5 +133,7 @@ async function renderApp() {
     await runApplication();
     renderLandingPage("wrapper");
 }
+
+
 
 
