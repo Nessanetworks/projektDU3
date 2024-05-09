@@ -63,7 +63,7 @@ function recipePage(parentID, data) {
     `;
     heartsStayFilled();
 
-    const hearts = recipePage.querySelector('.eventHeart');
+    /*const hearts = recipePage.querySelector('.eventHeart');
     hearts.addEventListener('click', function (event) {
         event.stopPropagation();
         this.classList.toggle('filled');
@@ -80,6 +80,17 @@ function recipePage(parentID, data) {
             State.patch({ id: id });
             console.log("false")
         }
+    });*/
+
+    const hearts = recipePage.querySelector('.eventHeart');
+    hearts.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const isFilled = this.classList.contains('filled');
+        State.patch({
+            id: data.id,
+            filled: !isFilled,
+            element: this
+        });
     });
 
     if (localStorage.getItem("token")) {
@@ -175,21 +186,6 @@ function recipePage(parentID, data) {
         });
 
         popUpRating.style.display = 'block';
-    });
-
-
-    const heart = document.querySelector('.eventHeart');
-
-
-    heart.addEventListener('click', function () {
-
-        heart.classList.toggle('filled');
-
-        if (heart.classList.contains('filled')) {
-            heart.innerHTML = '&#x2764;';
-        } else {
-            heart.innerHTML = '&#x2764;';
-        }
     });
 
 

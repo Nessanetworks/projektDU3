@@ -33,6 +33,11 @@ let State = {
 
     patch: async function (data) {
 
+        data.element.classList.toggle('filled', data.filled);
+        data.element.style.color = data.filled ? 'red' : 'rgb(117, 134, 80)';
+        data.element.innerHTML = data.filled ? '&#x2764;' : '&#x2764;';
+
+
         const response = await fetch('/api/patchFavorites.php', {
             method: 'PATCH',
             headers: {
@@ -40,32 +45,34 @@ let State = {
             },
             body: JSON.stringify({
                 id: data.id,
-                filled: data.filled,
                 userId: localStorage.getItem("id"),
             })
         });
 
+
         if (response.ok) {
-            for (let i = 0; i < STATE.users.length; i++) {
-                if (STATE.users[i].id === localStorage.getItem("id")) {
-                    let userFavoritesArray = STATE.users[i].favorites;
-                    if (data.filled === true) {
-                        if (!userFavoritesArray.includes(data.id)) {
-                            userFavoritesArray.push(data.id);
-                        }
-                    } else {
-                        const index = userFavoritesArray.indexOf(data.id);
-                        if (index !== -1) {
-                            userFavoritesArray.splice(index, 1);
-                        }
+            const userId = parseInt(localStorage.getItem("id"), 10);
+            let user = STATE.users.find(user => user.id === userId);
+            if (user) {
+                if (data.filled) {
+                    if (!user.favorites.includes(data.id)) {
+                        user.favorites.push(data.id);
                     }
-                    STATE.users[i].favorites = userFavoritesArray;
-                    console.log("Updated STATE:", STATE.users);
-                    break;
+                } else {
+                    const index = user.favorites.indexOf(data.id);
+                    if (index !== -1) {
+                        user.favorites.splice(index, 1);
+                    }
+                }
+                console.log("Updated STATE successfully:", STATE.users);
+                if (data.wrapper) {
+                    renderProfilePage(data.wrapper);
                 }
             }
-
+        } else {
+            console.error("Failed to patch favorites");
         }
+
     }
 }
 
@@ -79,12 +86,19 @@ function heartsStayFilled() {
             console.log(dataId);
             const heartElement = document.getElementById(`heart_${dataId}`);
             if (heartElement) {
+                //heartElement.style.color = 'red';
+                //heartElement.innerHTML = '&#x2764;';
+                heartElement.classList.add('filled');
                 heartElement.style.color = 'red';
                 heartElement.innerHTML = '&#x2764;';
             }
         });
     }
 }
+
+
+
+
 
 
 
@@ -118,5 +132,7 @@ async function renderApp() {
     await runApplication();
     renderLandingPage("wrapper");
 }
+
+
 
 

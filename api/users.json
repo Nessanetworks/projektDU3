@@ -15,8 +15,7 @@
         "username": "alba",
         "password": "123",
         "favorites": [
-            6,
-            7
+            1
         ]
     },
     {
@@ -43,7 +42,12 @@
         "id": 6,
         "username": "Venessa",
         "password": "Grisen",
-        "favorites": []
+        "favorites": [
+            1,
+            6,
+            5,
+            4
+        ]
     },
     {
         "id": 7,

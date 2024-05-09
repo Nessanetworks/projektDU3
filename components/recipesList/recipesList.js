@@ -33,22 +33,30 @@ function renderRecipesList(parentID, data) {
     const hearts = divDom.querySelector('.eventHeart');
     hearts.addEventListener('click', function (event) {
         event.stopPropagation();
+        const isFilled = this.classList.contains('filled');
+        State.patch({
+            id: data.id,
+            filled: !isFilled,
+            element: this
+        });
+    });
+
+    /*const hearts = divDom.querySelector('.eventHeart');
+    hearts.addEventListener('click', function (event) {
+        event.stopPropagation();
         this.classList.toggle('filled');
         const id = data.id;
 
-        if (this.classList.contains('filled')) {
+        if (this.classList.add('filled')) {
             this.innerHTML = '&#x2764;';
             State.patch({ id: id });
             console.log("true")
         } else {
-            renderAllRecipesContainer("wrapper");
-            console.log("Is it rendering but not working? yes sir!");
-            //this.classList.remove("filled");
-            //this.innerHTML = '&#x2764;';
+            this.classList.remove("filled");
             State.patch({ id: id });
             console.log("false")
         }
-    });
+    });*/
 }
 
 

@@ -178,6 +178,7 @@ function renderFavouriteRecipe(recipe) {
     </div>
 `;
     heartsStayFilled();
+
     div.addEventListener("click", function () {
         recipePage("wrapper", recipe);
     })
@@ -185,20 +186,13 @@ function renderFavouriteRecipe(recipe) {
     const hearts = div.querySelector('.eventHeart');
     hearts.addEventListener('click', function (event) {
         event.stopPropagation();
-        this.classList.toggle('filled');
-        const id = recipe.id;
-
-        if (this.classList.contains('filled')) {
-            this.innerHTML = '&#x2764;';
-            State.patch({ id: id });
-            console.log("true")
-        } else {
-            console.log("Is it rendering but not working? yes sir!");
-            //this.classList.remove("filled");
-            //this.innerHTML = '&#x2764;';
-            State.patch({ id: id });
-            console.log("false")
-        }
+        const isFilled = this.classList.contains('filled');
+        State.patch({
+            id: recipe.id,
+            filled: !isFilled,
+            element: this,
+            wrapper: "wrapper"
+        });
     });
 }
 
