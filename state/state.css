@@ -1,0 +1,13 @@
+.popUpForFaves {
+    position: fixed;
+    font-size: 20px;
+    left: 34.5vw;
+    top: 50%;
+    width: 400px;
+    height: 200px;
+    padding: 25px;
+    background-color: rgba(248, 249, 248, 0.95);
+    border: 1px solid black;
+    z-index: 1000;
+    display: block;
+}
