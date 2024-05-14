@@ -145,11 +145,12 @@
     gap: 15px;
     grid-auto-rows: 65vh;
     margin-left: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 .favouriteRecipesInstance {
     background-color: rgba(248, 249, 248, 0.8);
+    height: 410px;
 }
 
 #favouriteRecipesListImageContainer {
@@ -168,6 +169,7 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #favouriteRecipeTextBox {
@@ -261,4 +263,8 @@
     right: 0;
     margin: 10px 10px 0 0;
     cursor: pointer;
+}
+
+#favouriteRecipesTextContainer .star {
+    font-size: 5vh;
 }

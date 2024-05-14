@@ -175,11 +175,19 @@ function renderFavouriteRecipe(recipe) {
                     <div id="favouriteTimerImage"></div>
                     <p id="favouriteRecipeListTime">${recipe.time} min</p>
                 </div>
+                <div class="rating" data-recipe-id="${recipe.id}">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
             </div>
         </div>
     </div>
 `;
     heartsStayFilled();
+    updateAllRatings();
 
     div.addEventListener("click", function () {
         recipePage("wrapper", recipe);
