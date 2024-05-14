@@ -31,13 +31,13 @@ function recipePage(parentID, data) {
         </div>
         <div id="rightContainer">
             <h2>${data.name}</h2>
-            <div class="rating" data-recipe-id="${data.id}">
-                <span class="star" data-value="1">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="5">★</span>
-            </div>
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+</div>
+
             
             <h3 id="addRating">Lägg till betyg</h3>
             <div id="popUpRating" class="popUpRating">
@@ -234,16 +234,7 @@ function setRating(rating, container) {
     });
 }
 
-function setRatings(rating, container) {
-    const stars = container.querySelectorAll('.star');
-    stars.forEach((star, index) => {
-        if (index < rating) {
-            star.classList.add('filled');
-        } else {
-            star.classList.remove('filled');
-        }
-    });
-}
+
 
 
 
