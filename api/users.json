@@ -4,11 +4,11 @@
         "username": "julia",
         "password": "123",
         "favorites": [
-            9,
-            11,
             17,
             1,
             2,
+            7,
+            4,
             3
         ]
     },
