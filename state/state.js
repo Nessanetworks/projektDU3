@@ -126,13 +126,6 @@ function heartsStayFilled() {
     }
 }
 
-
-
-
-
-
-
-
 async function fetcher(request, options) {
     return await fetch(request, options);
 }
