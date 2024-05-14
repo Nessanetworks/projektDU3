@@ -3,7 +3,7 @@
         "id": 1,
         "picture": "./media/images/kyckling_och_rostade_rotfrukter.jpg",
         "time": 60,
-        "name": "Kyckling och rostade rotfrukter",
+        "name": "Kyckling och rotfrukter",
         "rating": 0,
         "ingredients": {
             "mor\u00f6tter": "3",
@@ -198,7 +198,7 @@
         "id": 9,
         "picture": "./media/images/pizza.webp",
         "time": 20,
-        "name": "Pizza med r\u00f6kt skinka och mozzarella",
+        "name": "Pizza med ost och skinka",
         "rating": 0,
         "ingredients": {
             "pizzadeg": "1",
@@ -221,7 +221,7 @@
         "id": 10,
         "picture": "./media/images/nudlar.webp",
         "time": 15,
-        "name": "Snabbnudlar med stekt \u00e4gg",
+        "name": "Snabbnudlar med \u00e4gg",
         "rating": 0,
         "ingredients": {
             "\u00e4gg": "4",
@@ -275,7 +275,7 @@
         "id": 12,
         "picture": "./media/images/kycklingwok-nudel-gr\u00f6nsak.webp",
         "time": 20,
-        "name": "Kycklingwok med nudlar och gr\u00f6nsaker",
+        "name": "Kycklingwok med nudlar",
         "rating": 0,
         "ingredients": {
             "kycklingbr\u00f6stfil\u00e9er": "600 g",
@@ -301,7 +301,7 @@
         "id": 13,
         "picture": "./media/images/stekt-ris-\u00e4gg.webp",
         "time": 25,
-        "name": "Stekt ris med gr\u00f6nsaker och \u00e4gg",
+        "name": "Stekt ris med gr\u00f6nsaker",
         "rating": 0,
         "ingredients": {
             "basmatiris": "1 1\/2 dl",
@@ -361,7 +361,7 @@
         "id": 15,
         "picture": "./media/images/kasslergryta-curry.webp",
         "time": 20,
-        "name": "Kasslergryta med curry och chili ",
+        "name": "Kasslergryta med curry",
         "rating": 0,
         "ingredients": {
             "kassler": "400 g",
@@ -418,7 +418,7 @@
         "id": 17,
         "picture": "./media/images/tomatsoppa-fetaost.webp",
         "time": 35,
-        "name": "Tomatsoppa med b\u00f6nor och fetaost",
+        "name": "Tomatsoppa med b\u00f6nor",
         "rating": 0,
         "ingredients": {
             "gul l\u00f6k": "1\/2",
@@ -446,7 +446,7 @@
         "id": 18,
         "picture": "./media/images/ramen.webp",
         "time": 30,
-        "name": "Ramen med gr\u00f6nsaker, svamp och \u00e4gg",
+        "name": "Ramen med gr\u00f6nsaker",
         "rating": 0,
         "ingredients": {
             "\u00e4gg": "4",
@@ -478,7 +478,7 @@
         "id": 19,
         "picture": "./media/images/kycklingpasta-soltorkade.webp",
         "time": 20,
-        "name": "Kr\u00e4mig kycklingpasta med soltorkade tomater",
+        "name": "Kr\u00e4mig kycklingpasta",
         "rating": 0,
         "ingredients": {
             "pasta": "300 g",
@@ -769,7 +769,7 @@
         "id": 31,
         "picture": "./media/images/flaskpannkaka.webp",
         "time": 45,
-        "name": "Fl\u00e4skpannkaka med bacon och morot",
+        "name": "Fl\u00e4skpannkaka med bacon",
         "rating": 0,
         "ingredients": {
             "vetemj\u00f6l": "3 dl",
@@ -816,7 +816,7 @@
         "id": 33,
         "picture": "./media/images/gronsakssoppa.webp",
         "time": 35,
-        "name": "Rostad gr\u00f6nsakssoppa med vitl\u00f6kskr\u00e4m",
+        "name": "Rostad gr\u00f6nsakssoppa",
         "rating": 0,
         "ingredients": {
             "r\u00f6dl\u00f6k": "1",
@@ -903,7 +903,7 @@
         "id": 36,
         "picture": "./media/images/halloumibiffar.jpg",
         "time": 30,
-        "name": "Halloumibiffar med zucchini och morot",
+        "name": "Halloumibiffar med zucchini",
         "rating": 0,
         "ingredients": {
             "zucchini": "400 g",
@@ -950,7 +950,7 @@
         "id": 38,
         "picture": "./media/images/rostade_gr\u00f6nsaker.jpg",
         "time": 30,
-        "name": "Rostade gr\u00f6nsaker med fetaost",
+        "name": "Rostade gr\u00f6nsaker",
         "rating": 0,
         "ingredients": {
             "potatis": "500 g",
