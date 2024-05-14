@@ -155,7 +155,3 @@ async function renderApp() {
     await runApplication();
     renderLandingPage("wrapper");
 }
-
-
-
-

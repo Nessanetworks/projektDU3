@@ -1,3 +1,4 @@
+
 function renderAllRecipesContainer(parentID) {
     document.getElementById(parentID).innerHTML = "";
     sortPopUpVisible = false;
