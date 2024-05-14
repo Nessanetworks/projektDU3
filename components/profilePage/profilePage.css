@@ -143,14 +143,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    grid-auto-rows: 65vh;
+    grid-auto-rows: 70vh;
     margin-left: 15px;
     margin-bottom: 50px;
 }
 
 .favouriteRecipesInstance {
     background-color: rgba(248, 249, 248, 0.8);
-    height: 410px;
 }
 
 #favouriteRecipesListImageContainer {
