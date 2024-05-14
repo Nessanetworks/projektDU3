@@ -31,13 +31,14 @@ function recipePage(parentID, data) {
         </div>
         <div id="rightContainer">
             <h2>${data.name}</h2>
-            <div class="rating">
+            <div class="rating" data-recipe-id="${data.id}">
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
                 <span class="star" data-value="3">★</span>
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
             </div>
+            
             <h3 id="addRating">Lägg till betyg</h3>
             <div id="popUpRating" class="popUpRating">
 
@@ -61,26 +62,9 @@ function recipePage(parentID, data) {
         </div>
     </div>
     `;
+    const ratingContainer = recipePage.querySelector('.rating');
+    setRating(data.rating, ratingContainer);
     heartsStayFilled();
-
-    /*const hearts = recipePage.querySelector('.eventHeart');
-    hearts.addEventListener('click', function (event) {
-        event.stopPropagation();
-        this.classList.toggle('filled');
-        const id = data.id;
-
-        if (this.classList.contains('filled')) {
-            this.innerHTML = '&#x2764;';
-            State.patch({ id: id });
-            console.log("true")
-        } else {
-            console.log("Is it rendering but not working? yes sir!");
-            //this.classList.remove("filled");
-            //this.innerHTML = '&#x2764;';
-            State.patch({ id: id });
-            console.log("false")
-        }
-    });*/
 
     const hearts = recipePage.querySelector('.eventHeart');
     hearts.addEventListener('click', function (event) {
@@ -128,14 +112,6 @@ function recipePage(parentID, data) {
         renderLandingPage("wrapper");
     });
 
-    /*document.getElementById("searchRecipes").addEventListener("click", function () {
-        renderIngredientSearch("wrapper");
-    });*/
-
-    /*document.getElementById("sortRecipes").addEventListener("click", function () {
-        renderIngredientSort("wrapper");
-    });*/
-
 
     const addRatingClick = document.getElementById('addRating');
     const popUpRating = document.getElementById('popUpRating');
@@ -149,11 +125,11 @@ function recipePage(parentID, data) {
                 return;
             }
 
-            popUpRating.innerHTML += `
+            /*popUpRating.innerHTML += `
             <div class="exitForRatingButton">
                 <button class="exitButton">X</button>
             </div>
-            <div class="popUpContent">
+            <div id='heart_${data.id}' class="popUpContent">
                 <p>Lägg till ditt betyg för:</p> 
                 <p><b>${data.name}</b></p>
                 <div class="rating">
@@ -165,7 +141,26 @@ function recipePage(parentID, data) {
                 </div>
                 <button id="addRatingButton">Lägg till betyg</button>
             </div>
-        `;
+        `;*/
+
+            popUpRating.innerHTML += `
+    <div class="exitForRatingButton">
+        <button class="exitButton">X</button>
+    </div>
+    <div class="popUpContent">
+        <p>Lägg till ditt betyg för:</p> 
+        <p><b>${data.name}</b></p>
+        <div class="rating popUpRatingStars" id="rating_${data.id}">
+            <span class="starsInPopUp" data-value="1">★</span>
+            <span class="starsInPopUp" data-value="2">★</span>
+            <span class="starsInPopUp" data-value="3">★</span>
+            <span class="starsInPopUp" data-value="4">★</span>
+            <span class="starsInPopUp" data-value="5">★</span>
+        </div>
+        <button id="addRatingButton">Lägg till betyg</button>
+    </div>
+`;
+
 
             const closeButton = popUpRating.querySelector('.exitForRatingButton');
             const addRatingButton = popUpRating.querySelector('#addRatingButton');
@@ -174,9 +169,25 @@ function recipePage(parentID, data) {
                 popUpRating.style.display = 'none';
             });
 
-            addRatingButton.addEventListener("click", function () {
+            /*addRatingButton.addEventListener("click", function () {
+                State.postRating()
+            });*/
 
+            document.getElementById("addRatingButton").addEventListener("click", function () {
+                const ratingContainer = document.querySelector(".popUpRatingStars");
+                const stars = ratingContainer.querySelectorAll(".starsInPopUp.filled");
+                const rating = stars.length;
+                console.log(rating);
+                const recipeId = data.id
+
+
+                State.postRating({
+                    recipeId: data.id,
+                    rating: rating
+                });
+                popUpRating.style.display = 'none';
             });
+
 
             const popupStars = popUpRating.querySelectorAll('.starsInPopUp');
             popupStars.forEach(popupStar => {
@@ -223,6 +234,16 @@ function setRating(rating, container) {
     });
 }
 
+function setRatings(rating, container) {
+    const stars = container.querySelectorAll('.star');
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.classList.add('filled');
+        } else {
+            star.classList.remove('filled');
+        }
+    });
+}
 
 
 
