@@ -54,7 +54,7 @@ async function logIn() {
         headers: { "Content-type": "application/json" }
     };
 
-    let response = await fetcher("/api/login.php", options);
+    let response = await fetcher('./api/login.php', options);
     if (response.ok) {
         let resource = await response.json();
         localStorage.setItem("token", resource.token);
@@ -121,7 +121,7 @@ async function createUser() {
             headers: { "Content-type": "application/json" }
         };
 
-        let response = await fetcher("/api/users.php", options);
+        let response = await fetcher('./api/users.php', options);
         if (response.ok) {
             popUpVisible = false;
             document.getElementById("popUpContainer").remove();

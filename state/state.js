@@ -13,7 +13,7 @@ let State = {
     },
     post: async function (data) {
 
-        const response = await fetch(`/api/recipes.php`, {
+        const response = await fetch('./api/recipes.php', {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-type": "application/json" },
@@ -32,7 +32,7 @@ let State = {
 
     patch: async function (data) {
 
-        const response = await fetch('/api/patchFavorites.php', {
+        const response = await fetch('./api/patchFavorites.php', {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -135,12 +135,12 @@ async function runApplication() {
         method: "GET",
         headers: { "Content-type": "application/json" }
     };
-    let response1 = await fetcher(`/api/recipes.php`, options);
+    let response1 = await fetcher('./api/recipes.php', options);
     if (response1.ok) {
         let resource1 = await response1.json();
         STATE.recipes = resource1;
     }
-    let response2 = await fetcher(`/api/usersList.php`, options);
+    let response2 = await fetcher('./api/usersList.php', options);
     if (response2.ok) {
         let resource2 = await response2.json();
         STATE.users = resource2;
