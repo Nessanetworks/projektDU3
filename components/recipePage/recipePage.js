@@ -65,6 +65,7 @@ function recipePage(parentID, data) {
     const ratingContainer = recipePage.querySelector('.rating');
     setRating(data.rating, ratingContainer);
     heartsStayFilled();
+    updateAllRatings();
 
     const hearts = recipePage.querySelector('.eventHeart');
     hearts.addEventListener('click', function (event) {
@@ -235,6 +236,17 @@ function setRating(rating, container) {
 }
 
 
+function setRatings(rating, container) {
+    const stars = container.querySelectorAll('.star');
+
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.classList.add('filled');
+        } else {
+            star.classList.remove('filled');
+        }
+    });
+}
 
 
 

@@ -154,10 +154,8 @@ function heartsStayFilled() {
     let loggedInUserId = localStorage.getItem("id");
 
     let user = STATE.users.find(user => user.id == loggedInUserId);
-    //console.log(user);
     if (user) {
         user.favorites.forEach(dataId => {
-            console.log(dataId);
             const heartElement = document.getElementById(`heart_${dataId}`);
             if (heartElement) {
                 heartElement.classList.add('filled');
@@ -177,7 +175,7 @@ function updateAllRatings() {
     STATE.recipes.forEach(recipe => {
         const recipeRatingContainer = document.querySelector(`.rating[data-recipe-id="${recipe.id}"]`);
         if (recipeRatingContainer) {
-            setRating(recipe.rating, recipeRatingContainer);
+            setRatings(recipe.rating, recipeRatingContainer);
         }
     });
 }
@@ -216,7 +214,3 @@ async function renderApp() {
     await runApplication();
     renderLandingPage("wrapper");
 }
-
-
-
-

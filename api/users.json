@@ -4,11 +4,11 @@
         "username": "julia",
         "password": "123",
         "favorites": [
-            9,
-            11,
             17,
             1,
             2,
+            7,
+            4,
             3
         ]
     },
@@ -17,9 +17,7 @@
         "username": "alba",
         "password": "123",
         "favorites": [
-            1,
-            40,
-            38
+            5
         ]
     },
     {
