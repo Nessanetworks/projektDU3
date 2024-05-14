@@ -107,7 +107,7 @@ let State = {
         console.log(data.recipeId);
         try {
             const userId = localStorage.getItem("id");
-            const response = await fetch('api/postRating.php', {
+            const response = await fetch('./api/postRating.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

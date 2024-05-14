@@ -63,8 +63,8 @@
         "time": 15,
         "name": "Korv Stroganoff",
         "rating": 2,
-        "totalRatings": 4,
-        "ratingCount": 2,
+        "totalRatings": 7,
+        "ratingCount": 3,
         "ingredients": {
             "falukorv": "300 g",
             "gul l\u00f6k": "1",
@@ -115,9 +115,9 @@
         "picture": ".\/media\/images\/pasta_puttanesca.jpg",
         "time": 30,
         "name": "Pasta puttanesca",
-        "rating": 0,
-        "totalRatings": 0,
-        "ratingCount": 0,
+        "rating": 3,
+        "totalRatings": 5,
+        "ratingCount": 2,
         "ingredients": {
             "vitl\u00f6ksklyftor": "3",
             "r\u00f6d chili": "1",
@@ -295,7 +295,7 @@
     },
     {
         "id": 12,
-        "picture": ".\/media\/images\/kycklingwok-nudel-gr\u00f6nsak.webp",
+        "picture": "./media/images/kycklingwok-nudel-gr\u00f6nsak.webp",
         "time": 20,
         "name": "Kycklingwok med nudlar",
         "rating": 0,
