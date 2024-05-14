@@ -19,11 +19,18 @@ function renderRecipesList(parentID, data) {
                     <div id="timerImage"></div>
                     <p id="recipeListTime">${data.time} min</p>
                 </div>
+                <div class="rating" data-recipe-id="${data.id}">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
             </div>
         </div>
     </div>
 `;
-
+    updateAllRatings();
 
     divDom.addEventListener("click", () => {
         recipePage("wrapper", data);

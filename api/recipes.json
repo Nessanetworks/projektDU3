@@ -5,8 +5,8 @@
         "time": 60,
         "name": "Kyckling och rostade rotfrukter",
         "rating": 3,
-        "totalRatings": 18,
-        "ratingCount": 7,
+        "totalRatings": 30,
+        "ratingCount": 11,
         "ingredients": {
             "mor\u00f6tter": "3",
             "palsternackor": "2",
@@ -267,9 +267,9 @@
         "picture": "..\/media\/images\/pad-thai-kyckling.webp",
         "time": 25,
         "name": "Kyckling Pad thai",
-        "rating": 0,
-        "totalRatings": 0,
-        "ratingCount": 0,
+        "rating": 2,
+        "totalRatings": 2,
+        "ratingCount": 1,
         "ingredients": {
             "brocoli": "1",
             "breda risnudlar": "180 g",

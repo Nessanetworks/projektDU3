@@ -65,6 +65,9 @@
         "id": 8,
         "username": "Rebz",
         "password": "123",
-        "favorites": []
+        "favorites": [
+            1,
+            11
+        ]
     }
 ]

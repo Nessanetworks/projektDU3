@@ -90,16 +90,6 @@ function recipePage(parentID, data) {
         renderIngredientSort("wrapper");
     });
 
-    let rightContainer = document.getElementById("rightContainer");
-
-    const stars = rightContainer.querySelectorAll('.star');
-    stars.forEach(star => {
-        /*star.addEventListener('click', () => {
-            const ratingValue = parseInt(star.getAttribute('data-value'), 10);
-            setRating(ratingValue, rightContainer);
-        });*/
-    });
-
 
     document.getElementById("logInOrUserName").addEventListener("click", function () {
         if (localStorage.getItem("token")) {
@@ -126,24 +116,6 @@ function recipePage(parentID, data) {
                 return;
             }
 
-            /*popUpRating.innerHTML += `
-            <div class="exitForRatingButton">
-                <button class="exitButton">X</button>
-            </div>
-            <div id='heart_${data.id}' class="popUpContent">
-                <p>Lägg till ditt betyg för:</p> 
-                <p><b>${data.name}</b></p>
-                <div class="rating">
-                    <span class="starsInPopUp" data-value="1">★</span>
-                    <span class="starsInPopUp" data-value="2">★</span>
-                    <span class="starsInPopUp" data-value="3">★</span>
-                    <span class="starsInPopUp" data-value="4">★</span>
-                    <span class="starsInPopUp" data-value="5">★</span>
-                </div>
-                <button id="addRatingButton">Lägg till betyg</button>
-            </div>
-        `;*/
-
             popUpRating.innerHTML += `
     <div class="exitForRatingButton">
         <button class="exitButton">X</button>
@@ -169,10 +141,6 @@ function recipePage(parentID, data) {
             closeButton.addEventListener('click', function () {
                 popUpRating.style.display = 'none';
             });
-
-            /*addRatingButton.addEventListener("click", function () {
-                State.postRating()
-            });*/
 
             document.getElementById("addRatingButton").addEventListener("click", function () {
                 const ratingContainer = document.querySelector(".popUpRatingStars");
@@ -220,8 +188,6 @@ function recipePage(parentID, data) {
         }
 
     });
-
-
 }
 
 function setRating(rating, container) {
