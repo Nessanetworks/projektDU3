@@ -36,6 +36,8 @@ function renderLandingPage(parentID) {
     document.getElementById("landingPageLogIn").addEventListener("click", function () {
         renderAllRecipesContainer("wrapper");
         renderLogInPopUp("wrapper");
+        renderIngredientSearch("wrapper");
+        renderIngredientSort("wrapper");
     });
 
     document.getElementById("landingPageButton").addEventListener("click", function () {
