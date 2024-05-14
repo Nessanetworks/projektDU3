@@ -3,8 +3,10 @@
         "id": 1,
         "picture": "./media/images/kyckling_och_rostade_rotfrukter.jpg",
         "time": 60,
-        "name": "Kyckling och rotfrukter",
-        "rating": 0,
+        "name": "Kyckling och rostade rotfrukter",
+        "rating": 3,
+        "totalRatings": 30,
+        "ratingCount": 11,
         "ingredients": {
             "mor\u00f6tter": "3",
             "palsternackor": "2",
@@ -30,7 +32,9 @@
         "picture": "./media/images/chili_con_carne.jpg",
         "time": 20,
         "name": "Chili con carne",
-        "rating": 0,
+        "rating": 3,
+        "totalRatings": 10,
+        "ratingCount": 4,
         "ingredients": {
             "n\u00f6tf\u00e4rs": "400 g",
             "gul l\u00f6k": "1",
@@ -58,7 +62,9 @@
         "picture": "./media/images/korv_stroganoff.jpg",
         "time": 15,
         "name": "Korv Stroganoff",
-        "rating": 0,
+        "rating": 2,
+        "totalRatings": 4,
+        "ratingCount": 2,
         "ingredients": {
             "falukorv": "300 g",
             "gul l\u00f6k": "1",
@@ -79,7 +85,9 @@
         "picture": "./media/images/crepes.jpg",
         "time": 40,
         "name": "\u00c4delostcr\u00eapes",
-        "rating": 0,
+        "rating": 2,
+        "totalRatings": 2,
+        "ratingCount": 1,
         "ingredients": {
             "sm\u00f6r": "75 g",
             "vetemj\u00f6l": "2 dl",
@@ -108,6 +116,8 @@
         "time": 30,
         "name": "Pasta puttanesca",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "vitl\u00f6ksklyftor": "3",
             "r\u00f6d chili": "1",
@@ -136,6 +146,8 @@
         "time": 25,
         "name": "Cacio e pepe",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "spaghetti": "320 g",
             "svartpepparkorn": "1 msk",
@@ -154,6 +166,8 @@
         "time": 30,
         "name": "Pasta pomodoro",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "spaghetti": "320 g",
             "gul l\u00f6k": "1",
@@ -176,6 +190,8 @@
         "time": 15,
         "name": "Tomatsoppa med gr\u00e4dde",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "gul l\u00f6k": "1",
             "vitl\u00f6ksklyfta": "1",
@@ -200,6 +216,8 @@
         "time": 20,
         "name": "Pizza med ost och skinka",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "pizzadeg": "1",
             "tomats\u00e5s": "4 msk",
@@ -223,6 +241,8 @@
         "time": 15,
         "name": "Snabbnudlar med \u00e4gg",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "\u00e4gg": "4",
             "olja": "",
@@ -247,7 +267,9 @@
         "picture": "./media/images/pad-thai-kyckling.webp",
         "time": 25,
         "name": "Kyckling Pad thai",
-        "rating": 0,
+        "rating": 2,
+        "totalRatings": 2,
+        "ratingCount": 1,
         "ingredients": {
             "brocoli": "1",
             "breda risnudlar": "180 g",
@@ -277,6 +299,8 @@
         "time": 20,
         "name": "Kycklingwok med nudlar",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "kycklingbr\u00f6stfil\u00e9er": "600 g",
             "kinesisk soja": "kinesisk soja",
@@ -303,6 +327,8 @@
         "time": 25,
         "name": "Stekt ris med gr\u00f6nsaker",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "basmatiris": "1 1\/2 dl",
             "morot": "1",
@@ -329,6 +355,8 @@
         "time": 25,
         "name": "Chilibowl med guacamole",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "k\u00f6ttf\u00e4rs": "500 g",
             "hackad gul l\u00f6k": "1",
@@ -363,6 +391,8 @@
         "time": 20,
         "name": "Kasslergryta med curry",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "kassler": "400 g",
             "gul l\u00f6k": "1",
@@ -393,6 +423,8 @@
         "time": 35,
         "name": "Kycklingfil\u00e9 i gr\u00e4dds\u00e5s ",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "kycklingbr\u00f6stfil\u00e9er": "4",
             "kinesisk soja": "1 msk",
@@ -420,6 +452,8 @@
         "time": 35,
         "name": "Tomatsoppa med b\u00f6nor",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "gul l\u00f6k": "1\/2",
             "vitl\u00f6ksklyfta": "1",
@@ -448,6 +482,8 @@
         "time": 30,
         "name": "Ramen med gr\u00f6nsaker",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "\u00e4gg": "4",
             "ramen- eller \u00e4ggnudlar": "200 g",
@@ -480,6 +516,8 @@
         "time": 20,
         "name": "Kr\u00e4mig kycklingpasta",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "pasta": "300 g",
             "kycklingbr\u00f6stfil\u00e9er": "500 g",
@@ -509,6 +547,8 @@
         "time": 30,
         "name": "Kyckling r\u00f6d curry",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "gr\u00f6nsaksbuljong": "1,5 liter",
             "gul l\u00f6k": "1",
@@ -532,6 +572,8 @@
         "time": 15,
         "name": "Stuvade makaroner",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "sm\u00f6r": "2 msk",
             "vetemj\u00f6l": "2 msk",
@@ -553,6 +595,8 @@
         "time": 30,
         "name": "Blomk\u00e5lsoppa",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "blomk\u00e5l": "700 g",
             "vatten": "7 dl",
@@ -574,6 +618,8 @@
         "time": 30,
         "name": "K\u00f6ttf\u00e4rssoppa",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "gul l\u00f6k": "1",
             "vitl\u00f6ksklyftor": "3",
@@ -603,6 +649,8 @@
         "time": 30,
         "name": "Svamppasta",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "pasta penne": "300 g",
             "skogschampinjoner": "500 g",
@@ -624,6 +672,8 @@
         "time": 15,
         "name": "Laxpasta med lime",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "pasta penne": "300 g",
             "laxfile": "400 g",
@@ -644,6 +694,8 @@
         "time": 45,
         "name": "Vegetarisk lasagne",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "purjol\u00f6kar": "300 g",
             "sm\u00f6r": "400 g",
@@ -668,6 +720,8 @@
         "time": 30,
         "name": "Currykyckling",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "kycklingl\u00e5rfile": "300 g",
             "curry": "400 g",
@@ -696,6 +750,8 @@
         "time": 45,
         "name": "K\u00f6ttbullar i gr\u00e4dds\u00e5s",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "vatten": "2 dl",
             "str\u00f6br\u00f6d": "1\/2 dl",
@@ -720,6 +776,8 @@
         "time": 45,
         "name": "Fiskgrat\u00e4ng med fetaost",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "fryst bladspenat": "250 g",
             "gr\u00f6nsaksbuljong": "1",
@@ -745,6 +803,8 @@
         "time": 45,
         "name": "Kycklinglasagne",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "gul l\u00f6k": "1",
             "olivolja": "1 msk",
@@ -771,6 +831,8 @@
         "time": 45,
         "name": "Fl\u00e4skpannkaka med bacon",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "vetemj\u00f6l": "3 dl",
             "salt": "1 tsk",
@@ -792,6 +854,8 @@
         "time": 40,
         "name": "Mustig linsgryta",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "gul l\u00f6k": "1",
             "morot": "1",
@@ -818,6 +882,8 @@
         "time": 35,
         "name": "Rostad gr\u00f6nsakssoppa",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "r\u00f6dl\u00f6k": "1",
             "mor\u00f6tter": "300 g",
@@ -849,6 +915,8 @@
         "time": 35,
         "name": "Asiatisk karr\u00e9 med hoisins\u00e5s",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "ris": "4 dl",
             "karr\u00e9": "600 g",
@@ -877,6 +945,8 @@
         "time": 60,
         "name": "Klassiska k\u00e5ldolmar",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "blandf\u00e4rs": "500 g",
             "spetsk\u00e5l": "1",
@@ -905,6 +975,8 @@
         "time": 30,
         "name": "Halloumibiffar med zucchini",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "zucchini": "400 g",
             "salt": "2 tsk",
@@ -930,6 +1002,8 @@
         "time": 15,
         "name": "Italiensk grilled cheese",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "skivor surdegsbr\u00f6d": "8",
             "dijonsenap": "4 tsk",
@@ -952,6 +1026,8 @@
         "time": 30,
         "name": "Rostade gr\u00f6nsaker",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "potatis": "500 g",
             "olivolja": "1 msk",
@@ -980,6 +1056,8 @@
         "time": 15,
         "name": "Tonfiskr\u00f6ra",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "tonfisk i olja": "2 burkar",
             "tomatpur\u00e9": "1 msk",
@@ -1006,6 +1084,8 @@
         "time": 20,
         "name": "Spaghetti och k\u00f6ttf\u00e4rss\u00e5s",
         "rating": 0,
+        "totalRatings": 0,
+        "ratingCount": 0,
         "ingredients": {
             "spaghetti": "1\/2 frp",
             "n\u00f6tf\u00e4rs": "500 g",

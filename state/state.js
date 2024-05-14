@@ -104,18 +104,58 @@ let State = {
     },
 
     postRating: async function (data) {
+        console.log(data.recipeId);
+        try {
+            const userId = localStorage.getItem("id");
+            const response = await fetch('api/postRating.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    recipeId: data.recipeId,
+                    rating: data.rating
+                })
+            });
 
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            if (response.ok) {
+                const responseData = await response.json();
+                let resource = await responseData;
+                console.log(resource);
+
+                if (responseData.recipe) {
+                    let index = STATE.recipes.findIndex(r => r.id == responseData.recipe.id);
+                    if (index !== -1) {
+                        STATE.recipes[index].rating = responseData.recipe.rating;
+                        console.log("Updated Recipe:", STATE.recipes[index]);
+                    }
+                }
+                updateAllRatings();
+                //console.log("FUNKAR DET", ratedStars);
+                return responseData;
+            }
+
+
+
+        } catch (error) {
+            console.error('Failed to post rating:', error);
+        }
     }
+
+
 }
 
 function heartsStayFilled() {
     let loggedInUserId = localStorage.getItem("id");
 
     let user = STATE.users.find(user => user.id == loggedInUserId);
-    //console.log(user);
     if (user) {
         user.favorites.forEach(dataId => {
-            console.log(dataId);
             const heartElement = document.getElementById(`heart_${dataId}`);
             if (heartElement) {
                 heartElement.classList.add('filled');
@@ -125,6 +165,25 @@ function heartsStayFilled() {
         });
     }
 }
+
+function updateAllRatings() {
+    if (!STATE || !STATE.recipes) {
+        console.error('STATE object is not correctly initialized.');
+        return;
+    }
+
+    STATE.recipes.forEach(recipe => {
+        const recipeRatingContainer = document.querySelector(`.rating[data-recipe-id="${recipe.id}"]`);
+        if (recipeRatingContainer) {
+            setRatings(recipe.rating, recipeRatingContainer);
+        }
+    });
+}
+updateAllRatings();
+
+
+
+
 
 async function fetcher(request, options) {
     return await fetch(request, options);

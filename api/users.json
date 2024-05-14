@@ -25,7 +25,8 @@
         "username": "lucas",
         "password": "123",
         "favorites": [
-            5
+            5,
+            1
         ]
     },
     {
@@ -50,7 +51,8 @@
             3,
             1,
             7,
-            8
+            8,
+            4
         ]
     },
     {
@@ -63,6 +65,9 @@
         "id": 8,
         "username": "Rebz",
         "password": "123",
-        "favorites": []
+        "favorites": [
+            1,
+            11
+        ]
     }
 ]
