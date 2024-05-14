@@ -295,7 +295,7 @@
     },
     {
         "id": 12,
-        "picture": "./media/images/kycklingwok-nudel-gr\u00f6nsak.webp",
+        "picture": "./media/images/kycklingwok.webp",
         "time": 20,
         "name": "Kycklingwok med nudlar",
         "rating": 0,
@@ -323,7 +323,7 @@
     },
     {
         "id": 13,
-        "picture": ".\/media\/images\/stekt-ris-\u00e4gg.webp",
+        "picture": "./media/images/stekt-ris.webp",
         "time": 25,
         "name": "Stekt ris med gr\u00f6nsaker",
         "rating": 0,
@@ -878,7 +878,7 @@
     },
     {
         "id": 33,
-        "picture": ".\/media\/images\/gronsakssoppa.webp",
+        "picture": "./media/images/gronsakssoppa.webp",
         "time": 35,
         "name": "Rostad gr\u00f6nsakssoppa",
         "rating": 0,
@@ -1022,7 +1022,7 @@
     },
     {
         "id": 38,
-        "picture": ".\/media\/images\/rostade_gr\u00f6nsaker.jpg",
+        "picture": ".\/media\/images\/rostade_gronsaker.jpg",
         "time": 30,
         "name": "Rostade gr\u00f6nsaker",
         "rating": 0,
