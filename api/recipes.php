@@ -50,7 +50,7 @@ list($type, $imageData) = explode(';', $imageData);
 list(, $imageData)      = explode(',', $imageData);
 $imageData = base64_decode($imageData);
 $imageName = "recipe_" . $nextId . ".png";
-$imagePath = "../media/images/" . $imageName;
+$imagePath = "/wdu/ht23/du3_projekt/projektDU3/media/images/" . $imageName;
 
 file_put_contents($imagePath, $imageData);
 
