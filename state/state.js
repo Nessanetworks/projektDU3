@@ -164,6 +164,7 @@ function heartsStayFilled() {
             }
         });
     }
+    console.log(user);
 }
 
 function updateAllRatings() {

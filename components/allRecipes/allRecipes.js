@@ -1,4 +1,3 @@
-
 function renderAllRecipesContainer(parentID) {
     document.getElementById(parentID).innerHTML = "";
     sortPopUpVisible = false;
@@ -52,7 +51,6 @@ function updateRecipesList(recipes) {
     document.getElementById("allRecipesContainer").innerHTML = "";
     for (let recipe of recipes) {
         renderRecipesList("allRecipesContainer", recipe);
-
     }
 }
 

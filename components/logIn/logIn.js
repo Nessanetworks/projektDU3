@@ -61,6 +61,7 @@ async function logIn() {
         localStorage.setItem("username", userName);
         localStorage.setItem("id", resource.id);
         console.log(localStorage.getItem("id"));
+        await renderApp("wrapper");
         renderProfilePage("wrapper");
     } else if (response.status === 401) {
         document.getElementById("messageLogIn").textContent = "Denna användare finns inte"
