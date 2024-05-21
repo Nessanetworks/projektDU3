@@ -5,7 +5,6 @@
         "password": "123",
         "favorites": [
             17,
-            1,
             2,
             7,
             4,
@@ -71,6 +70,44 @@
             1,
             11,
             2
+        ]
+    },
+    {
+        "id": 9,
+        "username": "lena",
+        "password": "123",
+        "favorites": [
+            2,
+            4
+        ]
+    },
+    {
+        "id": 10,
+        "username": "petter",
+        "password": "123",
+        "favorites": [
+            1,
+            2,
+            3
+        ]
+    },
+    {
+        "id": 11,
+        "username": "jens",
+        "password": "123",
+        "favorites": [
+            10,
+            12
+        ]
+    },
+    {
+        "id": 12,
+        "username": "ludde",
+        "password": "123",
+        "favorites": [
+            7,
+            8,
+            9
         ]
     }
 ]

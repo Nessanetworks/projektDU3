@@ -50,9 +50,10 @@ list($type, $imageData) = explode(';', $imageData);
 list(, $imageData)      = explode(',', $imageData);
 $imageData = base64_decode($imageData);
 $imageName = "recipe_" . $nextId . ".png";
-$imagePath = "./../media/images/" . $imageName;
+$imagePath = "media/images/" . $imageName;
+$imagePathOnServer = __DIR__ . "/../media/images/" . $imageName;
 
-file_put_contents($imagePath, $imageData);
+$bytes = file_put_contents($imagePathOnServer, $imageData);
 
 $newRecipe = [
     "id" => $nextId,
@@ -69,6 +70,8 @@ $newRecipe = [
 $recipes[] = $newRecipe; 
 
 file_put_contents($fileName, json_encode($recipes, JSON_PRETTY_PRINT));
+
+$newRecipe["bytes"] = $bytes;
 
 send(201, $newRecipe);
 }

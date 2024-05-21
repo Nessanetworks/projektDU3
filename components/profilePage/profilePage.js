@@ -2,7 +2,7 @@ let instructionsCounter = 2;
 let ingredientsCounter = 2;
 let uploadedFile;
 
-function renderProfilePage(parentID) {
+async function renderProfilePage(parentID) {
     document.getElementById(parentID).innerHTML = "";
     let divDom = document.createElement("div");
     divDom.id = "profilePageContainer";
